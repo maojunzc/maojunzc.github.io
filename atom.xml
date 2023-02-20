@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-20T02:29:14.679Z</updated>
+  <updated>2023-02-20T10:02:11.839Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Valine评论系统详解</title>
+    <link href="http://example.com/2023/02/20/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://example.com/2023/02/20/Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/</id>
+    <published>2023-02-20T09:40:08.000Z</published>
+    <updated>2023-02-20T10:02:11.839Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="转载点击"><a href="#转载点击" class="headerlink" title="转载点击"></a><a href="https://lovelijunyi.gitee.io/posts/e52c.html">转载点击</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BT磁力下载工具Tixati v2.88汉化版</title>
+    <link href="http://example.com/2023/02/20/BT%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7Tixati-v2-88%E6%B1%89%E5%8C%96%E7%89%88/"/>
+    <id>http://example.com/2023/02/20/BT%E7%A3%81%E5%8A%9B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7Tixati-v2-88%E6%B1%89%E5%8C%96%E7%89%88/</id>
+    <published>2023-02-20T08:03:05.000Z</published>
+    <updated>2023-02-20T08:18:17.620Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="BT磁力下载工具Tixati-v2-88汉化版"><a href="#BT磁力下载工具Tixati-v2-88汉化版" class="headerlink" title="BT磁力下载工具Tixati v2.88汉化版"></a>BT磁力下载工具Tixati v2.88汉化版</h3><h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>Tixati是一款免费的易于使用的BT下载工具，多平台、无广告、原生C程序，功能强，速度快。它支持磁力链接、种子文件，就和普通的下载工具一样使用，嫌慢可以添加一些 trackers 服务器就好了，同等的文件传输能力，它还具有强大的带宽图表和节流能力。相比与其他同类的BT种子下载工具，它有一个很大的特色就是它的P2P节点信息是完全可以看到的。软件是完全独立的，没有对 Java 或 .Net 框架的烦人依赖。与许多其他 torrent 客户端不同，我们以拒绝间谍软件和广告软件为荣。Tixati 干净地安装和卸载，不会向您的系统添加任何额外内容。迅雷下不了的，这个都可以下了。</p><h3 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201604821.png"/><h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>2022.01.15 v2.88</p><ul><li><p>额外的传输检查以在下载元数据后检测不一致的文件结构</p></li><li><p>修复了从文件大小不正确或片段布局未对齐的配置文件重新加载传输元数据时的崩溃</p></li><li><p>新的可选传输列以显示已知的对等点和种子计数</p></li><li><p>完全重写频道用户共享数据和频道信息消息缓存</p></li><li><p>大型共享数据集的通道内存使用率要低得多</p></li><li><p>更小的 channels.dat 配置文件，程序启动时加载更快</p></li><li><p>重新编写了频道信息和用户共享数据同步的所有例程</p></li><li><p>在 v2.88 或更新的客户端之间更快地更新频道信息选项卡更快、更可靠地更新频道用户共享数据通道连接的带宽使用率略低</p></li><li><p>修复了浏览不完整频道用户共享数据时的小显示问题，尤其是不完整的图像</p></li><li><p>所有频道现在默认为 10 年共享数据生存时间</p></li><li><p>在列表视图中切换频道时，现在可以正确保留和恢复下方选项卡中传出聊天消息编辑框中的文本</p></li><li><p>修复通道输出文本中的链接解析，以便不包含前导或尾随特殊字符</p></li><li><p>修复了频道论坛选项卡中的小排序问题</p></li><li><p>对一些 Windows 和 GTK 控件类进行重大重写，以解决复杂布局中的句柄破坏排序问题</p></li><li><p>修复了当打开的“设置”窗口具有未刷新的代{过}{滤}理设置时程序关闭时的崩溃</p></li><li><p>用于传入连接和洪流打孔的速率限制器的更好维护例程，应该使用更少的 RAM</p></li><li><p>当程序在 GTK 构建中关闭时，消息泵现在被强制清除，因此任何打开的属性窗口都会立即消失</p></li><li><p>退出程序后，应用程序锁定现在在配置保存之前立即释放，因此等待对话框将可靠地出现在快速重新启动时</p></li><li><p>对 CPU 和内存状态诊断分析的多项改进，在 Channels 和 Netbase 类别中的读数更加准确</p></li><li><p>更新的 IP 位置表，更多即将到来</p></li></ul><h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><h3 id="打开软件点击右上角黄色？–-gt-选择Switch-Language–-gt-点击文件夹导入汉化补丁–-gt-OK保存–-gt-重启软件"><a href="#打开软件点击右上角黄色？–-gt-选择Switch-Language–-gt-点击文件夹导入汉化补丁–-gt-OK保存–-gt-重启软件" class="headerlink" title="打开软件点击右上角黄色？–&gt;选择Switch Language–&gt;点击文件夹导入汉化补丁–&gt;OK保存–&gt;重启软件"></a>打开软件点击右上角黄色？–&gt;选择Switch Language–&gt;点击文件夹导入汉化补丁–&gt;OK保存–&gt;重启软件</h3><p><a href="https://update-check.tixati.com/checkver/2.88.1/">官网</a></p><p><a href="https://download1.tixati.com/download/tixati-3.16-1.win64-install.exe">下载软件/64位</a></p><br/> <br/> <br/> <p>###安卓版磁链工具<br>app支持磁力链、迅雷链接、Ed2k 电驴、FTP、HTTP 多种下载链接，不限速、无广告，还可以边下边播，用起来非常舒服，比手机迅雷好用 100 倍。</p><h3 id="https-wwqh-lanzouw-com-iOheI0o3zvqf-密码-b8re"><a href="#https-wwqh-lanzouw-com-iOheI0o3zvqf-密码-b8re" class="headerlink" title="https://wwqh.lanzouw.com/iOheI0o3zvqf   密码:b8re"></a><a href="https://wwqh.lanzouw.com/iOheI0o3zvqf">https://wwqh.lanzouw.com/iOheI0o3zvqf</a>   密码:b8re</h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="PC软件" scheme="http://example.com/categories/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="PC软件" scheme="http://example.com/tags/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023.2.20</title>
+    <link href="http://example.com/2023/02/20/2023-2-20/"/>
+    <id>http://example.com/2023/02/20/2023-2-20/</id>
+    <published>2023-02-20T07:03:18.000Z</published>
+    <updated>2023-02-20T10:06:24.419Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=468775637&auto=1&height=66"></iframe><br/><br/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201801113.jpg"/><h3 id="“即使身邊世事再毫無道理"><a href="#“即使身邊世事再毫無道理" class="headerlink" title="“即使身邊世事再毫無道理"></a>“即使身邊世事再毫無道理</h3><h3 id="與你永遠亦連在一起”"><a href="#與你永遠亦連在一起”" class="headerlink" title="與你永遠亦連在一起”"></a>與你永遠亦連在一起”</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="maojunzc" scheme="http://example.com/categories/maojunzc/"/>
+    
+    
+    <category term="maojunzc" scheme="http://example.com/tags/maojunzc/"/>
+    
+  </entry>
   
   <entry>
     <title>安卓听下v1.4.5免费下载无损音乐</title>
@@ -421,78 +493,6 @@
     
     
     <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 评论系统 Valine 的使用</title>
-    <link href="http://example.com/2023/02/17/Hexo-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F-Valine-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2023/02/17/Hexo-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F-Valine-%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
-    <published>2023-02-17T06:52:14.000Z</published>
-    <updated>2023-02-17T12:06:53.183Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="因为自己使用过，看了几篇文章；觉得有必要记录一下"><a href="#因为自己使用过，看了几篇文章；觉得有必要记录一下" class="headerlink" title="因为自己使用过，看了几篇文章；觉得有必要记录一下"></a>因为自己使用过，看了几篇文章；觉得有必要记录一下</h3><h3 id="cungudafa"><a href="#cungudafa" class="headerlink" title="cungudafa"></a><a href="https://blog.csdn.net/cungudafa/article/details/106189143">cungudafa</a></h3><br/><h3 id="关于valine升级的升级-魔改"><a href="#关于valine升级的升级-魔改" class="headerlink" title="关于valine升级的升级/魔改"></a>关于valine升级的升级/魔改</h3><p><a href="https://valine.js.org/">Valine - 一款快速、简洁且高效的无后端评论系统。</a><br>目前已经更新到v1.5.0, 2022-06-24；旧版和新版可根据自己需求看文档更新日志选取，本章主要阐述升级方法</p><br/><h3 id="引入X-X版的js文件；可以在官网选取"><a href="#引入X-X版的js文件；可以在官网选取" class="headerlink" title="引入X.X版的js文件；可以在官网选取"></a>引入X.X版的js文件；可以在官网选取</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171944333.webp"/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171945219.webp"/>位置在：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(&#x27;/libs/valine/av-min.js&#x27;) %&gt;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/libs/valine/Valine.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>记得把主题自带的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.libs.js.valine) %&gt;&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>删掉，或直接剪切到别的地方备份着。<br>将文件放你自己的仓库</p><p>下载我的 Valine.min.js 文件，直接替换你主题目录 /source/libs/valine/ 下的 Valine.min.js 文件。</p><p>注意，如果你担心替换有问题，可以先备份一下你自己的 Valine.min.js 文件。</p><h3 id="增加valine的配置："><a href="#增加valine的配置：" class="headerlink" title="增加valine的配置："></a>增加valine的配置：</h3><p>1.4的版本有些属性调整了，主题下的_config.ymlvaline属性如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appId: iTxfqh5e9IaRfiiVOTbIWoKa-XXXXXX</span><br><span class="line">  appKey: C5s5xGFErD1EtXXXXXXXX</span><br><span class="line">  verify: true  # 是否启用防垃圾验证</span><br><span class="line">  notify: true  # 是否开启邮件提醒(https://valine.js.org/notify.html)</span><br><span class="line">  visitor: true</span><br><span class="line">  avatar: monsterid  # 头像样式(https://valine.js.org/avatar.html) </span><br><span class="line">  pageSize: 10</span><br><span class="line">  placeholder: &#x27;ヾﾉ≧∀≦)o来啊，快活啊!&#x27; # Comment Box placeholder</span><br><span class="line">  background: /medias/comment_bg.png #背景图</span><br><span class="line">  count: true</span><br><span class="line">  enableQQ: 970175021</span><br><span class="line">  recordIP: true</span><br><span class="line">  requiredFields: </span><br><span class="line">    - nick</span><br><span class="line">    - mail</span><br><span class="line">  guest_info: </span><br><span class="line">    - nick</span><br><span class="line">    - mail</span><br><span class="line">    - link</span><br><span class="line">  master: </span><br><span class="line">    - 123abc508165c8eba9a77f872xxxx046  # md5加密后的博主邮箱</span><br><span class="line">  metaPlaceholder:  # 输入框的背景文字</span><br><span class="line">    nick: 昵称/QQ号(必填)</span><br><span class="line">    mail: 邮箱(必填)</span><br><span class="line">    link: 网址(https://)</span><br><span class="line">  lang: zh-CN</span><br><span class="line">  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]</span><br><span class="line">    - 博主</span><br><span class="line">    - 小伙伴</span><br><span class="line">    - 访客</span><br><span class="line">  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]</span><br><span class="line">    - c08508165c8eba9a77f8c2853xxxx09e</span><br><span class="line">    - 901345d4c91ddfd8db0f175bbcfff0c8</span><br><span class="line">    - 1512958e18378c98b498d5effe3e76ff</span><br></pre></td></tr></table></figure><p>复制代码注意缩进对齐，不对齐可能会报错，请自行检查对齐。</p><h3 id="修改valine-ejs："><a href="#修改valine-ejs：" class="headerlink" title="修改valine.ejs："></a>修改valine.ejs：</h3><p>Matery 主题使用的ejs模板预编译，如果你使用了pug或者swig等其他的模板语言，请修改成对应语言语法即可。</p><p>原始的valine.ejs</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">new Valine(&#123;</span><br><span class="line">        el: &#x27;#vcomments&#x27;,</span><br><span class="line">        appId: &#x27;&lt;%- theme.valine.appId %&gt;&#x27;,</span><br><span class="line">        appKey: &#x27;&lt;%- theme.valine.appKey %&gt;&#x27;,</span><br><span class="line">        notify: &#x27;&lt;%- theme.valine.notify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        verify: &#x27;&lt;%- theme.valine.verify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        visitor: &#x27;&lt;%- theme.valine.visitor %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        avatar: &#x27;&lt;%- theme.valine.avatar %&gt;&#x27;,</span><br><span class="line">        pageSize: &#x27;&lt;%- theme.valine.pageSize %&gt;&#x27;,</span><br><span class="line">        lang: &#x27;&lt;% if (config.language == &quot;zh-CN&quot;) &#123;  %&gt;zh-cn&lt;% &#125; else &#123; %&gt;en&lt;% &#125; %&gt;&#x27;,</span><br><span class="line">        placeholder: &#x27;&lt;%= theme.valine.placeholder %&gt;&#x27;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure><p>升级后的valine.ejs</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">let metaPlaceholder = &lt;%-  JSON.stringify(theme.valine.metaPlaceholder) %&gt; ;</span><br><span class="line">//这里要换行</span><br><span class="line">new Valine(&#123;</span><br><span class="line">        el: &#x27;#vcomments&#x27;,</span><br><span class="line">        appId: &#x27;&lt;%- theme.valine.appId %&gt;&#x27;,</span><br><span class="line">        appKey: &#x27;&lt;%- theme.valine.appKey %&gt;&#x27;,</span><br><span class="line">        notify: &#x27;&lt;%- theme.valine.notify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        verify: &#x27;&lt;%- theme.valine.verify %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        visitor: &#x27;&lt;%- theme.valine.visitor %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        avatar: &#x27;&lt;%- theme.valine.avatar %&gt;&#x27;,</span><br><span class="line">        pageSize: &#x27;&lt;%- theme.valine.pageSize %&gt;&#x27;,</span><br><span class="line">        lang: &#x27;&lt;%- theme.valine.lang %&gt;&#x27;,</span><br><span class="line">        placeholder: &#x27;&lt;%= theme.valine.placeholder %&gt;&#x27;,</span><br><span class="line">        meta: &lt;%- &#x27;[&quot;&#x27; + theme.valine.guest_info.join(&#x27;&quot;, &quot;&#x27;) + &#x27;&quot;]&#x27; %&gt;,</span><br><span class="line">        recordIP: &#x27;&lt;%- theme.valine.recordIP %&gt;&#x27; === &#x27;true&#x27;,</span><br><span class="line">        enableQQ: &#x27;&lt;%- theme.valine.avatar %&gt;&#x27;,</span><br><span class="line">        requiredFields: &lt;%- &#x27;[&quot;&#x27; + theme.valine.master.join(&#x27;&quot;, &quot;&#x27;) + &#x27;&quot;]&#x27; %&gt;,</span><br><span class="line">        master: &lt;%- &#x27;[&quot;&#x27; + theme.valine.master.join(&#x27;&quot;, &quot;&#x27;) + &#x27;&quot;]&#x27; %&gt;,</span><br><span class="line">        friends: &lt;%- &#x27;[&quot;&#x27; + theme.valine.friends.join(&#x27;&quot;, &quot;&#x27;) + &#x27;&quot;]&#x27; %&gt;,</span><br><span class="line">        tagMeta: &lt;%- &#x27;[&quot;&#x27; + theme.valine.tagMeta.join(&#x27;&quot;, &quot;&#x27;) + &#x27;&quot;]&#x27; %&gt;,</span><br><span class="line">        metaPlaceholder: metaPlaceholder,</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure><p>如果需要验证昵称和邮箱可以加上以下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">document.body.addEventListener(&#x27;click&#x27;, function(e) &#123;</span><br><span class="line">    if (e.target.classList.contains(&#x27;vsubmit&#x27;)) &#123;</span><br><span class="line">        const email = document.querySelector(&#x27;input[type=email]&#x27;);</span><br><span class="line">        const nick = document.querySelector(&#x27;input[name=nick]&#x27;);</span><br><span class="line">        const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;</span><br><span class="line">        if (!email.value || !nick.value || !reg.test(email.value)) &#123;</span><br><span class="line">            const str = `&lt;div class=&quot;valert txt-center&quot;&gt;&lt;div class=&quot;vtext&quot;&gt;请填写正确的昵称和邮箱！&lt;/div&gt;&lt;/div&gt;`;</span><br><span class="line">            const vmark = document.querySelector(&#x27;.vmark&#x27;);</span><br><span class="line">            vmark.innerHTML = str;</span><br><span class="line">            vmark.style.display = &#x27;block&#x27;;</span><br><span class="line"></span><br><span class="line">            e.stopPropagation();</span><br><span class="line"></span><br><span class="line">            setTimeout(function() &#123;</span><br><span class="line">                vmark.style.display = &#x27;none&#x27;;</span><br><span class="line">                vmark.innerHTML = &#x27;&#x27;;</span><br><span class="line">            &#125;, 2500);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;, true);</span><br></pre></td></tr></table></figure><br/> <p>其它填写昵称邮箱和网址的地方如果折行了就按我的样式改一下就好：</p><p>在 valine.ejs 是上面对着改一下就好了：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.v[data-class=&quot;v&quot;] .vwrap .vheader .vinput &#123;</span><br><span class="line">  width: 32%;</span><br><span class="line">  border-bottom: 1px dashed #dedede;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo添加评论功能</title>
-    <link href="http://example.com/2023/02/17/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
-    <id>http://example.com/2023/02/17/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</id>
-    <published>2023-02-17T03:48:12.000Z</published>
-    <updated>2023-02-17T11:49:17.642Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="注册-Leancloud-账号"><a href="#注册-Leancloud-账号" class="headerlink" title="注册 Leancloud 账号"></a><a href="https://console.leancloud.cn/login">注册 Leancloud 账号</a></h3><img src="https://pic.imgdb.cn/item/63eef966f144a01007f411cf.jpg">注册完成后进入app控制面板->创建应用->创建开发版应用。<img src="https://pic.imgdb.cn/item/63eef9acf144a01007f4814c.jpg"><img src="https://pic.imgdb.cn/item/63eef9f4f144a01007f4e971.jpg">接下来我们配置一下我们的leancloud。点击设置->安全中心->Web 安全域名，输入你的域名来保证其他人就算获取了你的appid也没办法操作你的数据库。<img src="https://pic.imgdb.cn/item/63eefb26f144a01007f66b4d.jpg"><h3 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h3><p>在主题文件中配置valine（注意是主题文件_config.yml）<br>搜索 valine，一般可看到如下，将 enbled:true, 并填写 appid 和 appkey(从 leancloud 中获取的 appid 和 appkey)。</p><img src="https://pic.imgdb.cn/item/63eefba5f144a01007f719e8.jpg"><h3 id="此时加入评论模块完成；后续教程为自定义在菜单栏添加留言板page"><a href="#此时加入评论模块完成；后续教程为自定义在菜单栏添加留言板page" class="headerlink" title="此时加入评论模块完成；后续教程为自定义在菜单栏添加留言板page"></a>此时加入评论模块完成；后续教程为自定义在菜单栏添加留言板page</h3><br/><br/><br/><h3 id="添加一个新的page"><a href="#添加一个新的page" class="headerlink" title="添加一个新的page"></a>添加一个新的page</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;guestbook&quot;</span><br></pre></td></tr></table></figure><h3 id="进入-source-guestbook-index-md。加入你想显示的内容，如："><a href="#进入-source-guestbook-index-md。加入你想显示的内容，如：" class="headerlink" title="进入 source/guestbook/index.md。加入你想显示的内容，如："></a>进入 source/guestbook/index.md。加入你想显示的内容，如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 给我留言吧</span><br><span class="line">date: 2022-02-18 20:04:25</span><br><span class="line">type: &quot;guestbook&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># 欢迎来到我的博客！</span><br><span class="line"></span><br><span class="line">&gt; 欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度，在呢称栏目输入QQ号可以直接获取你的QQ头像噢。</span><br></pre></td></tr></table></figure><h3 id="进入-config-next-yml，-找到menu栏目，添加留言板功能："><a href="#进入-config-next-yml，-找到menu栏目，添加留言板功能：" class="headerlink" title="进入 _config.next.yml， 找到menu栏目，添加留言板功能："></a>进入 _config.next.yml， 找到menu栏目，添加留言板功能：</h3><img src="https://pic.imgdb.cn/item/63eefcc3f144a01007f8cbda.jpg"><h3 id="更改-themes-next-languages-下对应语言的翻译。例如中文的-zh-CN-yml-文件"><a href="#更改-themes-next-languages-下对应语言的翻译。例如中文的-zh-CN-yml-文件" class="headerlink" title="更改 themes/next/languages 下对应语言的翻译。例如中文的````zh-CN.yml```文件"></a>更改 themes/next/languages 下对应语言的翻译。例如中文的````zh-CN.yml```文件</h3><img src="https://pic.imgdb.cn/item/63eefcfcf144a01007f91cd6.jpg"><h3 id="重启server搞定"><a href="#重启server搞定" class="headerlink" title="重启server搞定"></a>重启server搞定</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023.2.17</title>
-    <link href="http://example.com/2023/02/17/2023-2-17/"/>
-    <id>http://example.com/2023/02/17/2023-2-17/</id>
-    <published>2023-02-17T03:29:15.000Z</published>
-    <updated>2023-02-17T10:31:10.459Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="60S看世界"><a href="#60S看世界" class="headerlink" title="60S看世界"></a><a href="http://api.xiaolu520.cn/api/60s.php">60S看世界</a></h3><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=66285&auto=1&height=66"></iframe><h3 id="今天可能没有一言，但是今天想写写一个朋友。关于爱情"><a href="#今天可能没有一言，但是今天想写写一个朋友。关于爱情" class="headerlink" title="今天可能没有一言，但是今天想写写一个朋友。关于爱情"></a>今天可能没有一言，但是今天想写写一个朋友。关于爱情</h3><h3 id="爱情是个啥？百度解释：爱情是受社会因素影响的生理、心理和主观情感结合的复杂现象，不同时代、文化、学科和学者们对爱情有着不同的理解和定义。顾城说：手我有的是，就是不知道如何碰你。木心还说：意大利靠一个太阳，我全靠一个你。"><a href="#爱情是个啥？百度解释：爱情是受社会因素影响的生理、心理和主观情感结合的复杂现象，不同时代、文化、学科和学者们对爱情有着不同的理解和定义。顾城说：手我有的是，就是不知道如何碰你。木心还说：意大利靠一个太阳，我全靠一个你。" class="headerlink" title="爱情是个啥？百度解释：爱情是受社会因素影响的生理、心理和主观情感结合的复杂现象，不同时代、文化、学科和学者们对爱情有着不同的理解和定义。顾城说：手我有的是，就是不知道如何碰你。木心还说：意大利靠一个太阳，我全靠一个你。"></a>爱情是个啥？百度解释：爱情是受社会因素影响的生理、心理和主观情感结合的复杂现象，不同时代、文化、学科和学者们对爱情有着不同的理解和定义。顾城说：手我有的是，就是不知道如何碰你。木心还说：意大利靠一个太阳，我全靠一个你。</h3><h3 id="其实我就是引用一下"><a href="#其实我就是引用一下" class="headerlink" title="其实我就是引用一下"></a>其实我就是引用一下</h3><br/> <h3 id="我记得很早之前和别人谈结婚，他说“传统的就选择传统的，开放的就选择开放的”；其实很多事很多人可能一开始我们就知道结局，但是人都有些固执；"><a href="#我记得很早之前和别人谈结婚，他说“传统的就选择传统的，开放的就选择开放的”；其实很多事很多人可能一开始我们就知道结局，但是人都有些固执；" class="headerlink" title="我记得很早之前和别人谈结婚，他说“传统的就选择传统的，开放的就选择开放的”；其实很多事很多人可能一开始我们就知道结局，但是人都有些固执；"></a>我记得很早之前和别人谈结婚，他说“传统的就选择传统的，开放的就选择开放的”；其实很多事很多人可能一开始我们就知道结局，但是人都有些固执；</h3><h3 id="我记得从前我眼里放星星，我也记得那一天你眼里陨石坠落；为了拯救地球我还化身光…"><a href="#我记得从前我眼里放星星，我也记得那一天你眼里陨石坠落；为了拯救地球我还化身光…" class="headerlink" title="我记得从前我眼里放星星，我也记得那一天你眼里陨石坠落；为了拯救地球我还化身光…"></a>我记得从前我眼里放星星，我也记得那一天你眼里陨石坠落；为了拯救地球我还化身光…</h3><h3 id="从前我放了一朵花在你们那-现在我是允许你还回来的"><a href="#从前我放了一朵花在你们那-现在我是允许你还回来的" class="headerlink" title="从前我放了一朵花在你们那 现在我是允许你还回来的"></a>从前我放了一朵花在你们那 现在我是允许你还回来的</h3><h3 id="一路走来，你会遇到很多形形色色的人。但是这不是让你难过的，是在告诉我们，不要成为那样的人"><a href="#一路走来，你会遇到很多形形色色的人。但是这不是让你难过的，是在告诉我们，不要成为那样的人" class="headerlink" title="一路走来，你会遇到很多形形色色的人。但是这不是让你难过的，是在告诉我们，不要成为那样的人"></a>一路走来，你会遇到很多形形色色的人。但是这不是让你难过的，是在告诉我们，不要成为那样的人</h3><h3 id="亲密无间，各自生活，再无相见本是人间常态"><a href="#亲密无间，各自生活，再无相见本是人间常态" class="headerlink" title="亲密无间，各自生活，再无相见本是人间常态"></a>亲密无间，各自生活，再无相见本是人间常态</h3><br/> <h3 id="后来我才知道人难受到极点是确实会干呕恶心的"><a href="#后来我才知道人难受到极点是确实会干呕恶心的" class="headerlink" title="后来我才知道人难受到极点是确实会干呕恶心的"></a>后来我才知道人难受到极点是确实会干呕恶心的</h3><h3 id="恶心完了记得刷牙啊"><a href="#恶心完了记得刷牙啊" class="headerlink" title="恶心完了记得刷牙啊"></a>恶心完了记得刷牙啊</h3><br/> <h3 id="“好女孩要珍惜，坏女孩别浪费”，这不是我说的。"><a href="#“好女孩要珍惜，坏女孩别浪费”，这不是我说的。" class="headerlink" title="“好女孩要珍惜，坏女孩别浪费”，这不是我说的。"></a>“好女孩要珍惜，坏女孩别浪费”，这不是我说的。</h3><h3 id="“好女孩没有好好珍惜，坏女孩绝壁不能浪费”这是你说的，这和我无关。"><a href="#“好女孩没有好好珍惜，坏女孩绝壁不能浪费”这是你说的，这和我无关。" class="headerlink" title="“好女孩没有好好珍惜，坏女孩绝壁不能浪费”这是你说的，这和我无关。"></a>“好女孩没有好好珍惜，坏女孩绝壁不能浪费”这是你说的，这和我无关。</h3><h3 id="你还说“下一个更乖”，当然我是没啥兴趣的。"><a href="#你还说“下一个更乖”，当然我是没啥兴趣的。" class="headerlink" title="你还说“下一个更乖”，当然我是没啥兴趣的。"></a>你还说“下一个更乖”，当然我是没啥兴趣的。</h3><h3 id="那时我还年轻-我信一约既定-万山无阻。"><a href="#那时我还年轻-我信一约既定-万山无阻。" class="headerlink" title="那时我还年轻 我信一约既定,万山无阻。"></a>那时我还年轻 我信一约既定,万山无阻。</h3><h3 id="现在我也年轻-但是我说-可是你那么坚持，就代表那一边已经放弃。"><a href="#现在我也年轻-但是我说-可是你那么坚持，就代表那一边已经放弃。" class="headerlink" title="现在我也年轻  但是我说 可是你那么坚持，就代表那一边已经放弃。"></a>现在我也年轻  但是我说 可是你那么坚持，就代表那一边已经放弃。</h3><h3 id="人为什么突然的来又突然的走"><a href="#人为什么突然的来又突然的走" class="headerlink" title="人为什么突然的来又突然的走"></a>人为什么突然的来又突然的走</h3><h3 id="她想好了才会来-她想清了才会走"><a href="#她想好了才会来-她想清了才会走" class="headerlink" title="她想好了才会来  她想清了才会走"></a>她想好了才会来  她想清了才会走</h3><br/>  <h3 id="夏天要到了"><a href="#夏天要到了" class="headerlink" title="夏天要到了"></a>夏天要到了</h3><h3 id="到时候我穿衬衫，你滴穿花衬衫"><a href="#到时候我穿衬衫，你滴穿花衬衫" class="headerlink" title="到时候我穿衬衫，你滴穿花衬衫"></a>到时候我穿衬衫，你滴穿花衬衫</h3><h3 id="哟西…"><a href="#哟西…" class="headerlink" title="哟西…"></a>哟西…</h3><br/> <br/> <br/> <h3 id="累了，拙笔。没喝枸杞，在喝茶。在看着窗外。在听《富士山下》。"><a href="#累了，拙笔。没喝枸杞，在喝茶。在看着窗外。在听《富士山下》。" class="headerlink" title="累了，拙笔。没喝枸杞，在喝茶。在看着窗外。在听《富士山下》。"></a>累了，拙笔。没喝枸杞，在喝茶。在看着窗外。在听《富士山下》。</h3><h3 id="不知道你能不能看到，但是，我还是想送你一首《葡萄成熟时》，以后为何为好事泪流，希望你是因为幸福"><a href="#不知道你能不能看到，但是，我还是想送你一首《葡萄成熟时》，以后为何为好事泪流，希望你是因为幸福" class="headerlink" title="不知道你能不能看到，但是，我还是想送你一首《葡萄成熟时》，以后为何为好事泪流，希望你是因为幸福"></a>不知道你能不能看到，但是，我还是想送你一首《葡萄成熟时》，以后为何为好事泪流，希望你是因为幸福</h3><h3 id="当然如果你到时候来找我了，我是不会开门的。"><a href="#当然如果你到时候来找我了，我是不会开门的。" class="headerlink" title="当然如果你到时候来找我了，我是不会开门的。"></a>当然如果你到时候来找我了，我是不会开门的。</h3><h3 id="如果你还要微信骂我说写的个TM的什么玩意，牛头不对马嘴的，我也是不怕的。"><a href="#如果你还要微信骂我说写的个TM的什么玩意，牛头不对马嘴的，我也是不怕的。" class="headerlink" title="如果你还要微信骂我说写的个TM的什么玩意，牛头不对马嘴的，我也是不怕的。"></a>如果你还要微信骂我说写的个TM的什么玩意，牛头不对马嘴的，我也是不怕的。</h3><h3 id="说好的要写自传-是需要真实的-我什么都说了，我也什么都没说"><a href="#说好的要写自传-是需要真实的-我什么都说了，我也什么都没说" class="headerlink" title="说好的要写自传 是需要真实的 我什么都说了，我也什么都没说"></a>说好的要写自传 是需要真实的 我什么都说了，我也什么都没说</h3><h3 id="但是面子还是给的"><a href="#但是面子还是给的" class="headerlink" title="但是面子还是给的"></a>但是面子还是给的</h3><h3 id="下次我就不随意发挥了，我先排好版。那时候大概人类已经无法阻挡我了"><a href="#下次我就不随意发挥了，我先排好版。那时候大概人类已经无法阻挡我了" class="headerlink" title="下次我就不随意发挥了，我先排好版。那时候大概人类已经无法阻挡我了"></a>下次我就不随意发挥了，我先排好版。那时候大概人类已经无法阻挡我了</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171827415.webp"/><br/> <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171827803.webp"/><br/> <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171826493.webp"/>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="maojunzc" scheme="http://example.com/categories/maojunzc/"/>
-    
-    
-    <category term="maojunzc" scheme="http://example.com/tags/maojunzc/"/>
     
   </entry>
   
