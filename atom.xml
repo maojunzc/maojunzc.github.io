@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-21T09:58:56.559Z</updated>
+  <updated>2023-02-22T07:15:42.687Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>超酷黑色风格个人引导页源码</title>
+    <link href="http://example.com/2023/02/22/%E8%B6%85%E9%85%B7%E9%BB%91%E8%89%B2%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%BC%95%E5%AF%BC%E9%A1%B5%E6%BA%90%E7%A0%81/"/>
+    <id>http://example.com/2023/02/22/%E8%B6%85%E9%85%B7%E9%BB%91%E8%89%B2%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%BC%95%E5%AF%BC%E9%A1%B5%E6%BA%90%E7%A0%81/</id>
+    <published>2023-02-22T07:14:28.000Z</published>
+    <updated>2023-02-22T07:15:42.687Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一款酷黑风个人主页+引导页源码，修改index.html文件里面文字即可，需要修改的地方均在index.html内有注释。</p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302221513588.png"/><h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iXjOU0oarxmh">蓝奏网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
+    
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XL软件库App源码+后端源码</title>
+    <link href="http://example.com/2023/02/22/XL%E8%BD%AF%E4%BB%B6%E5%BA%93App%E6%BA%90%E7%A0%81-%E5%90%8E%E7%AB%AF%E6%BA%90%E7%A0%81/"/>
+    <id>http://example.com/2023/02/22/XL%E8%BD%AF%E4%BB%B6%E5%BA%93App%E6%BA%90%E7%A0%81-%E5%90%8E%E7%AB%AF%E6%BA%90%E7%A0%81/</id>
+    <published>2023-02-22T07:05:17.000Z</published>
+    <updated>2023-02-22T07:07:31.885Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>多功能软件库，支持自定义对接易支付</p><h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>先导入sql数据库，然后修改config.php 里边填数据库信息</p><p>再倒入app源码到iapp，打开源码main.iyu载入界面，修改对接网址即可</p><p>后台地址 /admin  账号linyun 密码linyun666..0 或者是admin 123456</p><h3 id="源码下载链接-https-qmywl-lanzout-com-iH6yv0o6kw1e"><a href="#源码下载链接-https-qmywl-lanzout-com-iH6yv0o6kw1e" class="headerlink" title="源码下载链接 https://qmywl.lanzout.com/iH6yv0o6kw1e"></a>源码下载链接 <a href="https://qmywl.lanzout.com/iH6yv0o6kw1e">https://qmywl.lanzout.com/iH6yv0o6kw1e</a></h3><h3 id="备用：https-wwqh-lanzouw-com-iXjOU0oarxmh"><a href="#备用：https-wwqh-lanzouw-com-iXjOU0oarxmh" class="headerlink" title="备用：https://wwqh.lanzouw.com/iXjOU0oarxmh"></a>备用：<a href="https://wwqh.lanzouw.com/iXjOU0oarxmh">https://wwqh.lanzouw.com/iXjOU0oarxmh</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302221506199.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
+    
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>2023.2.21</title>
@@ -445,54 +493,6 @@
     
     
     <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>justnews2023最新免受权可用版</title>
-    <link href="http://example.com/2023/02/20/justnews2023%E6%9C%80%E6%96%B0%E5%85%8D%E5%8F%97%E6%9D%83%E5%8F%AF%E7%94%A8%E7%89%88/"/>
-    <id>http://example.com/2023/02/20/justnews2023%E6%9C%80%E6%96%B0%E5%85%8D%E5%8F%97%E6%9D%83%E5%8F%AF%E7%94%A8%E7%89%88/</id>
-    <published>2023-02-20T01:44:39.000Z</published>
-    <updated>2023-02-20T01:46:01.781Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="justnews2023最新免受权可用版"><a href="#justnews2023最新免受权可用版" class="headerlink" title="justnews2023最新免受权可用版"></a>justnews2023最新免受权可用版</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302200945284.png"/><h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a><a href="https://wwqh.lanzouw.com/ikaBe0o31s0h">下载软件</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
-    
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>语音合成助手 一款强大的配音神器</title>
-    <link href="http://example.com/2023/02/20/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E5%8A%A9%E6%89%8B-%E4%B8%80%E6%AC%BE%E5%BC%BA%E5%A4%A7%E7%9A%84%E9%85%8D%E9%9F%B3%E7%A5%9E%E5%99%A8/"/>
-    <id>http://example.com/2023/02/20/%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E5%8A%A9%E6%89%8B-%E4%B8%80%E6%AC%BE%E5%BC%BA%E5%A4%A7%E7%9A%84%E9%85%8D%E9%9F%B3%E7%A5%9E%E5%99%A8/</id>
-    <published>2023-02-20T01:37:46.000Z</published>
-    <updated>2023-02-20T01:40:15.457Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一款专业文字转换成语音的配音软件，适用于商场店铺广告促销配音、地摊叫卖录音制作、英语听力音频制作、有声朗读等多种场景语音合成必备，专业文字转语音一键合成，满足您的多种需求，已解锁永久SVIP </p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302200938262.png"/><h3 id="下载软件：https-wwqh-lanzouw-com-i7a3F0o316za-密码-7j70"><a href="#下载软件：https-wwqh-lanzouw-com-i7a3F0o316za-密码-7j70" class="headerlink" title="下载软件：https://wwqh.lanzouw.com/i7a3F0o316za   密码:7j70"></a>下载软件：<a href="https://wwqh.lanzouw.com/i7a3F0o316za">https://wwqh.lanzouw.com/i7a3F0o316za</a>   密码:7j70</h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
