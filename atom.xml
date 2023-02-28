@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-27T03:03:43.134Z</updated>
+  <updated>2023-02-27T03:09:07.170Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>菜鸟AI开发入门：AidLux将旧手机变开发服务器</title>
+    <link href="http://example.com/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://example.com/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2023-02-27T03:07:25.000Z</published>
+    <updated>2023-02-27T03:09:07.170Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="AidLux是什么"><a href="#AidLux是什么" class="headerlink" title="AidLux是什么"></a>AidLux是什么</h3><p>AidLux是一个基于安卓手机环境的AI应用开发和部署平台，为开发者带来强大、简单、无限创意可能的奇妙体验！</p><p>使用安卓手机的安装方式：打开手机应用商店搜索AidLux</p><h3 id="下载方式：https-community-aidlux-com-aidluxdownload"><a href="#下载方式：https-community-aidlux-com-aidluxdownload" class="headerlink" title="下载方式：https://community.aidlux.com/aidluxdownload"></a>下载方式：<a href="https://community.aidlux.com/aidluxdownload">https://community.aidlux.com/aidluxdownload</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271107391.png"/><p>AidLux强大的功能（搬运工）</p><p>1、一部设备同时运行两个系统环境，既是一部Android设备，同时也是一部Linux设备。两个生态的资源优势可同时被加以利用；</p><p>2、集成主流AI框架（caffe、mxnet、keras、pytorch、tensorflow、ncnn、MindSpore、PaddlePaddle、TNN、opencv），无需配置，直接使用；</p><p>3、海量的AI案例，人脸识别、人脸关键点识别、肢体识别、手势识别、头发识别、物体分类、物体跟踪、3D检测-、身体交换、换脸、人体抠图等。</p><p>4、内置创新性的CPU+GPU+NPU智能加速技术，通过“硬件+框架+Op”多层优化，赋予深度学习运算性能的大幅度提升。并且提供统一API接口，在方便开发者调用的同时，还支持不同AI框架模型自动转换；</p><p>5、支持多种开发语言：C/C++，Python，Java，JavaScript，Ruby，PHP，Go，Shell等；</p><p>6、支持多种开发工具：AidCode，Wizard，VSCode，Jupyter notebook，pycharm，积木编程(青少年)；</p><p>7、扩展性好：内置了极简的外设极速互连模块，通过USB和网络等方式控制Arduino、机械臂、高清摄像机、深度相机等；</p><p>8、丰富的Linux软件：Git，MySql，Hadoop，Nginx，Apache，Vim，SSH，ROS，PCL点云，Eigen，Home Assistant和g2o等多种工具。</p><p>AidLux初体验</p><p>通过电脑网页端连接服务器端，然后开始体验。<br>官方文档：<a href="https://docs.aidlux.com/">https://docs.aidlux.com/</a></p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108575.png"/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108415.png"/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108500.png"/>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>VideoProc v5.4终身许可赠品版</title>
@@ -456,30 +476,6 @@
     <updated>2023-02-20T02:29:14.679Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>听下app是一款安卓音乐下载应用，聚合各大音乐平台网站搜索接口，免费在线试听及下载全网付费歌曲、版权音乐、无损音质歌曲。应用UI界面采用插画设计，简约清新，全网音乐免费下载320kps/无损FLAC音质。</p><h3 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201026913.png"/><h3 id="实时更新直达"><a href="#实时更新直达" class="headerlink" title="实时更新直达"></a><a href="https://bgg.lanzout.com/b02bjj8pa">实时更新直达</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="影音娱乐" scheme="http://example.com/categories/%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90/"/>
-    
-    
-    <category term="影音娱乐" scheme="http://example.com/tags/%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安卓紫电视频v1.4.0绿化版</title>
-    <link href="http://example.com/2023/02/20/%E5%AE%89%E5%8D%93%E7%B4%AB%E7%94%B5%E8%A7%86%E9%A2%91v1-4-0%E7%BB%BF%E5%8C%96%E7%89%88/"/>
-    <id>http://example.com/2023/02/20/%E5%AE%89%E5%8D%93%E7%B4%AB%E7%94%B5%E8%A7%86%E9%A2%91v1-4-0%E7%BB%BF%E5%8C%96%E7%89%88/</id>
-    <published>2023-02-20T02:22:54.000Z</published>
-    <updated>2023-02-20T02:25:16.129Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="安卓紫电视频v1-4-0绿化版"><a href="#安卓紫电视频v1-4-0绿化版" class="headerlink" title="安卓紫电视频v1.4.0绿化版"></a>安卓紫电视频v1.4.0绿化版</h3><h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>紫电视频APP最新版是一款免费安卓影视软件,全网热门影视资源同步更新,排行榜汇集当下热播影视,提供片库和专题筛选,免费观看院线大片等付费影视的高清视频,紫电视频安卓版支持上传视频,弹幕/倍速播放/TV投屏.</p><h3 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201023978.png"/><h3 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h3><p>  by 黑鹰 耗子</p><p>去启动开屏广告，无引流纯净版</p><p>免登陆，破解永久VIP免广告特权</p><p>免观看激励视频广告, 全站无广告</p><h3 id="下载软件"><a href="#下载软件" class="headerlink" title="下载软件"></a><a href="https://wwqh.lanzouw.com/iIXhr0o33xaj">下载软件</a></h3><h3 id="密码-evm1"><a href="#密码-evm1" class="headerlink" title="密码:evm1"></a>密码:evm1</h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
