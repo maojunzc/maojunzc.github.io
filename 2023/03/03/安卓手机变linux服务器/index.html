@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.2k</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">6 min</span>
         </span>
     </span>
 </div>
@@ -128,7 +128,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//一行一行输入</span><br><span class="line">pkg install proot git python -y</span><br><span class="line">git clone https://github.com/sqlsec/termux-install-linux</span><br><span class="line">cd termux-install-linux</span><br><span class="line">python termux-linux-install.py</span><br></pre></td></tr></table></figure>
 <h1 id="根据自身需求选择系统安装；"><a href="#根据自身需求选择系统安装；" class="headerlink" title="根据自身需求选择系统安装；"></a>根据自身需求选择系统安装；</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303030954158.png"/>
 
-<h1 id="以上为kali简版本；后文附kali完成版安装"><a href="#以上为kali简版本；后文附kali完成版安装" class="headerlink" title="以上为kali简版本；后文附kali完成版安装"></a>以上为kali简版本；后文附kali完成版安装</h1><h1 id="kKali-Linux-完整系统安装说明"><a href="#kKali-Linux-完整系统安装说明" class="headerlink" title="kKali Linux 完整系统安装说明"></a>kKali Linux 完整系统安装说明</h1><p>1、更新升级Termux软件包</p>
+<h1 id="以上为kali简版本；后文附kali完成版安装"><a href="#以上为kali简版本；后文附kali完成版安装" class="headerlink" title="以上为kali简版本；后文附kali完成版安装"></a>以上为kali简版本；后文附kali完成版安装</h1><h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Termux-Linux/CentOS</span><br><span class="line">./start-centos.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="建议安装宝塔界面，博客前面有免费版企业宝塔介绍"><a href="#建议安装宝塔界面，博客前面有免费版企业宝塔介绍" class="headerlink" title="建议安装宝塔界面，博客前面有免费版企业宝塔介绍"></a>建议安装宝塔界面，博客前面有免费版企业宝塔介绍</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh https://cdn.0o8.cn/install/install_6.0.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="kKali-Linux-完整系统安装说明"><a href="#kKali-Linux-完整系统安装说明" class="headerlink" title="kKali Linux 完整系统安装说明"></a>kKali Linux 完整系统安装说明</h1><p>1、更新升级Termux软件包</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg update</span><br><span class="line">pkg upgrade</span><br></pre></td></tr></table></figure>
 
 <p>2、安装Git<br>我们要借用地球一枝花的开源安装版本来自动安装kali minimum最小化版本，所以安装Git工具是必须的。不费话，往下走：</p>
@@ -151,6 +156,16 @@
 <h2 id="Tools-工具"><a href="#Tools-工具" class="headerlink" title="Tools 工具"></a>Tools 工具</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">kali-tools-gpu: Tools which benefit from having access to GPU hardware 访问GPU硬件资源工具</span><br><span class="line">kali-tools-hardware: Hardware hacking tools 硬件hack工具</span><br><span class="line">kali-tools-crypto-stego: Tools based around Cryptography &amp; Steganography 加密工具</span><br><span class="line">kali-tools-fuzzing: For fuzzing protocols fuzzing协议工具</span><br><span class="line">kali-tools-802-11: 802.11 (Commonly known as “Wi-Fi”) 无线协议工具</span><br><span class="line">kali-tools-bluetooth: For targeting Bluetooth devices 蓝牙设备</span><br><span class="line">kali-tools-rfid: Radio-Frequency IDentification tools 无线射频</span><br><span class="line">kali-tools-sdr: Software-Defined Radio tools 软件定义无线工具</span><br><span class="line">kali-tools-voip: Voice over IP tools IP语音工具</span><br><span class="line">kali-tools-windows-resources: Any resources which can be executed on a Windows hosts 窗口资源</span><br><span class="line">kali-linux-labs: Environments for learning and practising on 实验室环境测试</span><br></pre></td></tr></table></figure>
 <h2 id="Menu菜单-https-www-kali-org-docs-general-use-metapackages-menu"><a href="#Menu菜单-https-www-kali-org-docs-general-use-metapackages-menu" class="headerlink" title="Menu菜单(https://www.kali.org/docs/general-use/metapackages/#menu)"></a>Menu菜单(<a target="_blank" rel="noopener" href="https://www.kali.org/docs/general-use/metapackages/#menu">https://www.kali.org/docs/general-use/metapackages/#menu</a>)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">kali-tools-information-gathering: Used for Open Source Intelligence (OSINT) &amp; information gathering 信息收集</span><br><span class="line">kali-tools-vulnerability: Vulnerability assessments tools 漏洞扫描</span><br><span class="line">kali-tools-web: Designed doing web applications attacks web攻击</span><br><span class="line">kali-tools-database: Based around any database attacks 数据库攻击</span><br><span class="line">kali-tools-passwords: Helpful for password cracking attacks – Online &amp; offline 在线/离线密码攻击</span><br><span class="line">kali-tools-wireless: All tools based around Wireless protocols – 802.11, Bluetooth, RFID &amp; SDR 无线协议攻击</span><br><span class="line">kali-tools-reverse-engineering: For reverse engineering binaries 逆向工程</span><br><span class="line">kali-tools-exploitation: Commonly used for doing exploitation 漏洞发现</span><br><span class="line">kali-tools-social-engineering: Aimed for doing social engineering techniques 社会化工程</span><br><span class="line">kali-tools-sniffing-spoofing: Any tools meant for sniffing &amp; spoofing 嗅探工具</span><br><span class="line">kali-tools-post-exploitation: Techniques for post exploitation stage 漏洞工具</span><br><span class="line">kali-tools-forensics: Forensic tools – Live &amp; Offline 取证工具</span><br><span class="line">kali-tools-reporting: Reporting tools 报告工具</span><br></pre></td></tr></table></figure>
 <h2 id="Others-其他"><a href="#Others-其他" class="headerlink" title="Others 其他"></a>Others 其他</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kali-linux-large: Our previous default tools for amd64/i386 images amd64/i386默认工具集</span><br><span class="line">kali-linux-everything: Every metapackage and tool listed here 所有元数据和列出的工具</span><br><span class="line">kali-desktop-live: Used during a live session when booted from the image live启动盘</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2020/04/termuxlinux.html">转载CSDN文章1</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012525063/article/details/127343215">转载CSDN文章2</a></p>
+<br/> 
+<br/> 
+<br/> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -233,6 +248,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2023/03/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BD%ACapp%E6%95%99%E7%A8%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            微信小程序转app教程
+          
+        </div>
+      </a>
     
     
       <a href="/2023/03/01/QQ%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9C%A8%E7%BA%BF%E6%9C%BA%E5%9E%8B%E4%BF%AE%E6%94%B9%E5%8D%A1%E5%AF%86%E7%89%88%E6%9C%AC%E6%97%A0%E9%9C%80SVIP/" class="article-nav-link">
