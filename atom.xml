@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-06T02:53:42.240Z</updated>
+  <updated>2023-03-06T03:45:10.430Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床</title>
+    <link href="http://example.com/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"/>
+    <id>http://example.com/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</id>
+    <published>2023-03-06T03:37:00.000Z</published>
+    <updated>2023-03-06T03:45:10.430Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常写Markdown或者博客的同学，肯定都要用到图床。图床是什么呢？其实相当于一个存储图片的网站，类似百度云这样，不过上传图片到图床后可以直接通过外链进行访问。</p><p>比如把本地一张a.jpg上传到图床后，便可以拿到一个链接：</p><p><a href="https://www.xxx.com/img/a.jpg">https://www.xxx.com/img/a.jpg</a></p><p>然后点击这个链接就可以访问图片a了。今天来聊聊怎么搭建可靠的图床吧~</p><p>为什么会产生这个需求呢？因为小编经常写博文什么的，现在的做法是在简书上上传图片，然后把生成的图片链接放到Markdown文档上面，写好文档以后就可以批量复制到各大博客平台投稿了。</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061137456.png"/><p>但是这样有个隐患：万一简书哪天挂掉了，那么我放到csdn、cnbolgs等这些平台的文章图片都会挂掉。即使简书一直维持现状，但万一哪天它不高兴了，做了个外链防盗（图片外链只能在本站显示），那同样会遇到上面的问题。</p><p>比如小编之前放在简书上的文章，复制到csdn上后。不知道怎么回事：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061138846.png"/><p>说多了都是泪。因此，趁早做好准备，免得以后出现问题就麻烦了。毕竟有些博客的图片只是随手一截，还真找不到备份……</p><h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h1 id="1-Github"><a href="#1-Github" class="headerlink" title="1.Github"></a>1.Github</h1><h1 id="2-picgo"><a href="#2-picgo" class="headerlink" title="2.picgo"></a>2.picgo</h1><h1 id="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"><a href="#之前有介绍过一篇如何让搭建gitub仓库及picgo的使用" class="headerlink" title="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"></a>之前有介绍过一篇如何让搭建gitub仓库及picgo的使用</h1><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h2 id="1-创建Repository"><a href="#1-创建Repository" class="headerlink" title="1. 创建Repository"></a>1. 创建Repository</h2><p>鼠标移动到右上角，点击”New repository”按钮：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061140559.png"/></p><p>填写相关信息，创建一个存储图片的仓库：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141996.png"/><h2 id="2-配置token-key"><a href="#2-配置token-key" class="headerlink" title="2. 配置token key"></a>2. 配置token key</h2><p>生成一个Token用于操作GitHub repository。回到主页，点击”Settings”按钮：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141405.png"/><p>进入页面后，点击”Developer settings”按钮<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142014.png"/></p><p>点击”Personal access tokens”按钮，然后点击Generate token：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142644.png"/><p>填写描述，选择”repo”权限，然后拉到下面点击”Generate token”按钮</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142968.png"/><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：创建成功后，会生成一串token，这串token之后不会再显示，所以第一次看到的时候，可以用个小本本保存起来哦，忘记了只有重新生成，每次都不一样。</span><br></pre></td></tr></table></figure><h2 id="Picgo配置"><a href="#Picgo配置" class="headerlink" title="Picgo配置"></a>Picgo配置</h2><p>拿到了刚刚记录了GitHub token后，打开picgo，按照如下设置即可：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061143122.png"/></p><p>设定仓库名按照“账户名/仓库名的格式填写”，比如我的是：maojunzc/maojunzc。</p><p>分支名统一填写“master”。</p><p>设定Token将之前的Token粘贴在这里。</p><p>指定存储路径留空。</p><p>自定义域名的作用是在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上。默认留空也可以正常使用。这里为了使用CDN加快图片的访问速度，</p><h3 id="自定义域名我们按照这样去填写："><a href="#自定义域名我们按照这样去填写：" class="headerlink" title="自定义域名我们按照这样去填写："></a>自定义域名我们按照这样去填写：</h3><h3 id="cdn-jsdelivr-net-gh-GitHub用户名-仓库名"><a href="#cdn-jsdelivr-net-gh-GitHub用户名-仓库名" class="headerlink" title="://cdn.jsdelivr.net/gh/GitHub用户名/仓库名"></a>://cdn.jsdelivr.net/gh/GitHub用户名/仓库名</h3><p>比如我的是：<a href="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc">https://cdn.jsdelivr.net/gh/maojunzc/maojunzc</a><br>点击确定后就配置完成了，我们截图后点击剪切板图片上传，如果上传成功，拿到的外链放到Markdown中正常访问，就OK啦。</p><p>当然快捷上传的快捷键也可以到设置中进行配置。可以看到GitHub仓库中多了很多我们上传的图片。</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061145683.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网页chatgpt 最新模型 可自定义api</title>
+    <link href="http://example.com/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/"/>
+    <id>http://example.com/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/</id>
+    <published>2023-03-06T03:18:19.000Z</published>
+    <updated>2023-03-06T03:21:27.154Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最新网页版chatgpt 支持自定义api</p><p>国内服务器，虚拟主机都支持搭建</p><p>chatgpt 最新模型 </p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061118260.png"/><p>自定义api入口：域名/adminkey.php</p><p>直接把源码放到根目录即可运行</p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061119841.png"/><h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iygzw0pdrkyf">蓝奏网盘</a></h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="ChatGPT" scheme="http://example.com/categories/ChatGPT/"/>
+    
+    
+    <category term="ChatGPT" scheme="http://example.com/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlogHelper v1.0.30：一键发布本地文章到主流博客平台</title>
+    <link href="http://example.com/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://example.com/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</id>
+    <published>2023-03-06T03:15:32.000Z</published>
+    <updated>2023-03-06T03:16:32.727Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>BlogHelper 是一个没有界面，只存放在系统托盘中的应用，它的目的是帮助人们更方便地发布文章。</p><p>该软件具有以下功能：</p><ul><li>一键发布本地文章到知乎、简书、博客园、CSDN、掘金、SegmentFault (思否)、开源中国等博客平台。</li><li>支持多种图床，包括新浪、SM.MS、Github、Imgur、七牛云、腾讯云、阿里云、又拍云。</li></ul><p>开源地址：<a href="https://github.com/onblog/BlogHelper">https://github.com/onblog/BlogHelper</a></p><p>Windows 下载链接：<a href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.exe<br>Mac 下载链接：<a href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.dmg</p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061116768.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="PC软件" scheme="http://example.com/categories/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="PC软件" scheme="http://example.com/tags/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>在线检测网速流量HTML单页源码</title>
@@ -417,78 +489,6 @@
     
     
     <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>超酷黑色风格个人引导页源码</title>
-    <link href="http://example.com/2023/02/22/%E8%B6%85%E9%85%B7%E9%BB%91%E8%89%B2%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%BC%95%E5%AF%BC%E9%A1%B5%E6%BA%90%E7%A0%81/"/>
-    <id>http://example.com/2023/02/22/%E8%B6%85%E9%85%B7%E9%BB%91%E8%89%B2%E9%A3%8E%E6%A0%BC%E4%B8%AA%E4%BA%BA%E5%BC%95%E5%AF%BC%E9%A1%B5%E6%BA%90%E7%A0%81/</id>
-    <published>2023-02-22T07:14:28.000Z</published>
-    <updated>2023-02-22T07:15:42.687Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一款酷黑风个人主页+引导页源码，修改index.html文件里面文字即可，需要修改的地方均在index.html内有注释。</p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302221513588.png"/><h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iXjOU0oarxmh">蓝奏网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
-    
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XL软件库App源码+后端源码</title>
-    <link href="http://example.com/2023/02/22/XL%E8%BD%AF%E4%BB%B6%E5%BA%93App%E6%BA%90%E7%A0%81-%E5%90%8E%E7%AB%AF%E6%BA%90%E7%A0%81/"/>
-    <id>http://example.com/2023/02/22/XL%E8%BD%AF%E4%BB%B6%E5%BA%93App%E6%BA%90%E7%A0%81-%E5%90%8E%E7%AB%AF%E6%BA%90%E7%A0%81/</id>
-    <published>2023-02-22T07:05:17.000Z</published>
-    <updated>2023-02-22T07:07:31.885Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>多功能软件库，支持自定义对接易支付</p><h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>先导入sql数据库，然后修改config.php 里边填数据库信息</p><p>再倒入app源码到iapp，打开源码main.iyu载入界面，修改对接网址即可</p><p>后台地址 /admin  账号linyun 密码linyun666..0 或者是admin 123456</p><h3 id="源码下载链接-https-qmywl-lanzout-com-iH6yv0o6kw1e"><a href="#源码下载链接-https-qmywl-lanzout-com-iH6yv0o6kw1e" class="headerlink" title="源码下载链接 https://qmywl.lanzout.com/iH6yv0o6kw1e"></a>源码下载链接 <a href="https://qmywl.lanzout.com/iH6yv0o6kw1e">https://qmywl.lanzout.com/iH6yv0o6kw1e</a></h3><h3 id="备用：https-wwqh-lanzouw-com-iXjOU0oarxmh"><a href="#备用：https-wwqh-lanzouw-com-iXjOU0oarxmh" class="headerlink" title="备用：https://wwqh.lanzouw.com/iXjOU0oarxmh"></a>备用：<a href="https://wwqh.lanzouw.com/iXjOU0oarxmh">https://wwqh.lanzouw.com/iXjOU0oarxmh</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302221506199.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
-    
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023.2.21</title>
-    <link href="http://example.com/2023/02/21/2023-2-21/"/>
-    <id>http://example.com/2023/02/21/2023-2-21/</id>
-    <published>2023-02-21T09:48:51.000Z</published>
-    <updated>2023-02-21T09:58:56.559Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=30284674&auto=1&height=66"></iframe><br/> <br/> <br/> <p>坐久了，就需要出去走一走</p><br/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302211756177.jpg"/><br/> <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302211757698.jpg"/><br/> <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302211757464.jpg"/><br/> <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302211757400.jpg"/>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="maojunzc" scheme="http://example.com/categories/maojunzc/"/>
-    
-    
-    <category term="maojunzc" scheme="http://example.com/tags/maojunzc/"/>
     
   </entry>
   
