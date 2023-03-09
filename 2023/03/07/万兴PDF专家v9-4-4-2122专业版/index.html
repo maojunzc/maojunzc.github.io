@@ -126,7 +126,7 @@
 <p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p>
 <p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p>
 <p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p>
-<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#74;&#x6f;&#110;&#x67;&#x61;&#110;&#x40;&#80;&#89;&#x47;&#x2e;&#x54;&#101;&#x61;&#109;">&#74;&#x6f;&#110;&#x67;&#x61;&#110;&#x40;&#80;&#89;&#x47;&#x2e;&#x54;&#101;&#x61;&#109;</a></p>
+<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#x6f;&#110;&#x67;&#97;&#x6e;&#64;&#80;&#89;&#71;&#x2e;&#84;&#x65;&#97;&#x6d;">&#x4a;&#x6f;&#110;&#x67;&#97;&#x6e;&#64;&#80;&#89;&#71;&#x2e;&#84;&#x65;&#97;&#x6d;</a></p>
 <ul>
 <li><p>目前全球独家破解万兴PDF8.0版本跟进</p>
 </li>
@@ -422,7 +422,37 @@
     </ul>
   </div>
 </footer>
-               
+
+
+            <center>
+                网站已运行:<span id="run_time" style="color:black"></span>
+            </center>
+
+            <script>
+                function runTime() {
+                    var d = new Date(), str = '';
+                    BirthDay = new Date("February 15,2023");
+                    today = new Date();
+                    timeold = (today.getTime() - BirthDay.getTime());
+                    sectimeold = timeold / 1000
+                    secondsold = Math.floor(sectimeold);
+                    msPerDay = 24 * 60 * 60 * 1000
+                    msPerYear = 365 * 24 * 60 * 60 * 1000
+                    e_daysold = timeold / msPerDay
+                    e_yearsold = timeold / msPerYear
+                    daysold = Math.floor(e_daysold);
+                    yearsold = Math.floor(e_yearsold);
+                    //str = yearsold + "年";
+                    str += daysold + "天";
+                    str += d.getHours() + '时';
+                    str += d.getMinutes() + '分';
+                    str += d.getSeconds() + '秒';
+                    return str;
+                }
+                setInterval(function () { $('#run_time').html(runTime()) }, 1000);
+            </script>
+
+    
     </main>
     <div class="float_btns">
       <div class="totop" id="totop">
