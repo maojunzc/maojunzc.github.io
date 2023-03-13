@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-09T03:43:06.046Z</updated>
+  <updated>2023-03-13T02:16:08.599Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动任务v1.0 --- 支持解锁手机, 启动软件, 点击自定义坐标, 滑动屏幕</title>
+    <link href="http://example.com/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/"/>
+    <id>http://example.com/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/</id>
+    <published>2023-03-13T02:14:11.000Z</published>
+    <updated>2023-03-13T02:16:08.599Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法"><a href="#声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法" class="headerlink" title="声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法."></a>声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法.</h2><p>软件名称: 自动任务v1.0<br>用途:  自动执行一些繁琐的任务,  例如: 打卡, 签到.<br>验证手机:  RedMi K30 Ultra<br>手机系统:  安卓12, MIUI13<br>软件界面:<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303131014200.png"/></p><p>软件界面十分简洁, 大概讲讲吧,</p><p>启动时间<br>        意思: 到达这个时间, 将会解锁手机, 并运行相关指令,  如果将时间改为666,  那么就会在每次启动软件的10秒后, 自动执行指令.</p><p>支持的指令如下:</p><ol><li><p>等待时间</p><pre><code> 格式:   等待时间,5000; 意思:  执行完一个指令后, 需要等一段时间再执行下一个指令, 就用到这个了, 特别是启动软件后,  需要等的时间比较长，时间单位为毫秒.</code></pre></li><li><p>点击坐标</p><pre><code> 格式: 点击坐标,100,100; 意思:  点击屏幕的坐标为100,100</code></pre></li><li><p>滑动屏幕</p><pre><code> 格式:  滑动屏幕,500,1800,500,200; 意思:  从屏幕坐标500,1800滑动到屏幕坐标500,200; 一个上滑的动作.</code></pre></li><li><p>点击文本</p><pre><code> 格式:  点击文本,签到; 意思:  打开的软件界面有签到两个字, 但我不想用坐标点击, 那么就可以用点击文本的方式了, 但是AutoJs.Pro已经禁止识别部分软件的控件了, 所以这个不是100%有效.</code></pre></li><li><p>输入文本</p><pre><code> 格式:  输入文本,吾爱破解论坛; 意思: 点击了一个输入框后, 然后在那个输入框输入吾爱破解论坛.</code></pre></li><li><p>返回桌面; 最近任务; 返回键</p><pre><code> 意思:  模拟按下手机的这些按键.</code></pre></li><li><p>退出软件</p><pre><code> 意思: 执行完指令后, 软件不再使用了, 就可以用退出软件这个指令.</code></pre></li></ol><p>注意事项:<br>        软件需要开启无障碍服务,  用于手机解锁和操作指令.<br>        软件注意后台保活, 方法自行网上搜索.<br>        界面中用到的符号都是英文标点符号, 请勿用错.<br>        如有问题可以点击软件界面中 吾爱破解论坛的网址查看日志.</p><p>如果该软件对你有帮助,  请给免费评分鼓励一下,   谢谢大家.</p><p>下载地址:<a href="https://wwtr.lanzoue.com/b03vx7y7g">https://wwtr.lanzoue.com/b03vx7y7g</a><br>密码:52pj</p><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>学校人员统计系统源码调查问卷表</title>
@@ -140,7 +164,7 @@
     <published>2023-03-07T07:37:24.000Z</published>
     <updated>2023-03-07T07:39:32.455Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>万兴PDF专家是一款国产PDF全套解决方案专家，专注于PDF的创建、编辑、转换、标注、保护、管理、水印、压缩、签名等功能。这款强大的专业PDF编辑软件，以简约风格及强大的功能在国外名声大噪，除了传统的阅读、编辑、注释等功能外，它还提供了表单填写、数据提取、格式转换等强大功能。Wondershare PDFelement，全能型数字文档处理工具，PDF文档的全方位解决方案，除OCR功能外，还具有PDF创建，编辑PDF，PDF表单，PDF安全与分享等功能。您可以编辑PDF文件，图像和页面，签署数字签名和注释PDF，将PDF转换成Word或各种类型文件，如Word、Excel、PPT、EPUB、HTML、Text、RTF等多种格式。</p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537283.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537397.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071534805.png"/><h1 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h1><p>  PDF阅读器 + PDF创建器 + PDF编辑器 + PDF转换器 + OCR识别工具</p><p>支持PDF文档或PDF扫描件转换为RTF/Word/Excel/PPT/EPUB/HTML/Text/图片等常用格式</p><p>无损转换PDF文档，转换的PDF文件还原程度高，号称能够最大程度的保留原有是布局不改变</p><p>表单处理功能：可一键识别表单填写区域，支持数据识别，生成表格文档，批量处理PDF表单</p><p>数据提取功能：表单归档和数据录入，自动识别可填写表单域，无需转换格式，即可直接填写</p><p>定义表单选项形式，比如：文本字段，复选框，单选按钮，组合框，列表框，按钮或签名域</p><p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p><p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p><p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p><h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#74;&#x6f;&#110;&#x67;&#97;&#x6e;&#x40;&#80;&#x59;&#71;&#46;&#84;&#x65;&#97;&#109;">&#74;&#x6f;&#110;&#x67;&#97;&#x6e;&#x40;&#80;&#x59;&#71;&#46;&#84;&#x65;&#97;&#109;</a></p><ul><li><p>目前全球独家破解万兴PDF8.0版本跟进</p></li><li><p>破解专业版，免登陆所有付费功能可用！  </p></li></ul><h1 id="运行要求"><a href="#运行要求" class="headerlink" title="运行要求"></a>运行要求</h1><p>.NET Framwork , Windows 7 或更高版</p><h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a href="https://pan.quark.cn/s/fc1975440e56#/list/share/e99d2c3172954f40b5773d0146fc5163-8658">夸克网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>万兴PDF专家是一款国产PDF全套解决方案专家，专注于PDF的创建、编辑、转换、标注、保护、管理、水印、压缩、签名等功能。这款强大的专业PDF编辑软件，以简约风格及强大的功能在国外名声大噪，除了传统的阅读、编辑、注释等功能外，它还提供了表单填写、数据提取、格式转换等强大功能。Wondershare PDFelement，全能型数字文档处理工具，PDF文档的全方位解决方案，除OCR功能外，还具有PDF创建，编辑PDF，PDF表单，PDF安全与分享等功能。您可以编辑PDF文件，图像和页面，签署数字签名和注释PDF，将PDF转换成Word或各种类型文件，如Word、Excel、PPT、EPUB、HTML、Text、RTF等多种格式。</p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537283.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537397.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071534805.png"/><h1 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h1><p>  PDF阅读器 + PDF创建器 + PDF编辑器 + PDF转换器 + OCR识别工具</p><p>支持PDF文档或PDF扫描件转换为RTF/Word/Excel/PPT/EPUB/HTML/Text/图片等常用格式</p><p>无损转换PDF文档，转换的PDF文件还原程度高，号称能够最大程度的保留原有是布局不改变</p><p>表单处理功能：可一键识别表单填写区域，支持数据识别，生成表格文档，批量处理PDF表单</p><p>数据提取功能：表单归档和数据录入，自动识别可填写表单域，无需转换格式，即可直接填写</p><p>定义表单选项形式，比如：文本字段，复选框，单选按钮，组合框，列表框，按钮或签名域</p><p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p><p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p><p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p><h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#111;&#110;&#x67;&#x61;&#110;&#64;&#x50;&#x59;&#71;&#46;&#84;&#x65;&#97;&#x6d;">&#x4a;&#111;&#110;&#x67;&#x61;&#110;&#64;&#x50;&#x59;&#71;&#46;&#84;&#x65;&#97;&#x6d;</a></p><ul><li><p>目前全球独家破解万兴PDF8.0版本跟进</p></li><li><p>破解专业版，免登陆所有付费功能可用！  </p></li></ul><h1 id="运行要求"><a href="#运行要求" class="headerlink" title="运行要求"></a>运行要求</h1><p>.NET Framwork , Windows 7 或更高版</p><h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a href="https://pan.quark.cn/s/fc1975440e56#/list/share/e99d2c3172954f40b5773d0146fc5163-8658">夸克网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -466,26 +490,6 @@
     
     
     <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>菜鸟AI开发入门：AidLux将旧手机变开发服务器</title>
-    <link href="http://example.com/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>http://example.com/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
-    <published>2023-02-27T03:07:25.000Z</published>
-    <updated>2023-02-27T03:09:07.170Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="AidLux是什么"><a href="#AidLux是什么" class="headerlink" title="AidLux是什么"></a>AidLux是什么</h3><p>AidLux是一个基于安卓手机环境的AI应用开发和部署平台，为开发者带来强大、简单、无限创意可能的奇妙体验！</p><p>使用安卓手机的安装方式：打开手机应用商店搜索AidLux</p><h3 id="下载方式：https-community-aidlux-com-aidluxdownload"><a href="#下载方式：https-community-aidlux-com-aidluxdownload" class="headerlink" title="下载方式：https://community.aidlux.com/aidluxdownload"></a>下载方式：<a href="https://community.aidlux.com/aidluxdownload">https://community.aidlux.com/aidluxdownload</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271107391.png"/><p>AidLux强大的功能（搬运工）</p><p>1、一部设备同时运行两个系统环境，既是一部Android设备，同时也是一部Linux设备。两个生态的资源优势可同时被加以利用；</p><p>2、集成主流AI框架（caffe、mxnet、keras、pytorch、tensorflow、ncnn、MindSpore、PaddlePaddle、TNN、opencv），无需配置，直接使用；</p><p>3、海量的AI案例，人脸识别、人脸关键点识别、肢体识别、手势识别、头发识别、物体分类、物体跟踪、3D检测-、身体交换、换脸、人体抠图等。</p><p>4、内置创新性的CPU+GPU+NPU智能加速技术，通过“硬件+框架+Op”多层优化，赋予深度学习运算性能的大幅度提升。并且提供统一API接口，在方便开发者调用的同时，还支持不同AI框架模型自动转换；</p><p>5、支持多种开发语言：C/C++，Python，Java，JavaScript，Ruby，PHP，Go，Shell等；</p><p>6、支持多种开发工具：AidCode，Wizard，VSCode，Jupyter notebook，pycharm，积木编程(青少年)；</p><p>7、扩展性好：内置了极简的外设极速互连模块，通过USB和网络等方式控制Arduino、机械臂、高清摄像机、深度相机等；</p><p>8、丰富的Linux软件：Git，MySql，Hadoop，Nginx，Apache，Vim，SSH，ROS，PCL点云，Eigen，Home Assistant和g2o等多种工具。</p><p>AidLux初体验</p><p>通过电脑网页端连接服务器端，然后开始体验。<br>官方文档：<a href="https://docs.aidlux.com/">https://docs.aidlux.com/</a></p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108575.png"/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108415.png"/><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108500.png"/>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
     
   </entry>
   
