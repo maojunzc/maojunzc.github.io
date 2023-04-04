@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-03T09:57:57.617Z</updated>
+  <updated>2023-04-04T06:41:27.139Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,150 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VIP优启通EasyU v3.7.2023.0323</title>
+    <link href="http://example.com/2023/04/04/VIP%E4%BC%98%E5%90%AF%E9%80%9AEasyU-v3-7-2023-0323/"/>
+    <id>http://example.com/2023/04/04/VIP%E4%BC%98%E5%90%AF%E9%80%9AEasyU-v3-7-2023-0323/</id>
+    <published>2023-04-04T06:38:21.000Z</published>
+    <updated>2023-04-04T06:41:27.139Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>优启通（EasyU，简称EU）是IT天空打造的一款专业U盘启动盘制作工具，采用U盘三分区方案，支持BIOS（Legacy）与UEFI双启动模式，在支持主流硬件基础上，同时兼容早期多数旧硬件。整合各种装机必备工具，并结合IT天空数款自研软件，有效提高系统安装效率。U盘PE所在分区于系统下自动隐藏，PE区与数据区分别独立，便于使用者对数据的各项操作。优启通定位于一线装机技术员、系统工程师和系统维护人员。</p><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143848.png"/><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143855.png"/><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143907.png"/><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143918.png"/><h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p>2023.03.31 v3.7.2023.0323</p><p>更新 - CPU-Z 2.05</p><p>[VIP]增加 - 11PE 内核升级至 Win11 22H2 64位</p><p>[VIP]更新 - 微信 3.9.0.28</p><p>[VIP]去除 - 好压 HaoZip</p><p>2022.07.31 v3.7.2022.0620</p><p>（由于 Win11 更新安全软件，如遇到无法生成 ISO 文件，</p><p>请删掉 TOOLS 目录内的 PETOOLS_Dism.7z 文件，再生成）</p><p>更新 - DiskGenius 5.2.0.878 DOS版</p><p>更新 - WinNTSetup 5.2.4</p><p>[VIP]更新 - 微信 3.7.0.30</p><p>[VIP]更新 - 360 安全浏览器 13.1.6002.0</p><p>[VIP]更新 - PDF 阅读器 SumatraPDF 3.4.6</p><p>[VIP]去除 - Chrome 浏览器</p><h1 id="优启通简要说明"><a href="#优启通简要说明" class="headerlink" title="优启通简要说明"></a>优启通简要说明</h1><p>（1）U盘模式：一键全新制作，支持免格升级、UD/EFI分区（可选PETools/Dlc扩展包）、个性化启动菜单、模拟测试；</p><p>（2）本地模式：将PE写入当前系统盘符，可选支持BLOS/UEFI引导、可选安装PETools/Dlc扩展包</p><p>（3）生成ISO：生成PE的ISO镜像，可用于量产、虚拟机等；可选UDF格式/PETools/Dlc扩展包，可选引导菜单样式；</p><p>（4）分区管理：这是个辅助功能，用于检查及修复U盘，创建磁盘分区操作、文件信息，如：UD区信息，安装信息等；</p><p>（5）高级选项：UD/EFI分区、本地模式、ISO-BLOS/EFI、Win2003PE/Win10PE、各种加载命令、磁盘检测模式等；</p><h1 id="关于版本"><a href="#关于版本" class="headerlink" title="关于版本"></a>关于版本</h1><p>优启通免费版和优启通VIP版有什么区别？</p><p>1）优启通原包部分与非VIP略有区别，VIP版DLC包中更新了某些新版程序或内容</p><p>2）最大差别在于扩展包（DLC），DLC提供大量可供优启通拓展使用的PE或组件</p><p>3）DLC包解压对应复制覆盖到EasyU主程序所在目录即可，启动界面带(VIP)标识</p><p>VIP版：界面带(VIP)标识，VIP版DLC包具有EXLOAD(扩展管理器)功能，可以安装常用装机软件</p><p>普通版：貌似也支持网络及音视频播放，PE浏览器主页默认绑定2345导航，EXLOAD功能需VIP</p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>注意：貌似无论VIP版还是免费普通版，安装都默认设置桌面浏览器主页推广导航，已无取消选项！</p><p>1.下载解压后，请运行EasyU主程序进行制作；</p><p>2.请预先准备好U盘或者移动硬盘，推荐标配16G或以上；</p><p>3.请尽可能选择速度和性能好的U盘，某些较差的控制芯片的U盘可能导致制作失败；</p><p>4.请在制作前备份U盘内重要数据，避免出现不必要的问题；</p><p>5.个别杀软会将主程序或PE内工具软件报毒，还请理性判断；</p><p>6.移动硬盘USB转接芯片的优劣，将导致制作成功与否或可否正常启动。</p><h1 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a href="https://pan.quark.cn/s/1778e7434d43#/list/share/1b1c08789dc8406a993e4f3bd3fbd953-11333">夸克网盘</a></h1><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>baidu文库 会员无限制下载</title>
+    <link href="http://example.com/2023/04/04/baidu%E6%96%87%E5%BA%93-%E4%BC%9A%E5%91%98%E6%97%A0%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://example.com/2023/04/04/baidu%E6%96%87%E5%BA%93-%E4%BC%9A%E5%91%98%E6%97%A0%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD/</id>
+    <published>2023-04-04T06:31:20.000Z</published>
+    <updated>2023-04-04T06:32:36.153Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>会员无限制下载<br>【应用名称】：baidu文库下载q<br>【应用包名】：com.miui.screenrecorder<br>【应用版本】：3.2<br>【应用大小】：26.0MB<br>【适用平台】：win</p><p>【官方介绍】：通过对baidu文库文章地址解析，无限制下载所有会员文章，且自动转为PDF<br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143139.png"/><br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143149.png"/></p><p>【使用方法】：<br>将文件下载完后，进入某文库网站，搜索自己想要的文章，复制网址链接<br>点击exe执行程序，程序会自动读取剪贴板内容，可自行修改保存路径，不做c盘战神，文库地址进去后，直接选择开始下载<br>会出下这个窗口，等待几分钟，如若文章过大也可能久一点，总体来说速度是非常快的，显示已完成后，在保存位置找到PDF文件<br>然后打开即可了<br>解压密码:qingdi<br>下载地址：<a href="https://share.weiyun.com/VPAv3pQV">https://share.weiyun.com/VPAv3pQV</a></p><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>某钉打卡系列2，安卓13，安装即用</title>
+    <link href="http://example.com/2023/04/04/%E6%9F%90%E9%92%89%E6%89%93%E5%8D%A1%E7%B3%BB%E5%88%972%EF%BC%8C%E5%AE%89%E5%8D%9313%EF%BC%8C%E5%AE%89%E8%A3%85%E5%8D%B3%E7%94%A8/"/>
+    <id>http://example.com/2023/04/04/%E6%9F%90%E9%92%89%E6%89%93%E5%8D%A1%E7%B3%BB%E5%88%972%EF%BC%8C%E5%AE%89%E5%8D%9313%EF%BC%8C%E5%AE%89%E8%A3%85%E5%8D%B3%E7%94%A8/</id>
+    <published>2023-04-04T06:27:56.000Z</published>
+    <updated>2023-04-04T06:28:51.513Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>进入主题，请审题进入，</p><p>测试机型：红米K50电竞版</p><p>【目前测试的模拟位置，模拟wifi】没有任何问题，由于版权等因素，就不透露太多了。</p><p>【里面的钉安装包是内置插件版本的，但是还需要安装一个，一块打包了两个软件，安装好两个软件，登录钉钉，设置里找到钉助手，设置一下位置，wifi信息即用】</p><p>PJ不易，低调使用，细水长流，请勿传播，设置了一个阅读权限10可看。</p><p><a href="https://www.123pan.com/s/5kJZVv-hcHBh.html%E6%8F%90%E5%8F%96%E7%A0%81:HCjy">https://www.123pan.com/s/5kJZVv-hcHBh.html提取码:HCjy</a></p><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142831.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工程快速调试工具、NetAssist网络调试助手</title>
+    <link href="http://example.com/2023/04/04/%E5%B7%A5%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%81NetAssist%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B/"/>
+    <id>http://example.com/2023/04/04/%E5%B7%A5%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%81NetAssist%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B/</id>
+    <published>2023-04-04T06:24:13.000Z</published>
+    <updated>2023-04-04T06:26:16.445Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>工程快速调试工具系列（UDP.TCP端口诊断）<br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142509.png"/></p><h1 id="下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5"><a href="#下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5" class="headerlink" title="下载地址： https://zksk.lanzouf.com/iPj0H0rmir1g 密码:cqo5"></a>下载地址： <a href="https://zksk.lanzouf.com/iPj0H0rmir1g">https://zksk.lanzouf.com/iPj0H0rmir1g</a> 密码:cqo5</h1><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142538.png"/><p>NetAssist网络调试助手，是Windows平台下开发的TCP/IP网络调试工具，集TCP/UDP服务端及客户端于一体，是网络应用开发及调试工作必备的专业工具之一，可以帮助网络应用设计、开发、测试人员检查所开发的网络应用软/硬件的数据收发状况，提高开发速度，简化开发复杂度，成为TCP/UDP应用开发调试的得力助手。NetAssist网络调试助手是绿色软件，无所安装，只有一个执行文件，适用于各版本Windows操作系统，不需要微软dotNet框架支持。可以作为客户端或服务器端使用：可以在一台PC上同时启动多个网络调试助手，并可设置其中一个作为服务端，其他作为客户端，然后操作客户端去连接开启的服务端。只要协议、地址及端口均设置正确就能成功进行连接通信。典型应用场合：通过网络调试助手与自行开发的网络程序或者网络设备进行通信联调。软件支持UDP、TCP协议，集成服务端与客户端，作为服务端时可以管理多个客户端连接；支持单播/广播；支持ASCII/Hex两种模式的数据收发，发送和接收的数据可以在十六进制和ASCII码之间任意转换；可以自动发送校验位，支持多种校验格式；支持发送的数据中嵌入脚本代码以实现动态数据发送；支持建立自动应答规则，实现指令自动应答/回复功能；支持间隔发送，循环发送，批处理发送，输入数据可以从外部文件导入；可以保存预定义指令/数据序列，任何时候都可以通过工具面板发送预定义的指令或数据，便于通信联调。软件界面支持中/英文，默认自适应操作系统的语言环境。</p><p>下载:<a href="https://zksk.lanzouf.com/iQ7vi0rmt6za">https://zksk.lanzouf.com/iQ7vi0rmt6za</a> 密码:zktk</p><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安卓谁喝酒v1.3.0绿化版</title>
+    <link href="http://example.com/2023/04/04/%E5%AE%89%E5%8D%93%E8%B0%81%E5%96%9D%E9%85%92v1-3-0%E7%BB%BF%E5%8C%96%E7%89%88/"/>
+    <id>http://example.com/2023/04/04/%E5%AE%89%E5%8D%93%E8%B0%81%E5%96%9D%E9%85%92v1-3-0%E7%BB%BF%E5%8C%96%E7%89%88/</id>
+    <published>2023-04-04T06:08:37.000Z</published>
+    <updated>2023-04-04T06:15:11.195Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>谁喝酒是一种聚会娱乐工具，由于其简单易用，运气成分和趣味性高，使聚会更富有娱乐性和刺激性，深受广大玩家喜爱。内含大话骰、weaphones、taproulette、炸弹骰、真心话大冒险等精彩玩法。夏天快到了，每逢大热天的时候，总想着跟三五好友找一烧烤摊吃烧烤喝啤酒，但既然要喝啤酒就少不了玩各种游戏活跃气氛。</p><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404140918.png"/><h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iZfeS0s2h33e">蓝奏网盘</a></h1><h1 id="密码-2h0n"><a href="#密码-2h0n" class="headerlink" title="密码:2h0n"></a>密码:2h0n</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="小程序在线使用：maojunzc"><a href="#小程序在线使用：maojunzc" class="headerlink" title="小程序在线使用：maojunzc"></a>小程序在线使用：maojunzc</h1><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>全网最聪明的镜像版ChatGPT</title>
+    <link href="http://example.com/2023/04/03/%E5%85%A8%E7%BD%91%E6%9C%80%E8%81%AA%E6%98%8E%E7%9A%84%E9%95%9C%E5%83%8F%E7%89%88ChatGPT/"/>
+    <id>http://example.com/2023/04/03/%E5%85%A8%E7%BD%91%E6%9C%80%E8%81%AA%E6%98%8E%E7%9A%84%E9%95%9C%E5%83%8F%E7%89%88ChatGPT/</id>
+    <published>2023-04-03T13:08:19.000Z</published>
+    <updated>2023-04-03T13:09:48.039Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><img src="https://cdn.jsdelivr.net/gh/maojunzc/image0/image/20230403210901.png"/><p>ChatGPT Next Web是目前国内最聪明的镜像版ChatGPT体验地址：chat.ohtoai.com它的主要特点：<br>支持GPT3.5turbo以及GPT4.0turbo的各种版本模型</p><p>精心设计的 UI，响应式设计，支持深色模式<br>极快的首屏加载速度简繁体中、英文无缝切换自动压缩上下文聊天记录，支持超长对话一键导出聊天记录，完整的 Markdown 支持<br>另外要注意的是，完全无需担心您的隐私安全，因为ChatGPT Next Web是完全开源的产品，你可以在Github上找到它的完整源代码。</p><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware&amp;Esxi虚拟机Centos7 (懒人包)</title>
@@ -342,150 +486,6 @@
     
     
     <category term="maojunzc" scheme="http://example.com/tags/maojunzc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>万兴PDF专家v9.4.4.2122专业版</title>
-    <link href="http://example.com/2023/03/07/%E4%B8%87%E5%85%B4PDF%E4%B8%93%E5%AE%B6v9-4-4-2122%E4%B8%93%E4%B8%9A%E7%89%88/"/>
-    <id>http://example.com/2023/03/07/%E4%B8%87%E5%85%B4PDF%E4%B8%93%E5%AE%B6v9-4-4-2122%E4%B8%93%E4%B8%9A%E7%89%88/</id>
-    <published>2023-03-07T07:37:24.000Z</published>
-    <updated>2023-04-03T01:34:30.757Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>万兴PDF专家是一款国产PDF全套解决方案专家，专注于PDF的创建、编辑、转换、标注、保护、管理、水印、压缩、签名等功能。这款强大的专业PDF编辑软件，以简约风格及强大的功能在国外名声大噪，除了传统的阅读、编辑、注释等功能外，它还提供了表单填写、数据提取、格式转换等强大功能。Wondershare PDFelement，全能型数字文档处理工具，PDF文档的全方位解决方案，除OCR功能外，还具有PDF创建，编辑PDF，PDF表单，PDF安全与分享等功能。您可以编辑PDF文件，图像和页面，签署数字签名和注释PDF，将PDF转换成Word或各种类型文件，如Word、Excel、PPT、EPUB、HTML、Text、RTF等多种格式。</p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537283.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537397.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071534805.png"/><h1 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h1><p>  PDF阅读器 + PDF创建器 + PDF编辑器 + PDF转换器 + OCR识别工具</p><p>支持PDF文档或PDF扫描件转换为RTF/Word/Excel/PPT/EPUB/HTML/Text/图片等常用格式</p><p>无损转换PDF文档，转换的PDF文件还原程度高，号称能够最大程度的保留原有是布局不改变</p><p>表单处理功能：可一键识别表单填写区域，支持数据识别，生成表格文档，批量处理PDF表单</p><p>数据提取功能：表单归档和数据录入，自动识别可填写表单域，无需转换格式，即可直接填写</p><p>定义表单选项形式，比如：文本字段，复选框，单选按钮，组合框，列表框，按钮或签名域</p><p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p><p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p><p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p><h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#111;&#110;&#x67;&#97;&#110;&#x40;&#80;&#x59;&#71;&#x2e;&#84;&#101;&#x61;&#109;">&#x4a;&#111;&#110;&#x67;&#97;&#110;&#x40;&#80;&#x59;&#71;&#x2e;&#84;&#101;&#x61;&#109;</a></p><ul><li><p>目前全球独家破解万兴PDF8.0版本跟进</p></li><li><p>破解专业版，免登陆所有付费功能可用！  </p></li></ul><h1 id="运行要求"><a href="#运行要求" class="headerlink" title="运行要求"></a>运行要求</h1><p>.NET Framwork , Windows 7 或更高版</p><h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a href="https://pan.quark.cn/s/fc1975440e56#/list/share/e99d2c3172954f40b5773d0146fc5163-8658">夸克网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>太极v10.3.1 免ROOT用Xposed</title>
-    <link href="http://example.com/2023/03/07/%E5%A4%AA%E6%9E%81v10-3-1-%E5%85%8DROOT%E7%94%A8Xposed/"/>
-    <id>http://example.com/2023/03/07/%E5%A4%AA%E6%9E%81v10-3-1-%E5%85%8DROOT%E7%94%A8Xposed/</id>
-    <published>2023-03-07T06:57:05.000Z</published>
-    <updated>2023-04-03T01:34:30.757Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>太极app是一个帮助你免Root,免解锁免刷机使用Xposed模块的APP框架.模块通过它改变系统和应用的行为,既能以传统的 Root/刷机方式运作,也能免Root/ 免刷机运行;并且它支持 Android 5.0 ~ 13.简单来说,太极虚拟框架就是个虚拟Xposed框架,能够加载Xposed模块,修改系统和内置APP,拦截方法,执行hook逻辑等.可以让你的应用程序拥有强大的功能，比如随意修改微信步数、免费下载网易云收费音乐、微信红包提醒，钉钉签到，各种实用的功能等你来发现。</p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071458521.png"/><p>更新日志<br>exp.weishu.me/update.json</p><p>2023.03.06 青钢影·10.3.1.03061102</p><ol><li><p>稳定性和性能优化。</p></li><li><p>修复 Double Free 导致的闪退</p></li></ol><p>最近更新：</p><ul><li><p>支持 Android 13</p></li><li><p>优化 Android 12 上卡顿和无响应的问题</p></li><li><p>优化 Android 10-11 以及鸿蒙2.0稳定性</p></li></ul><h1 id="软件特点"><a href="#软件特点" class="headerlink" title="软件特点"></a>软件特点</h1><ul><li><p>太极完美支持包括 Android 5.0~12 在内的几乎所有机型（如华为、三星、小米，Oppo和 Vivo 等手机)</p></li><li><p>太极能以免 Root/免刷机模式运行（无需 Root 也可以体验各种插件的强大功能，有 Root 之后也能解锁更多的能力）</p></li><li><p>太极不影响全局。可以只对特定的应用开启 Xposed 功能，无需使用 Xposed 的 APP 运行起来就跟系统没有 Xposed 一样；这意味着太极能轻松绕过 SafetyNet 检测，完美契合某些金融/银行/奇葩类 APP。</p></li><li><p>在大部分情况下，太极中的模块无需重启即刻生效。</p></li><li><p>太极更不易被检测。太极的弱侵入特性不再修改 ART 运行时，也不在全局环境中留下任何踪影；因此只要想要做到，可以轻松逃过各种代码类型的检测。</p></li></ul><h1 id="什么是太极·阳"><a href="#什么是太极·阳" class="headerlink" title="什么是太极·阳"></a>什么是太极·阳</h1><p>太极·阴是普通版，太极·阳是增强版，普通版无法作用系统APP，且大部分Xposed模块不能免ROOT加载</p><p>太极·阳Magisk卡包 借助 magisk 模块注入系统，从而可以作用所有 APP，实现Xposed框架的完整功能。</p><h1 id="与太极·阴区别"><a href="#与太极·阴区别" class="headerlink" title="与太极·阴区别"></a>与太极·阴区别</h1><p>1.太极·Magisk 可以拦截系统，因此可以额外支持系统级别的 Xposed 模块；如边缘手势/核心破解/绿色守护/应用控制器等。</p><p>2.太极·Magisk 不需要修改 APP，因此可以做到 秒添加 APP；再也不用烦心地等待。</p><p>3.由于 太极·Magisk 不再需要修改 APP，因此 可以完美解决 微信/QQ 等应用无法被其他应用识别的问题。</p><p>4.太极·Magisk 有能力对系统做更多地控制，因此可以做到更加稳定</p><p>官方下载</p><h1 id="软件：https-taichi-cool-zh-download-html"><a href="#软件：https-taichi-cool-zh-download-html" class="headerlink" title="软件：https://taichi.cool/zh/download.html"></a>软件：<a href="https://taichi.cool/zh/download.html">https://taichi.cool/zh/download.html</a></h1><h1 id="模块：https-taichi-cool-zh-module"><a href="#模块：https-taichi-cool-zh-module" class="headerlink" title="模块：https://taichi.cool/zh/module/"></a>模块：<a href="https://taichi.cool/zh/module/">https://taichi.cool/zh/module/</a></h1><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023最新可用dai挂网源码</title>
-    <link href="http://example.com/2023/03/07/2023%E6%9C%80%E6%96%B0%E5%8F%AF%E7%94%A8dai%E6%8C%82%E7%BD%91%E6%BA%90%E7%A0%81/"/>
-    <id>http://example.com/2023/03/07/2023%E6%9C%80%E6%96%B0%E5%8F%AF%E7%94%A8dai%E6%8C%82%E7%BD%91%E6%BA%90%E7%A0%81/</id>
-    <published>2023-03-07T03:01:52.000Z</published>
-    <updated>2023-04-03T01:34:30.756Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最新可用代挂网源码，上传源码，访问域名安装即可使用，对接LoginSystem，全套代挂成本只要0.8一月，后台填写LoginSystem密钥即可，LoginSystem地址在后台设置里面。</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071103842.png"/><h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/imQDD0pi7wmf">蓝奏网盘</a></h3><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
-    
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023最新全功能在线截图生成器工具网页版</title>
-    <link href="http://example.com/2023/03/07/2023%E6%9C%80%E6%96%B0%E5%85%A8%E5%8A%9F%E8%83%BD%E5%9C%A8%E7%BA%BF%E6%88%AA%E5%9B%BE%E7%94%9F%E6%88%90%E5%99%A8%E5%B7%A5%E5%85%B7%E7%BD%91%E9%A1%B5%E7%89%88/"/>
-    <id>http://example.com/2023/03/07/2023%E6%9C%80%E6%96%B0%E5%85%A8%E5%8A%9F%E8%83%BD%E5%9C%A8%E7%BA%BF%E6%88%AA%E5%9B%BE%E7%94%9F%E6%88%90%E5%99%A8%E5%B7%A5%E5%85%B7%E7%BD%91%E9%A1%B5%E7%89%88/</id>
-    <published>2023-03-07T01:05:08.000Z</published>
-    <updated>2023-04-03T01:34:30.756Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905005.png"/><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905417.png"/><p>全功能在线截图生成器工具网页版网站源码</p><p>源码项目全部开源，支持电脑和手机端在线制作生成！该源码可直接上传虚拟空间解压缩即可访问，搭建操作简单方便！源码为html，可二开！</p><p>要是正式使用我推荐大家购买一个收费主机，有条件的可以购买服务器进行搭建效果更好</p><h1 id="工具功能介绍"><a href="#工具功能介绍" class="headerlink" title="工具功能介绍"></a>工具功能介绍</h1><p>在线一键制作各种截图生成，包含生成功能：微信对话、微信领取红包、微信付款详情、微信收款详情、微信转账详情、微信零钱页面详情、微信扫码付款账单、微信对话和红包带安卓设置、微信朋友圈转发详情、支付宝聊天详情、支付宝转账详情、支付宝账户余额详情、淘宝订单详情、QQ聊天详情、手机短信聊天详情！</p><p>在线生成工具仅供娱乐参考！请勿非法使用！</p><h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/inHKI0phz5yh">蓝奏网盘</a></h1><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="源码" scheme="http://example.com/categories/%E6%BA%90%E7%A0%81/"/>
-    
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床</title>
-    <link href="http://example.com/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"/>
-    <id>http://example.com/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</id>
-    <published>2023-03-06T03:37:00.000Z</published>
-    <updated>2023-04-03T01:34:30.757Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常写Markdown或者博客的同学，肯定都要用到图床。图床是什么呢？其实相当于一个存储图片的网站，类似百度云这样，不过上传图片到图床后可以直接通过外链进行访问。</p><p>比如把本地一张a.jpg上传到图床后，便可以拿到一个链接：</p><p><a href="https://www.xxx.com/img/a.jpg">https://www.xxx.com/img/a.jpg</a></p><p>然后点击这个链接就可以访问图片a了。今天来聊聊怎么搭建可靠的图床吧~</p><p>为什么会产生这个需求呢？因为小编经常写博文什么的，现在的做法是在简书上上传图片，然后把生成的图片链接放到Markdown文档上面，写好文档以后就可以批量复制到各大博客平台投稿了。</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061137456.png"/><p>但是这样有个隐患：万一简书哪天挂掉了，那么我放到csdn、cnbolgs等这些平台的文章图片都会挂掉。即使简书一直维持现状，但万一哪天它不高兴了，做了个外链防盗（图片外链只能在本站显示），那同样会遇到上面的问题。</p><p>比如小编之前放在简书上的文章，复制到csdn上后。不知道怎么回事：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061138846.png"/><p>说多了都是泪。因此，趁早做好准备，免得以后出现问题就麻烦了。毕竟有些博客的图片只是随手一截，还真找不到备份……</p><h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h1 id="1-Github"><a href="#1-Github" class="headerlink" title="1.Github"></a>1.Github</h1><h1 id="2-picgo"><a href="#2-picgo" class="headerlink" title="2.picgo"></a>2.picgo</h1><h1 id="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"><a href="#之前有介绍过一篇如何让搭建gitub仓库及picgo的使用" class="headerlink" title="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"></a>之前有介绍过一篇如何让搭建gitub仓库及picgo的使用</h1><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h2 id="1-创建Repository"><a href="#1-创建Repository" class="headerlink" title="1. 创建Repository"></a>1. 创建Repository</h2><p>鼠标移动到右上角，点击”New repository”按钮：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061140559.png"/></p><p>填写相关信息，创建一个存储图片的仓库：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141996.png"/><h2 id="2-配置token-key"><a href="#2-配置token-key" class="headerlink" title="2. 配置token key"></a>2. 配置token key</h2><p>生成一个Token用于操作GitHub repository。回到主页，点击”Settings”按钮：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141405.png"/><p>进入页面后，点击”Developer settings”按钮<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142014.png"/></p><p>点击”Personal access tokens”按钮，然后点击Generate token：</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142644.png"/><p>填写描述，选择”repo”权限，然后拉到下面点击”Generate token”按钮</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142968.png"/><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：创建成功后，会生成一串token，这串token之后不会再显示，所以第一次看到的时候，可以用个小本本保存起来哦，忘记了只有重新生成，每次都不一样。</span><br></pre></td></tr></table></figure><h2 id="Picgo配置"><a href="#Picgo配置" class="headerlink" title="Picgo配置"></a>Picgo配置</h2><p>拿到了刚刚记录了GitHub token后，打开picgo，按照如下设置即可：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061143122.png"/></p><p>设定仓库名按照“账户名/仓库名的格式填写”，比如我的是：maojunzc/maojunzc。</p><p>分支名统一填写“master”。</p><p>设定Token将之前的Token粘贴在这里。</p><p>指定存储路径留空。</p><p>自定义域名的作用是在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上。默认留空也可以正常使用。这里为了使用CDN加快图片的访问速度，</p><h3 id="自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名"><a href="#自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名" class="headerlink" title="自定义域名我们按照这样去填写：https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名"></a>自定义域名我们按照这样去填写：<a href="https://cdn.jsdelivr.net/gh/GitHub%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名</a></h3><p>比如我的是：<a href="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc">https://cdn.jsdelivr.net/gh/maojunzc/maojunzc</a><br>点击确定后就配置完成了，我们截图后点击剪切板图片上传，如果上传成功，拿到的外链放到Markdown中正常访问，就OK啦。</p><p>当然快捷上传的快捷键也可以到设置中进行配置。可以看到GitHub仓库中多了很多我们上传的图片。</p><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061145683.png"/><br/> <br/> <br/> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网页chatgpt 最新模型 可自定义api</title>
-    <link href="http://example.com/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/"/>
-    <id>http://example.com/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/</id>
-    <published>2023-03-06T03:18:19.000Z</published>
-    <updated>2023-04-03T01:34:30.757Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最新网页版chatgpt 支持自定义api</p><p>国内服务器，虚拟主机都支持搭建</p><p>chatgpt 最新模型 </p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061118260.png"/><p>自定义api入口：域名/adminkey.php</p><p>直接把源码放到根目录即可运行</p><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061119841.png"/><h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iygzw0pdrkyf">蓝奏网盘</a></h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="ChatGPT" scheme="http://example.com/categories/ChatGPT/"/>
-    
-    
-    <category term="ChatGPT" scheme="http://example.com/tags/ChatGPT/"/>
     
   </entry>
   

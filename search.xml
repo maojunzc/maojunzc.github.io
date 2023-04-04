@@ -14,6 +14,159 @@
       </tags>
   </entry>
   <entry>
+    <title>VIP优启通EasyU v3.7.2023.0323</title>
+    <url>/2023/04/04/VIP%E4%BC%98%E5%90%AF%E9%80%9AEasyU-v3-7-2023-0323/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>优启通（EasyU，简称EU）是IT天空打造的一款专业U盘启动盘制作工具，采用U盘三分区方案，支持BIOS（Legacy）与UEFI双启动模式，在支持主流硬件基础上，同时兼容早期多数旧硬件。整合各种装机必备工具，并结合IT天空数款自研软件，有效提高系统安装效率。U盘PE所在分区于系统下自动隐藏，PE区与数据区分别独立，便于使用者对数据的各项操作。优启通定位于一线装机技术员、系统工程师和系统维护人员。</p>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143848.png"/>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143855.png"/>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143907.png"/>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143918.png"/>
+
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p>2023.03.31 v3.7.2023.0323</p>
+<p>更新 - CPU-Z 2.05</p>
+<p>[VIP]增加 - 11PE 内核升级至 Win11 22H2 64位</p>
+<p>[VIP]更新 - 微信 3.9.0.28</p>
+<p>[VIP]去除 - 好压 HaoZip</p>
+<p>2022.07.31 v3.7.2022.0620</p>
+<p>（由于 Win11 更新安全软件，如遇到无法生成 ISO 文件，</p>
+<p>请删掉 TOOLS 目录内的 PETOOLS_Dism.7z 文件，再生成）</p>
+<p>更新 - DiskGenius 5.2.0.878 DOS版</p>
+<p>更新 - WinNTSetup 5.2.4</p>
+<p>[VIP]更新 - 微信 3.7.0.30</p>
+<p>[VIP]更新 - 360 安全浏览器 13.1.6002.0</p>
+<p>[VIP]更新 - PDF 阅读器 SumatraPDF 3.4.6</p>
+<p>[VIP]去除 - Chrome 浏览器</p>
+<h1 id="优启通简要说明"><a href="#优启通简要说明" class="headerlink" title="优启通简要说明"></a>优启通简要说明</h1><p>（1）U盘模式：一键全新制作，支持免格升级、UD/EFI分区（可选PETools/Dlc扩展包）、个性化启动菜单、模拟测试；</p>
+<p>（2）本地模式：将PE写入当前系统盘符，可选支持BLOS/UEFI引导、可选安装PETools/Dlc扩展包</p>
+<p>（3）生成ISO：生成PE的ISO镜像，可用于量产、虚拟机等；可选UDF格式/PETools/Dlc扩展包，可选引导菜单样式；</p>
+<p>（4）分区管理：这是个辅助功能，用于检查及修复U盘，创建磁盘分区操作、文件信息，如：UD区信息，安装信息等；</p>
+<p>（5）高级选项：UD/EFI分区、本地模式、ISO-BLOS/EFI、Win2003PE/Win10PE、各种加载命令、磁盘检测模式等；</p>
+<h1 id="关于版本"><a href="#关于版本" class="headerlink" title="关于版本"></a>关于版本</h1><p>优启通免费版和优启通VIP版有什么区别？</p>
+<p>1）优启通原包部分与非VIP略有区别，VIP版DLC包中更新了某些新版程序或内容</p>
+<p>2）最大差别在于扩展包（DLC），DLC提供大量可供优启通拓展使用的PE或组件</p>
+<p>3）DLC包解压对应复制覆盖到EasyU主程序所在目录即可，启动界面带(VIP)标识</p>
+<p>VIP版：界面带(VIP)标识，VIP版DLC包具有EXLOAD(扩展管理器)功能，可以安装常用装机软件</p>
+<p>普通版：貌似也支持网络及音视频播放，PE浏览器主页默认绑定2345导航，EXLOAD功能需VIP</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>注意：貌似无论VIP版还是免费普通版，安装都默认设置桌面浏览器主页推广导航，已无取消选项！</p>
+<p>1.下载解压后，请运行EasyU主程序进行制作；</p>
+<p>2.请预先准备好U盘或者移动硬盘，推荐标配16G或以上；</p>
+<p>3.请尽可能选择速度和性能好的U盘，某些较差的控制芯片的U盘可能导致制作失败；</p>
+<p>4.请在制作前备份U盘内重要数据，避免出现不必要的问题；</p>
+<p>5.个别杀软会将主程序或PE内工具软件报毒，还请理性判断；</p>
+<p>6.移动硬盘USB转接芯片的优劣，将导致制作成功与否或可否正常启动。</p>
+<h1 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a href="https://pan.quark.cn/s/1778e7434d43#/list/share/1b1c08789dc8406a993e4f3bd3fbd953-11333">夸克网盘</a></h1><br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>破解软件</category>
+      </categories>
+      <tags>
+        <tag>破解软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>baidu文库 会员无限制下载</title>
+    <url>/2023/04/04/baidu%E6%96%87%E5%BA%93-%E4%BC%9A%E5%91%98%E6%97%A0%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>会员无限制下载<br>【应用名称】：baidu文库下载q<br>【应用包名】：com.miui.screenrecorder<br>【应用版本】：3.2<br>【应用大小】：26.0MB<br>【适用平台】：win</p>
+<p>【官方介绍】：通过对baidu文库文章地址解析，无限制下载所有会员文章，且自动转为PDF<br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143139.png"/><br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404143149.png"/></p>
+<p>【使用方法】：<br>将文件下载完后，进入某文库网站，搜索自己想要的文章，复制网址链接<br>点击exe执行程序，程序会自动读取剪贴板内容，可自行修改保存路径，不做c盘战神，文库地址进去后，直接选择开始下载<br>会出下这个窗口，等待几分钟，如若文章过大也可能久一点，总体来说速度是非常快的，显示已完成后，在保存位置找到PDF文件<br>然后打开即可了<br>解压密码:qingdi<br>下载地址：<a href="https://share.weiyun.com/VPAv3pQV">https://share.weiyun.com/VPAv3pQV</a></p>
+<br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>破解软件</category>
+      </categories>
+      <tags>
+        <tag>破解软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>某钉打卡系列2，安卓13，安装即用</title>
+    <url>/2023/04/04/%E6%9F%90%E9%92%89%E6%89%93%E5%8D%A1%E7%B3%BB%E5%88%972%EF%BC%8C%E5%AE%89%E5%8D%9313%EF%BC%8C%E5%AE%89%E8%A3%85%E5%8D%B3%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>进入主题，请审题进入，</p>
+<p>测试机型：红米K50电竞版</p>
+<p>【目前测试的模拟位置，模拟wifi】没有任何问题，由于版权等因素，就不透露太多了。</p>
+<p>【里面的钉安装包是内置插件版本的，但是还需要安装一个，一块打包了两个软件，安装好两个软件，登录钉钉，设置里找到钉助手，设置一下位置，wifi信息即用】</p>
+<p>PJ不易，低调使用，细水长流，请勿传播，设置了一个阅读权限10可看。</p>
+<p><a href="https://www.123pan.com/s/5kJZVv-hcHBh.html%E6%8F%90%E5%8F%96%E7%A0%81:HCjy">https://www.123pan.com/s/5kJZVv-hcHBh.html提取码:HCjy</a></p>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142831.png"/>
+
+
+<br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工程快速调试工具、NetAssist网络调试助手</title>
+    <url>/2023/04/04/%E5%B7%A5%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%81NetAssist%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>工程快速调试工具系列（UDP.TCP端口诊断）<br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142509.png"/></p>
+<h1 id="下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5"><a href="#下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5" class="headerlink" title="下载地址： https://zksk.lanzouf.com/iPj0H0rmir1g 密码:cqo5"></a>下载地址： <a href="https://zksk.lanzouf.com/iPj0H0rmir1g">https://zksk.lanzouf.com/iPj0H0rmir1g</a> 密码:cqo5</h1><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142538.png"/>
+
+<p>NetAssist网络调试助手，是Windows平台下开发的TCP/IP网络调试工具，集TCP/UDP服务端及客户端于一体，是网络应用开发及调试工作必备的专业工具之一，可以帮助网络应用设计、开发、测试人员检查所开发的网络应用软/硬件的数据收发状况，提高开发速度，简化开发复杂度，成为TCP/UDP应用开发调试的得力助手。NetAssist网络调试助手是绿色软件，无所安装，只有一个执行文件，适用于各版本Windows操作系统，不需要微软dotNet框架支持。可以作为客户端或服务器端使用：可以在一台PC上同时启动多个网络调试助手，并可设置其中一个作为服务端，其他作为客户端，然后操作客户端去连接开启的服务端。只要协议、地址及端口均设置正确就能成功进行连接通信。典型应用场合：通过网络调试助手与自行开发的网络程序或者网络设备进行通信联调。软件支持UDP、TCP协议，集成服务端与客户端，作为服务端时可以管理多个客户端连接；支持单播/广播；支持ASCII/Hex两种模式的数据收发，发送和接收的数据可以在十六进制和ASCII码之间任意转换；可以自动发送校验位，支持多种校验格式；支持发送的数据中嵌入脚本代码以实现动态数据发送；支持建立自动应答规则，实现指令自动应答/回复功能；支持间隔发送，循环发送，批处理发送，输入数据可以从外部文件导入；可以保存预定义指令/数据序列，任何时候都可以通过工具面板发送预定义的指令或数据，便于通信联调。软件界面支持中/英文，默认自适应操作系统的语言环境。</p>
+<p>下载:<a href="https://zksk.lanzouf.com/iQ7vi0rmt6za">https://zksk.lanzouf.com/iQ7vi0rmt6za</a> 密码:zktk</p>
+<br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安卓谁喝酒v1.3.0绿化版</title>
+    <url>/2023/04/04/%E5%AE%89%E5%8D%93%E8%B0%81%E5%96%9D%E9%85%92v1-3-0%E7%BB%BF%E5%8C%96%E7%89%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>谁喝酒是一种聚会娱乐工具，由于其简单易用，运气成分和趣味性高，使聚会更富有娱乐性和刺激性，深受广大玩家喜爱。内含大话骰、weaphones、taproulette、炸弹骰、真心话大冒险等精彩玩法。夏天快到了，每逢大热天的时候，总想着跟三五好友找一烧烤摊吃烧烤喝啤酒，但既然要喝啤酒就少不了玩各种游戏活跃气氛。</p>
+<img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404140918.png"/>
+
+<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iZfeS0s2h33e">蓝奏网盘</a></h1><h1 id="密码-2h0n"><a href="#密码-2h0n" class="headerlink" title="密码:2h0n"></a>密码:2h0n</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="小程序在线使用：maojunzc"><a href="#小程序在线使用：maojunzc" class="headerlink" title="小程序在线使用：maojunzc"></a>小程序在线使用：maojunzc</h1><br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>破解软件</category>
+      </categories>
+      <tags>
+        <tag>破解软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>全网最聪明的镜像版ChatGPT</title>
+    <url>/2023/04/03/%E5%85%A8%E7%BD%91%E6%9C%80%E8%81%AA%E6%98%8E%E7%9A%84%E9%95%9C%E5%83%8F%E7%89%88ChatGPT/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><img src="https://cdn.jsdelivr.net/gh/maojunzc/image0/image/20230403210901.png"/>
+
+<p>ChatGPT Next Web是目前国内最聪明的镜像版ChatGPT体验地址：chat.ohtoai.com它的主要特点：<br>支持GPT3.5turbo以及GPT4.0turbo的各种版本模型</p>
+<p>精心设计的 UI，响应式设计，支持深色模式<br>极快的首屏加载速度简繁体中、英文无缝切换自动压缩上下文聊天记录，支持超长对话一键导出聊天记录，完整的 Markdown 支持<br>另外要注意的是，完全无需担心您的隐私安全，因为ChatGPT Next Web是完全开源的产品，你可以在Github上找到它的完整源代码。</p>
+<br/> 
+<br/> 
+<br/> 
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VMware&amp;Esxi虚拟机Centos7 (懒人包)</title>
     <url>/2023/04/03/VMware-Esxi%E8%99%9A%E6%8B%9F%E6%9C%BACentos7-%E6%87%92%E4%BA%BA%E5%8C%85/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Centos7 linux懒人包 支持VMware和ESxi使用</p>
@@ -444,7 +597,7 @@
 <p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p>
 <p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p>
 <p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p>
-<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#111;&#110;&#x67;&#97;&#110;&#x40;&#80;&#x59;&#71;&#x2e;&#84;&#101;&#x61;&#109;">&#x4a;&#111;&#110;&#x67;&#97;&#110;&#x40;&#80;&#x59;&#71;&#x2e;&#84;&#101;&#x61;&#109;</a></p>
+<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#x59;&#x47;&#46;&#x54;&#x65;&#x61;&#109;">&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#x59;&#x47;&#46;&#x54;&#x65;&#x61;&#109;</a></p>
 <ul>
 <li><p>目前全球独家破解万兴PDF8.0版本跟进</p>
 </li>
@@ -3663,10 +3816,10 @@
 <p>输入生成命令：ssh-keygen -t rsa -C “邮件地址”后。连续回车三次即可<br><a href="https://imgse.com/i/pS7EWKf"><img src="https://s1.ax1x.com/2023/02/15/pS7EWKf.png" alt="pS7EWKf.png" border="0" /></a><br>可以看到在用户文件夹下生成了一个ssh文件夹<br><a href="https://imgse.com/i/pS7E7Ps"><img src="https://s1.ax1x.com/2023/02/15/pS7E7Ps.png" alt="pS7E7Ps.png" border="0" /></a><br>接着打开github主页，点击个人设置，点击左侧的SSH and GPG keys，点击New SSH key<br><img src="https://img1.imgtp.com/2023/02/15/ZB25fEcp.png" alt="1676433764057.png" title="1676433764057.png" /><br>将id_rsa.pub复制的内容粘贴到key中，title随便起一个就行</p>
 <p>点击 Add SSH key</p>
 <p>测试是否成功：</p>
-<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a></p>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p>输入测试命令后，接着输入yes，出现下面这个提示说明成功</p>
 <p><a href="https://imgse.com/i/pS7EHGn"><img src="https://s1.ax1x.com/2023/02/15/pS7EHGn.png" alt="pS7EHGn.png" border="0" /></a><br>配置账号和密码</p>
-<p>$ git config –global user.name “maojunzc” #你的github用户名<br>$ git config –global user.email “<a href="mailto:&#120;&#x78;&#120;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#120;&#x78;&#120;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a>“ #填写你的github注册邮箱</p>
+<p>$ git config –global user.name “maojunzc” #你的github用户名<br>$ git config –global user.email “<a href="mailto:&#120;&#120;&#120;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;">&#120;&#120;&#120;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;</a>“ #填写你的github注册邮箱</p>
 <p>备注：用户名和邮箱记得改为 自己的</p>
 <h3 id="03-搭建个人博客"><a href="#03-搭建个人博客" class="headerlink" title="03 搭建个人博客"></a>03 搭建个人博客</h3><p>1.新建博客<br>开始之前先介绍一下heox的基本命令</p>
 <p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #部署到GitHub<br>hexo help  # 查看帮助<br>hexo version  #查看Hexo的版本<br>对应的缩写，比如：</p>
@@ -3691,7 +3844,7 @@
 <p>仓库名称格式： 用户名.github.io</p>
 <p>我的仓库名称为：maojunzc.github.io</p>
 <p>因为这个仓库名称将作为你github博客的访问地址<br>编辑_config.yml，_config.yml在博客存放目录下</p>
-<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a>:liyunchen/liyunchen.github.io.git<br>  branch: main</p>
+<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:liyunchen/liyunchen.github.io.git<br>  branch: main</p>
 <p>repository仓库地址改为自己的</p>
 <p>branch看自己的github仓库是master还是main，我的是main，所以就填写main</p>
 <p><a href="https://imgse.com/i/pS7k8LF"><img src="https://s1.ax1x.com/2023/02/15/pS7k8LF.png" alt="pS7k8LF.png" border="0" /></a></p>
@@ -3726,11 +3879,11 @@
 <p>其中 <code>chart</code> 是标签名，<code>endchart</code> 是结束标签，不需要更改，<code>90%</code> 是图表容器的相对宽度，默认是<code>100%</code>，<code>300</code> 是图表容器的高度，默认是按正常比例缩放的，你可以通过设置 <code>options</code> 里面的 <code>aspectRatio</code> 属性来调整宽高比例，另外还有许多属性可以自定义，你可以查看 <a href="https://www.chartjs.org/docs/latest/general/responsive.html">官方文档</a>。在标签之间的部分，都是需要自己填充的图表数据和属性。</p>
 <p>我们来看一个样例，你可以把鼠标移上去看看动态效果。</p>
 <div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5940" style="height: 300px"></canvas>
+    <canvas id="chart7267" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5940').getContext('2d');
+    var ctx = document.getElementById('chart7267').getContext('2d');
     var options = {type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First dataset',backgroundColor:'rgb(255, 99, 132)',borderColor:'rgb(255, 99, 132)',data:[0,10,5,2,20,30,45]}]},options:{responsive:true,title:{display:true,text:'Chart.js Line Chart'}}};
     new Chart(ctx, options);
 </script>
@@ -3741,61 +3894,61 @@
 
 <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>现在你已经基本学会了在Hexo中插入图表了，我再展示一些更炫酷的图表吧，你可以自己去尝试一下。</p>
 <h2 id="柱状-条形图"><a href="#柱状-条形图" class="headerlink" title="柱状/条形图"></a>柱状/条形图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5488" style="height: 300px"></canvas>
+    <canvas id="chart5441" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5488').getContext('2d');
+    var ctx = document.getElementById('chart5441').getContext('2d');
     var options = {"type":"bar","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"My First Dataset","data":[65,59,80,81,56,55,40],"fill":false,"backgroundColor":["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],"borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],"borderWidth":1}]},"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="环形-amp-饼图"><a href="#环形-amp-饼图" class="headerlink" title="环形&amp;饼图"></a>环形&amp;饼图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart9765" style="height: 300px"></canvas>
+    <canvas id="chart1940" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart9765').getContext('2d');
+    var ctx = document.getElementById('chart1940').getContext('2d');
     var options = {"type":"pie","data":{"labels":["Red","Blue","Yellow"],"datasets":[{"label":"My First Dataset","data":[300,50,100],"backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart3297" style="height: 300px"></canvas>
+    <canvas id="chart4096" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart3297').getContext('2d');
+    var ctx = document.getElementById('chart4096').getContext('2d');
     var options = {"type":"radar","data":{"labels":["Eating","Drinking","Sleeping","Designing","Coding","Cycling","Running"],"datasets":[{"label":"My First Dataset","data":[65,59,90,81,56,55,40],"fill":true,"backgroundColor":"rgba(255, 99, 132, 0.2)","borderColor":"rgb(255, 99, 132)","pointBackgroundColor":"rgb(255, 99, 132)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(255, 99, 132)"},{"label":"My Second Dataset","data":[28,48,40,19,96,27,100],"fill":true,"backgroundColor":"rgba(54, 162, 235, 0.2)","borderColor":"rgb(54, 162, 235)","pointBackgroundColor":"rgb(54, 162, 235)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(54, 162, 235)"}]},"options":{"elements":{"line":{"tension":0,"borderWidth":3}}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="气泡图"><a href="#气泡图" class="headerlink" title="气泡图"></a>气泡图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart8386" style="height: 300px"></canvas>
+    <canvas id="chart3226" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart8386').getContext('2d');
+    var ctx = document.getElementById('chart3226').getContext('2d');
     var options = {"type":"bubble","data":{"datasets":[{"label":"First Dataset","data":[{"x":20,"y":30,"r":6},{"x":25,"y":20,"r":8},{"x":32,"y":6,"r":7},{"x":35,"y":26,"r":9},{"x":40,"y":10,"r":5}],"backgroundColor":"rgb(255, 99, 132)"}]}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="离散图"><a href="#离散图" class="headerlink" title="离散图"></a>离散图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart2686" style="height: 300px"></canvas>
+    <canvas id="chart127" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart2686').getContext('2d');
+    var ctx = document.getElementById('chart127').getContext('2d');
     var options = {type:'scatter',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First dataset',borderColor:'rgb(255, 99, 132)',backgroundColor:'rgb(255, 99, 132)',data:[{x:12,y:45,},{x:12,y:13,},{x:56,y:3,},{x:5,y:87,},{x:43,y:76,},{x:34,y:8,},{x:9,y:53,}]},{label:'My Second dataset',borderColor:'rgb(54, 162, 235)',backgroundColor:'rgb(54, 162, 235)',data:[{x:56,y:12,},{x:7,y:12,},{x:87,y:24,},{x:34,y:45,},{x:65,y:27,},{x:8,y:37,},{x:24,y:89,}]}],options:{title:{display:true,text:'Chart.js Scatter Chart'},}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="混合图"><a href="#混合图" class="headerlink" title="混合图"></a>混合图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5635" style="height: 300px"></canvas>
+    <canvas id="chart9185" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5635').getContext('2d');
+    var ctx = document.getElementById('chart9185').getContext('2d');
     var options = {"type":"bar","data":{"labels":["January","February","March","April"],"datasets":[{"label":"Bar Dataset","data":[10,20,30,40],"borderColor":"rgb(255, 99, 132)","backgroundColor":"rgba(255, 99, 132, 0.2)"},{"label":"Line Dataset","data":[50,50,50,50],"type":"line","fill":false,"borderColor":"rgb(54, 162, 235)"}]},"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}};
     new Chart(ctx, options);
 </script>
@@ -3907,7 +4060,7 @@
     <title>ChatGPT</title>
     <url>/2023/02/14/ChatGPT/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="README"><a href="#README" class="headerlink" title="README"></a>README</h3><p>[ChatGPT手机学习版  无须注册 无须登陆 直接使用:<a href="https://wwqh.lanzouw.com/b01qezjwd">https://wwqh.lanzouw.com/b01qezjwd</a><br>密码:3nl4]<br><a href="https://imgse.com/i/pSTJkmd"><img src="https://s1.ax1x.com/2023/02/14/pSTJkmd.png" alt="pSTJkmd.png" border="0" /></a></p>
-<h3 id="chatgpt最新账号共享"><a href="#chatgpt最新账号共享" class="headerlink" title="chatgpt最新账号共享"></a>chatgpt最新账号共享</h3><p>账号1：<a href="mailto:&#x76;&#x69;&#x63;&#107;&#121;&#101;&#x38;&#57;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">&#x76;&#x69;&#x63;&#107;&#121;&#101;&#x38;&#57;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;</a>  密码：LeZ25X5dwL<br>账号2：<a href="mailto:&#x65;&#x75;&#x67;&#101;&#110;&#105;&#x65;&#x76;&#53;&#x35;&#x32;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x65;&#x75;&#x67;&#101;&#110;&#105;&#x65;&#x76;&#53;&#x35;&#x32;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码2：4w95MnvIvc<br>账号3：<a href="mailto:&#x61;&#121;&#97;&#107;&#x6f;&#110;&#x65;&#x77;&#117;&#x79;&#111;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x61;&#121;&#97;&#107;&#x6f;&#110;&#x65;&#x77;&#117;&#x79;&#111;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>  密码3：q8UCd2lST4<br>账号4：<a href="mailto:&#x6c;&#117;&#x64;&#x6d;&#105;&#x6c;&#x6c;&#97;&#x73;&#x74;&#x65;&#98;&#57;&#x40;&#104;&#x6f;&#116;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x6c;&#117;&#x64;&#x6d;&#105;&#x6c;&#x6c;&#97;&#x73;&#x74;&#x65;&#98;&#57;&#x40;&#104;&#x6f;&#116;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码4：7sb54Oii8I<br>账号5：<a href="mailto:&#x63;&#104;&#114;&#56;&#x39;&#x6b;&#117;&#99;&#x68;&#x74;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#x63;&#104;&#114;&#56;&#x39;&#x6b;&#117;&#99;&#x68;&#x74;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>  密码5：Cea7IQj5ud<br>账号6：<a href="mailto:&#x65;&#x6d;&#105;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#104;&#111;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x65;&#x6d;&#105;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#104;&#111;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码6：ENC82hip2A<br>账号7：<a href="mailto:&#108;&#x79;&#x64;&#105;&#97;&#x76;&#x6e;&#x39;&#x6b;&#x74;&#117;&#116;&#x6f;&#x6b;&#121;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#108;&#x79;&#x64;&#105;&#97;&#x76;&#x6e;&#x39;&#x6b;&#x74;&#117;&#116;&#x6f;&#x6b;&#121;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>  密码7：6351VsZz25<br>账号8：<a href="mailto:&#x74;&#117;&#x6c;&#97;&#103;&#106;&#51;&#64;&#x68;&#111;&#116;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#x74;&#117;&#x6c;&#97;&#103;&#106;&#51;&#64;&#x68;&#111;&#116;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>  密码8：Wx99eCqer7<br>账号9：<a href="mailto:&#x70;&#114;&#x75;&#x65;&#53;&#x36;&#122;&#106;&#x65;&#104;&#108;&#101;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x70;&#114;&#x75;&#x65;&#53;&#x36;&#122;&#106;&#x65;&#104;&#108;&#101;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>  密码9：8398k84X85<br>账号10：<a href="mailto:&#x76;&#x65;&#114;&#x6e;&#x69;&#x74;&#x61;&#103;&#113;&#x32;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x76;&#x65;&#114;&#x6e;&#x69;&#x74;&#x61;&#103;&#113;&#x32;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>  密码10：geFfr4H0x9<br>账号11：<a href="mailto:&#107;&#x69;&#x72;&#x73;&#116;&#x69;&#x65;&#x61;&#x6c;&#116;&#x71;&#119;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#107;&#x69;&#x72;&#x73;&#116;&#x69;&#x65;&#x61;&#x6c;&#116;&#x71;&#119;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a>  密码11：1FBbV8OJg9<br>账号12：<a href="mailto:&#x72;&#x61;&#108;&#112;&#104;&#110;&#x61;&#109;&#x65;&#114;&#51;&#x32;&#x64;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x72;&#x61;&#108;&#112;&#104;&#110;&#x61;&#109;&#x65;&#114;&#51;&#x32;&#x64;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>  密码12：F85T86YtbL<br>账号13：<a href="mailto:&#99;&#101;&#x6c;&#x69;&#110;&#97;&#98;&#117;&#108;&#x6c;&#105;&#101;&#x76;&#109;&#x75;&#64;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#99;&#101;&#x6c;&#x69;&#110;&#97;&#98;&#117;&#108;&#x6c;&#105;&#101;&#x76;&#109;&#x75;&#64;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a>  密码13：OqTz0lj525<br>账号14：<a href="mailto:&#x63;&#104;&#x61;&#110;&#97;&#102;&#x64;&#105;&#x64;&#101;&#108;&#x61;&#x65;&#x74;&#64;&#104;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x63;&#104;&#x61;&#110;&#97;&#102;&#x64;&#105;&#x64;&#101;&#108;&#x61;&#x65;&#x74;&#64;&#104;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>  密码14：6x3CM4pPYY<br>账号15：<a href="mailto:&#x61;&#108;&#x69;&#116;&#x61;&#48;&#55;&#112;&#98;&#111;&#x67;&#x64;&#111;&#x6e;&#64;&#x68;&#x6f;&#116;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x61;&#108;&#x69;&#116;&#x61;&#48;&#55;&#112;&#98;&#111;&#x67;&#x64;&#111;&#x6e;&#64;&#x68;&#x6f;&#116;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>  密码15：Umppl1ylc0<br>账号16：<a href="mailto:&#97;&#x76;&#101;&#x72;&#x69;&#108;&#x6c;&#x74;&#120;&#x67;&#x74;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#97;&#x76;&#101;&#x72;&#x69;&#108;&#x6c;&#x74;&#120;&#x67;&#x74;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a>  密码16：94cymN2p42ChatGPT</p>
+<h3 id="chatgpt最新账号共享"><a href="#chatgpt最新账号共享" class="headerlink" title="chatgpt最新账号共享"></a>chatgpt最新账号共享</h3><p>账号1：<a href="mailto:&#118;&#105;&#x63;&#107;&#121;&#101;&#56;&#57;&#x40;&#x68;&#111;&#116;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#118;&#105;&#x63;&#107;&#121;&#101;&#56;&#57;&#x40;&#x68;&#111;&#116;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码：LeZ25X5dwL<br>账号2：<a href="mailto:&#101;&#117;&#x67;&#101;&#x6e;&#105;&#x65;&#x76;&#x35;&#x35;&#x32;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#101;&#117;&#x67;&#101;&#x6e;&#105;&#x65;&#x76;&#x35;&#x35;&#x32;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a>  密码2：4w95MnvIvc<br>账号3：<a href="mailto:&#97;&#x79;&#x61;&#107;&#111;&#110;&#x65;&#x77;&#117;&#x79;&#x6f;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#97;&#x79;&#x61;&#107;&#111;&#110;&#x65;&#x77;&#117;&#x79;&#x6f;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>  密码3：q8UCd2lST4<br>账号4：<a href="mailto:&#x6c;&#117;&#100;&#x6d;&#x69;&#x6c;&#108;&#x61;&#115;&#116;&#101;&#98;&#57;&#x40;&#x68;&#x6f;&#116;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;">&#x6c;&#117;&#100;&#x6d;&#x69;&#x6c;&#108;&#x61;&#115;&#116;&#101;&#98;&#57;&#x40;&#x68;&#x6f;&#116;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a>  密码4：7sb54Oii8I<br>账号5：<a href="mailto:&#99;&#104;&#x72;&#56;&#57;&#107;&#117;&#99;&#104;&#116;&#x6f;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#99;&#104;&#x72;&#56;&#57;&#107;&#117;&#99;&#104;&#116;&#x6f;&#64;&#x68;&#x6f;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;</a>  密码5：Cea7IQj5ud<br>账号6：<a href="mailto:&#101;&#x6d;&#105;&#x6c;&#x30;&#x33;&#x6d;&#107;&#64;&#104;&#111;&#116;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;">&#101;&#x6d;&#105;&#x6c;&#x30;&#x33;&#x6d;&#107;&#64;&#104;&#111;&#116;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;</a>  密码6：ENC82hip2A<br>账号7：<a href="mailto:&#x6c;&#121;&#x64;&#105;&#97;&#118;&#x6e;&#57;&#107;&#x74;&#117;&#116;&#x6f;&#107;&#x79;&#64;&#104;&#x6f;&#116;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x6c;&#121;&#x64;&#105;&#97;&#118;&#x6e;&#57;&#107;&#x74;&#117;&#116;&#x6f;&#107;&#x79;&#64;&#104;&#x6f;&#116;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>  密码7：6351VsZz25<br>账号8：<a href="mailto:&#116;&#x75;&#x6c;&#x61;&#x67;&#106;&#x33;&#64;&#x68;&#111;&#116;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#116;&#x75;&#x6c;&#x61;&#x67;&#106;&#x33;&#64;&#x68;&#111;&#116;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a>  密码8：Wx99eCqer7<br>账号9：<a href="mailto:&#x70;&#x72;&#117;&#x65;&#53;&#x36;&#x7a;&#106;&#x65;&#x68;&#108;&#101;&#64;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x70;&#x72;&#117;&#x65;&#53;&#x36;&#x7a;&#106;&#x65;&#x68;&#108;&#101;&#64;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码9：8398k84X85<br>账号10：<a href="mailto:&#x76;&#x65;&#114;&#110;&#x69;&#x74;&#x61;&#x67;&#x71;&#50;&#x40;&#104;&#111;&#x74;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x76;&#x65;&#114;&#110;&#x69;&#x74;&#x61;&#x67;&#x71;&#50;&#x40;&#104;&#111;&#x74;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>  密码10：geFfr4H0x9<br>账号11：<a href="mailto:&#107;&#105;&#x72;&#115;&#116;&#105;&#x65;&#97;&#x6c;&#x74;&#x71;&#x77;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#107;&#105;&#x72;&#115;&#116;&#105;&#x65;&#97;&#x6c;&#x74;&#x71;&#x77;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码11：1FBbV8OJg9<br>账号12：<a href="mailto:&#x72;&#x61;&#x6c;&#x70;&#104;&#110;&#97;&#x6d;&#101;&#x72;&#51;&#50;&#x64;&#x40;&#x68;&#x6f;&#116;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x72;&#x61;&#x6c;&#x70;&#104;&#110;&#97;&#x6d;&#101;&#x72;&#51;&#50;&#x64;&#x40;&#x68;&#x6f;&#116;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>  密码12：F85T86YtbL<br>账号13：<a href="mailto:&#x63;&#x65;&#108;&#x69;&#x6e;&#97;&#x62;&#117;&#108;&#108;&#x69;&#101;&#x76;&#109;&#x75;&#64;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x63;&#x65;&#108;&#x69;&#x6e;&#97;&#x62;&#117;&#108;&#108;&#x69;&#101;&#x76;&#109;&#x75;&#64;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>  密码13：OqTz0lj525<br>账号14：<a href="mailto:&#99;&#104;&#x61;&#110;&#x61;&#x66;&#x64;&#105;&#100;&#x65;&#108;&#x61;&#x65;&#116;&#x40;&#104;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#104;&#x61;&#110;&#x61;&#x66;&#x64;&#105;&#100;&#x65;&#108;&#x61;&#x65;&#116;&#x40;&#104;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>  密码14：6x3CM4pPYY<br>账号15：<a href="mailto:&#x61;&#108;&#105;&#116;&#97;&#x30;&#55;&#112;&#98;&#x6f;&#103;&#x64;&#x6f;&#110;&#x40;&#104;&#x6f;&#116;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;">&#x61;&#108;&#105;&#116;&#97;&#x30;&#55;&#112;&#98;&#x6f;&#103;&#x64;&#x6f;&#110;&#x40;&#104;&#x6f;&#116;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;</a>  密码15：Umppl1ylc0<br>账号16：<a href="mailto:&#97;&#x76;&#101;&#114;&#105;&#108;&#x6c;&#116;&#120;&#x67;&#x74;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#97;&#x76;&#101;&#114;&#105;&#108;&#x6c;&#116;&#120;&#x67;&#x74;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>  密码16：94cymN2p42ChatGPT</p>
 <h2 id="登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港"><a href="#登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港" class="headerlink" title="登录地址：https://chat.openai.com/auth/login     注：需自备网络，不可用香港"></a>登录地址：<a href="https://chat.openai.com/auth/login">https://chat.openai.com/auth/login</a>     注：需自备网络，不可用香港</h2>]]></content>
       <categories>
         <category>ChatGPT</category>
