@@ -112,13 +112,13 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h3 id="因为自己使用过，看了几篇文章；觉得有必要记录一下"><a href="#因为自己使用过，看了几篇文章；觉得有必要记录一下" class="headerlink" title="因为自己使用过，看了几篇文章；觉得有必要记录一下"></a>因为自己使用过，看了几篇文章；觉得有必要记录一下</h3><h3 id="cungudafa"><a href="#cungudafa" class="headerlink" title="cungudafa"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/106189143">cungudafa</a></h3><br/>
+  <h3 id="因为自己使用过，看了几篇文章；觉得有必要记录一下"><a href="#因为自己使用过，看了几篇文章；觉得有必要记录一下" class="headerlink" title="因为自己使用过，看了几篇文章；觉得有必要记录一下"></a>因为自己使用过，看了几篇文章；觉得有必要记录一下</h3><h3 id="cungudafa"><a href="#cungudafa" class="headerlink" title="cungudafa"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/106189143">cungudafa</a></h3><br>
 
 <h3 id="关于valine升级的升级-魔改"><a href="#关于valine升级的升级-魔改" class="headerlink" title="关于valine升级的升级/魔改"></a>关于valine升级的升级/魔改</h3><p><a target="_blank" rel="noopener" href="https://valine.js.org/">Valine - 一款快速、简洁且高效的无后端评论系统。</a><br>目前已经更新到v1.5.0, 2022-06-24；旧版和新版可根据自己需求看文档更新日志选取，本章主要阐述升级方法</p>
-<br/>
+<br>
 
-<h3 id="引入X-X版的js文件；可以在官网选取"><a href="#引入X-X版的js文件；可以在官网选取" class="headerlink" title="引入X.X版的js文件；可以在官网选取"></a>引入X.X版的js文件；可以在官网选取</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171944333.webp"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171945219.webp"/>
+<h3 id="引入X-X版的js文件；可以在官网选取"><a href="#引入X-X版的js文件；可以在官网选取" class="headerlink" title="引入X.X版的js文件；可以在官网选取"></a>引入X.X版的js文件；可以在官网选取</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171944333.webp">
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302171945219.webp">
 位置在：
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(&#x27;/libs/valine/av-min.js&#x27;) %&gt;&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io/libs/valine/Valine.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -143,7 +143,7 @@
 <p>如果需要验证昵称和邮箱可以加上以下代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">document.body.addEventListener(&#x27;click&#x27;, function(e) &#123;</span><br><span class="line">    if (e.target.classList.contains(&#x27;vsubmit&#x27;)) &#123;</span><br><span class="line">        const email = document.querySelector(&#x27;input[type=email]&#x27;);</span><br><span class="line">        const nick = document.querySelector(&#x27;input[name=nick]&#x27;);</span><br><span class="line">        const reg = /^[A-Za-z0-9_-\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;</span><br><span class="line">        if (!email.value || !nick.value || !reg.test(email.value)) &#123;</span><br><span class="line">            const str = `&lt;div class=&quot;valert txt-center&quot;&gt;&lt;div class=&quot;vtext&quot;&gt;请填写正确的昵称和邮箱！&lt;/div&gt;&lt;/div&gt;`;</span><br><span class="line">            const vmark = document.querySelector(&#x27;.vmark&#x27;);</span><br><span class="line">            vmark.innerHTML = str;</span><br><span class="line">            vmark.style.display = &#x27;block&#x27;;</span><br><span class="line"></span><br><span class="line">            e.stopPropagation();</span><br><span class="line"></span><br><span class="line">            setTimeout(function() &#123;</span><br><span class="line">                vmark.style.display = &#x27;none&#x27;;</span><br><span class="line">                vmark.innerHTML = &#x27;&#x27;;</span><br><span class="line">            &#125;, 2500);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;, true);</span><br></pre></td></tr></table></figure>
 
-<br/> 
+<br> 
 
 <p>其它填写昵称邮箱和网址的地方如果折行了就按我的样式改一下就好：</p>
 <p>在 valine.ejs 是上面对着改一下就好了：</p>

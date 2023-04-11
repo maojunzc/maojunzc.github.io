@@ -174,6 +174,515 @@
     
     
     <article
+  id="post-使用Picgo-GitHub-jsDelivr搭建CDN加速免费图床"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"
+    >使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" class="article-date">
+  <time datetime="2023-03-06T03:37:00.000Z" itemprop="datePublished">2023-03-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常写Markdown或者博客的同学，肯定都要用到图床。图床是什么呢？其实相当于一个存储图片的网站，类似百度云这样，不过上传图片到图床后可以直接通过外链进行访问。</p>
+<p>比如把本地一张a.jpg上传到图床后，便可以拿到一个链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.xxx.com/img/a.jpg">https://www.xxx.com/img/a.jpg</a></p>
+<p>然后点击这个链接就可以访问图片a了。今天来聊聊怎么搭建可靠的图床吧~</p>
+<p>为什么会产生这个需求呢？因为小编经常写博文什么的，现在的做法是在简书上上传图片，然后把生成的图片链接放到Markdown文档上面，写好文档以后就可以批量复制到各大博客平台投稿了。</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061137456.png">
+
+<p>但是这样有个隐患：万一简书哪天挂掉了，那么我放到csdn、cnbolgs等这些平台的文章图片都会挂掉。即使简书一直维持现状，但万一哪天它不高兴了，做了个外链防盗（图片外链只能在本站显示），那同样会遇到上面的问题。</p>
+<p>比如小编之前放在简书上的文章，复制到csdn上后。不知道怎么回事：</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061138846.png">
+
+<p>说多了都是泪。因此，趁早做好准备，免得以后出现问题就麻烦了。毕竟有些博客的图片只是随手一截，还真找不到备份……</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h1 id="1-Github"><a href="#1-Github" class="headerlink" title="1.Github"></a>1.Github</h1><h1 id="2-picgo"><a href="#2-picgo" class="headerlink" title="2.picgo"></a>2.picgo</h1><h1 id="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"><a href="#之前有介绍过一篇如何让搭建gitub仓库及picgo的使用" class="headerlink" title="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"></a>之前有介绍过一篇如何让搭建gitub仓库及picgo的使用</h1><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h2 id="1-创建Repository"><a href="#1-创建Repository" class="headerlink" title="1. 创建Repository"></a>1. 创建Repository</h2><p>鼠标移动到右上角，点击”New repository”按钮：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061140559.png"></p>
+<p>填写相关信息，创建一个存储图片的仓库：</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141996.png">
+
+<h2 id="2-配置token-key"><a href="#2-配置token-key" class="headerlink" title="2. 配置token key"></a>2. 配置token key</h2><p>生成一个Token用于操作GitHub repository。回到主页，点击”Settings”按钮：</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141405.png">
+
+<p>进入页面后，点击”Developer settings”按钮<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142014.png"></p>
+<p>点击”Personal access tokens”按钮，然后点击Generate token：</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142644.png">
+
+<p>填写描述，选择”repo”权限，然后拉到下面点击”Generate token”按钮</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142968.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：创建成功后，会生成一串token，这串token之后不会再显示，所以第一次看到的时候，可以用个小本本保存起来哦，忘记了只有重新生成，每次都不一样。</span><br></pre></td></tr></table></figure>
+
+<h2 id="Picgo配置"><a href="#Picgo配置" class="headerlink" title="Picgo配置"></a>Picgo配置</h2><p>拿到了刚刚记录了GitHub token后，打开picgo，按照如下设置即可：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061143122.png"></p>
+<p>设定仓库名按照“账户名/仓库名的格式填写”，比如我的是：maojunzc/maojunzc。</p>
+<p>分支名统一填写“master”。</p>
+<p>设定Token将之前的Token粘贴在这里。</p>
+<p>指定存储路径留空。</p>
+<p>自定义域名的作用是在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上。默认留空也可以正常使用。这里为了使用CDN加快图片的访问速度，</p>
+<h3 id="自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名"><a href="#自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名" class="headerlink" title="自定义域名我们按照这样去填写：https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名"></a>自定义域名我们按照这样去填写：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/GitHub%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名</a></h3><p>比如我的是：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc">https://cdn.jsdelivr.net/gh/maojunzc/maojunzc</a><br>点击确定后就配置完成了，我们截图后点击剪切板图片上传，如果上传成功，拿到的外链放到Markdown中正常访问，就OK啦。</p>
+<p>当然快捷上传的快捷键也可以到设置中进行配置。可以看到GitHub仓库中多了很多我们上传的图片。</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061145683.png">
+
+<br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-网页chatgpt-最新模型-可自定义api"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/"
+    >网页chatgpt 最新模型 可自定义api</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/" class="article-date">
+  <time datetime="2023-03-06T03:18:19.000Z" itemprop="datePublished">2023-03-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ChatGPT/">ChatGPT</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>最新网页版chatgpt 支持自定义api</p>
+<p>国内服务器，虚拟主机都支持搭建</p>
+<p>chatgpt 最新模型 </p>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061118260.png">
+
+<p>自定义api入口：域名/adminkey.php</p>
+<p>直接把源码放到根目录即可运行</p>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061119841.png">
+
+<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iygzw0pdrkyf">蓝奏网盘</a></h1> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ChatGPT/" rel="tag">ChatGPT</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-BlogHelper-v1-0-30：一键发布本地文章到主流博客平台"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"
+    >BlogHelper v1.0.30：一键发布本地文章到主流博客平台</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/" class="article-date">
+  <time datetime="2023-03-06T03:15:32.000Z" itemprop="datePublished">2023-03-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PC%E8%BD%AF%E4%BB%B6/">PC软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>BlogHelper 是一个没有界面，只存放在系统托盘中的应用，它的目的是帮助人们更方便地发布文章。</p>
+<p>该软件具有以下功能：</p>
+<ul>
+<li>一键发布本地文章到知乎、简书、博客园、CSDN、掘金、SegmentFault (思否)、开源中国等博客平台。</li>
+<li>支持多种图床，包括新浪、SM.MS、Github、Imgur、七牛云、腾讯云、阿里云、又拍云。</li>
+</ul>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHelper">https://github.com/onblog/BlogHelper</a></p>
+<p>Windows 下载链接：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.exe<br>Mac 下载链接：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.dmg</p>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061116768.png">
+
+<br> 
+<br> 
+<br> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PC%E8%BD%AF%E4%BB%B6/" rel="tag">PC软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-在线检测网速流量HTML单页源码"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/06/%E5%9C%A8%E7%BA%BF%E6%A3%80%E6%B5%8B%E7%BD%91%E9%80%9F%E6%B5%81%E9%87%8FHTML%E5%8D%95%E9%A1%B5%E6%BA%90%E7%A0%81/"
+    >在线检测网速流量HTML单页源码</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/06/%E5%9C%A8%E7%BA%BF%E6%A3%80%E6%B5%8B%E7%BD%91%E9%80%9F%E6%B5%81%E9%87%8FHTML%E5%8D%95%E9%A1%B5%E6%BA%90%E7%A0%81/" class="article-date">
+  <time datetime="2023-03-06T02:40:32.000Z" itemprop="datePublished">2023-03-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061041598.png">
+
+<p>在线检测网速流量 HTML 单页源码 测试您的网速，多地查询您的 IP 地址，同时具备网络延迟实时检测，流量杀手，流量消耗器，流量消失器，支持定量完成，支持多线程，适配 iOS 后台运行，网页由原生 js 编写，直接部署在静态存储服务即可，非常实用在线测速流量的小工具，可以直接上传空间或者本地浏览器打开访问 HTML</p>
+<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iUm3N0pdojsf">蓝奏网盘</a></h3><br> 
+<br> 
+<br> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-微信小程序转app教程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BD%ACapp%E6%95%99%E7%A8%8B/"
+    >微信小程序转app教程</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BD%ACapp%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2023-03-06T02:37:28.000Z" itemprop="datePublished">2023-03-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>移动互联网快速发展时，轻量简洁的小程序，背靠微信平台的天然流量，因开发难度低、运行速度快、更新迭代快、运维成本低等优势，一度有成为主流的趋势。随后，小而美的微信小程序，因“小”体量而内容体积有限制、受微信平台玩法限制等原因逐渐体现。而APP，前期有着开发难度较高、速度慢、后期维护难、更新迭代相对慢、用户运营成本高等特点，但长久来看，更好的用户体验、自有平台生态，让这两谁也无法取代谁。</p>
+<p>小程序和APP各有特色，它们适用于不同需求的客户。我们可以看出，对于功能比较简单的需求，小程序可以满足；但如果是一些功能繁多的需求，小程序无法承载过多功能。对于开发者来说，小程序开发快、成本相对低，对于预算较低、希望快速应用的公司来说，开发小程序不失为一种不错的选择；而对于预算较高的中大型公司，做APP、网站、小程序等全套开发，更能够提高用户体验，通过自身APP沉淀用户数据，提升企业价值。</p>
+<p>如何将已有小程序和App合二为一？</p>
+<p>这对于开发人员是个难题。App和小程序拥有着完全独立的技术架构，一个成型的App转小程序可以利用各大小程序平台提供的组件模板开发，而且适配速度可观。小程序转APP需要脱离这些小程序平台，适应更加庞大的技术架构流程，难度更大。</p>
+<p>但现在有了FinClip，让问题解决变得简单易懂。就算你不擅于编程也能轻松搞定这一切！这里手把手教大家把小程序一键打包转为App的方法：</p>
+<p>1、第一步</p>
+<p>从 FinClip 官网下载 FIDE 工具，已经提供了 Mac 和 Windows 两个版本。</p>
+<p>2、第二步</p>
+<p>下载安装完成后，打开 FIDE 工具，可以选择从零开始开发一款小程序或在“项目目录”选择已有的小程序代码包进行上传。</p>
+<p>3、第三步</p>
+<p>上传代码包后系统自动进行编译，编译过程大概1-2分钟，速度还是非常快的。</p>
+<p>4、第四步</p>
+<p>编译完成后会出现小程序运行的界面，此时点击右上角的“生成 App”即可进入打包 App 的正式环节。</p>
+<p>5、第五步</p>
+<p>点击后会出现功能的介绍及提示，这里点击“下一步”即可。</p>
+<p>6、第六步</p>
+<p>小程序生成App需要确认配置小程序信息，这里可以选择你在 FinClip 管理后台已设置好的小程序信息即可。</p>
+<p>7、第七步</p>
+<p>根据提示完成 App 信息的填写，这个的“关联应用”同样需要在 FinClip 管理后台提前进行“应用绑定”设置，什么是 Bundle ID ，如何填写官方也有非常详细的指引，大家可以根据下方的文字找到相应的文档，我在下面也放了官方的说明截图。</p>
+<p>8、第八步</p>
+<p>到这里就完成了所有信息的填写，点击“下一步”之后进入到生成App的等待过程。</p>
+<p>完成</p>
+<p>整个过程是不是非常简单，超低门槛，仅需几步点击即可完成操作。</p>
+<p>一些tips：</p>
+<p>FinClip技术，旨在帮助任何企业实现：自主拥有能运行小程序的App、自主拥有小程序商店和生态、同时支持自己的小程序在第三方平台运行、并让小程序和App之间无缝跳转。首先整个产品的定位是一个小程序容器，相当于 App 集成 FinClip SDK 后便拥有了小程序的运行能力，同时 FinClip 兼容微信小程序语法，可快速将微信小程序搬到自有App中，同时支持手机、电脑、智能手表、IoT等终端设备运行小程序，可以做到一端开发，iOS、Android、Windows、MacOS、麒麟等多端运行。</p>
+<p>FinClip还提供包括管理后台、FinClip助手、FIDE等服务工具，可以帮助企业进行从小程序开发、小程序测试、小程序上下架等整个闭环管理。</p>
+<p>想要进一步了解FinClip更多信息，可以登录FinClip官网了解和注册体验。</p>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038324.png">
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038359.png">
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038848.png">
+
+<h3 id="FinClip官网"><a href="#FinClip官网" class="headerlink" title="FinClip官网"></a><a target="_blank" rel="noopener" href="https://www.finclip.com/">FinClip官网</a></h3><br> 
+<br> 
+<br> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-安卓手机变linux服务器"
   class="article article-type-post"
   itemscope
@@ -213,13 +722,13 @@
 <p>解决完所有报错重复步骤1 即可SSH</p>
 <h1 id="SSH说明"><a href="#SSH说明" class="headerlink" title="SSH说明"></a>SSH说明</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入 ifconfig 查看自己的ip地址；SSH端口为8082；</span><br><span class="line">输入 whoami 查看用户名</span><br><span class="line">echo &quot;sshd&quot; &gt;&gt; ~/.bashrc   #为了方便连接，设置开机自启</span><br></pre></td></tr></table></figure>
 
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303031116838.png"/>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303031116838.png">
 
 <h1 id="一键脚本"><a href="#一键脚本" class="headerlink" title="一键脚本"></a>一键脚本</h1><p>项目地址: <a target="_blank" rel="noopener" href="https://github.com/sqlsec/termux-install-linux">https://github.com/sqlsec/termux-install-linux</a></p>
 <p>因为本脚本使用的是 Python3 编写，所以除了 proot 需要安装以外，还需要基本的 Python 环境，Python 相对于 sh 脚本的优点是更灵活，可操作性更强，人生苦短，我用 Python，另外觉得好用的话 不点点个 star 再走吗。</p>
 <p>执行如下命令安装基本依赖:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//一行一行输入</span><br><span class="line">pkg install proot git python -y</span><br><span class="line">git clone https://github.com/sqlsec/termux-install-linux</span><br><span class="line">cd termux-install-linux</span><br><span class="line">python termux-linux-install.py</span><br></pre></td></tr></table></figure>
-<h1 id="根据自身需求选择系统安装；"><a href="#根据自身需求选择系统安装；" class="headerlink" title="根据自身需求选择系统安装；"></a>根据自身需求选择系统安装；</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303030954158.png"/>
+<h1 id="根据自身需求选择系统安装；"><a href="#根据自身需求选择系统安装；" class="headerlink" title="根据自身需求选择系统安装；"></a>根据自身需求选择系统安装；</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303030954158.png">
 
 <h1 id="以上为kali简版本；后文附kali完整版安装"><a href="#以上为kali简版本；后文附kali完整版安装" class="headerlink" title="以上为kali简版本；后文附kali完整版安装"></a>以上为kali简版本；后文附kali完整版安装</h1><h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Termux-Linux/CentOS</span><br><span class="line">./start-centos.sh</span><br></pre></td></tr></table></figure>
 
@@ -255,9 +764,9 @@
 
 
 <p><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2020/04/termuxlinux.html">转载CSDN文章1</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012525063/article/details/127343215">转载CSDN文章2</a></p>
-<br/> 
-<br/> 
-<br/> 
+<br> 
+<br> 
+<br> 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
@@ -340,13 +849,13 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h3 id="QQ自定义在线机型修改卡密版本无需SVIP"><a href="#QQ自定义在线机型修改卡密版本无需SVIP" class="headerlink" title="QQ自定义在线机型修改卡密版本无需SVIP"></a>QQ自定义在线机型修改卡密版本无需SVIP</h3><h3 id="可自己拿来对接代刷社区啥的批发卡密"><a href="#可自己拿来对接代刷社区啥的批发卡密" class="headerlink" title="可自己拿来对接代刷社区啥的批发卡密"></a>可自己拿来对接代刷社区啥的批发卡密</h3><h3 id="readme"><a href="#readme" class="headerlink" title="readme"></a>readme</h3><p>1.系统环境<br>-php要求 5.6 过高部分函数会失效无法使用<br>-mysql 无要求，数据库手动导入<br>========================================<br>2.配置问题<br>-导入数据库后，在config.php文件夹里修改数据库信息<br>========================================<br>3.api对接问题<br>-搭建好之后，在ajax.php文件里<br>-修改第 6 行的API key,为您拿到的key<br>key获取地址:<a target="_blank" rel="noopener" href="https://jhapi.rjk66.cn/user/key">https://jhapi.rjk66.cn/user/key</a><br>需要开通专业版会员<br>=======================================<br>4.后台入口可自定义<br>-修改 admin 目录名即可</p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011457522.png"/>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011457522.png">
 
-<br/>
+<br>
 
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/ifvv20oxoauh">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
+<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/ifvv20oxoauh">蓝奏网盘</a></h3><br> 
+<br> 
+<br> 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
@@ -429,16 +938,16 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h3 id="匿名短信发送源码，成本0-1一条65字源码限制了120字最大，卡密版本，可自己后台生成卡密"><a href="#匿名短信发送源码，成本0-1一条65字源码限制了120字最大，卡密版本，可自己后台生成卡密" class="headerlink" title="匿名短信发送源码，成本0.1一条65字源码限制了120字最大，卡密版本，可自己后台生成卡密"></a>匿名短信发送源码，成本0.1一条65字源码限制了120字最大，卡密版本，可自己后台生成卡密</h3><h3 id="可自己对接代刷或者社区卖卡！表白祝福啥的"><a href="#可自己对接代刷或者社区卖卡！表白祝福啥的" class="headerlink" title="可自己对接代刷或者社区卖卡！表白祝福啥的"></a>可自己对接代刷或者社区卖卡！表白祝福啥的</h3><h3 id="使用要求"><a href="#使用要求" class="headerlink" title="使用要求"></a>使用要求</h3><p>1.系统环境<br>-php要求 5.6 过高部分函数会失效无法使用<br>-mysql 无要求，数据库手动导入<br>========================================<br>2.配置问题<br>-导入数据库后，在config.php文件夹里修改数据库信息<br>========================================<br>3.api对接问题<br>-搭建好之后，在ajax.php文件里<br>-修改第 6 行的API key,为您拿到的key<br>key获取地址：<a target="_blank" rel="noopener" href="https://jhapi.rjk66.cn/user/key">https://jhapi.rjk66.cn/user/key</a><br>短信成本0.12需要冲点数喔<br>=======================================<br>4.后台入口可自定义<br>-修改 admin 目录名即可</p>
-<br/>
+<br>
 
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/i6Zyw0oxnjwh">蓝奏网盘</a></h3><h3 id="附带查Q绑软件，请勿用于非法途径"><a href="#附带查Q绑软件，请勿用于非法途径" class="headerlink" title="附带查Q绑软件，请勿用于非法途径"></a>附带查Q绑软件，请勿用于非法途径</h3><h3 id="点我加入QQ群"><a href="#点我加入QQ群" class="headerlink" title="点我加入QQ群"></a><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=BBTQKNJQ">点我加入QQ群</a></h3><h3 id="点我添加QBOT"><a href="#点我添加QBOT" class="headerlink" title="点我添加QBOT"></a><a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=911195646&site=qq&menu=yes">点我添加QBOT</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011452372.png"/>
-
-
+<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/i6Zyw0oxnjwh">蓝奏网盘</a></h3><h3 id="附带查Q绑软件，请勿用于非法途径"><a href="#附带查Q绑软件，请勿用于非法途径" class="headerlink" title="附带查Q绑软件，请勿用于非法途径"></a>附带查Q绑软件，请勿用于非法途径</h3><h3 id="点我加入QQ群"><a href="#点我加入QQ群" class="headerlink" title="点我加入QQ群"></a><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=BBTQKNJQ">点我加入QQ群</a></h3><h3 id="点我添加QBOT"><a href="#点我添加QBOT" class="headerlink" title="点我添加QBOT"></a><a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=911195646&site=qq&menu=yes">点我添加QBOT</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011452372.png">
 
 
-<br/> 
-<br/> 
-<br/> 
+
+
+<br> 
+<br> 
+<br> 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
@@ -521,15 +1030,15 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>苹果太空熊官网 html 源码 适合做引导页 苹果太空熊官网 html 源码 适合做引导页简单改改可以做成自己的软件官网或者是个人引导页。记事本打开 index.html 可以修改内容</p>
-<br/> 
+<br> 
 
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011446871.png"/>
+<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011446871.png">
 
 
 
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/ixMXD0oxmcqd">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
+<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/ixMXD0oxmcqd">蓝奏网盘</a></h3><br> 
+<br> 
+<br> 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
@@ -612,7 +1121,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>Adobe GenP激活器是个适用Windows平台的Adobe产品激活工具,专门在Win系统上激活所有Adobe软件的2019和2023版本.AdobeGenP最新版可以一键破解激活Adobe软件最新版,支持adobe全家桶软件激活.如果你喜欢安装官方版的话，可以试试用这个软件来和谐。</p>
-<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011432910.png"/>
+<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303011432910.png">
 
 <h1 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h1><h1 id="Adobe-GenP-for-Windows"><a href="#Adobe-GenP-for-Windows" class="headerlink" title="Adobe GenP for Windows"></a>Adobe GenP for Windows</h1><p>注：GenP会误报威胁，启动工具前建议加安全防护软件排除项!</p>
 <p>1、安装Adobe软件官方版，然后以管理员身份运行 RunMe.exe</p>
@@ -626,9 +1135,9 @@
 <p>2、打开补丁Adobe Zii，点击”PATCH OR DRAG”提示权限不够</p>
 <p>3、点击OK，输入系统密码修改成功，提示登录不管，完成免激活</p>
 <h1 id="官方版如何安装？"><a href="#官方版如何安装？" class="headerlink" title="官方版如何安装？"></a>官方版如何安装？</h1><p>使用Adobe Creative Cloud App在线安装所需软件（Adobe注册账号是免费的，没有的话就注册一个）</p>
-<h1 id="https-www-adobe-com-cn-creativecloud-catalog-desktop-html"><a href="#https-www-adobe-com-cn-creativecloud-catalog-desktop-html" class="headerlink" title="https://www.adobe.com/cn/creativecloud/catalog/desktop.html"></a><a target="_blank" rel="noopener" href="https://www.adobe.com/cn/creativecloud/catalog/desktop.html">https://www.adobe.com/cn/creativecloud/catalog/desktop.html</a></h1><h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/4bd234fa2684#/list/share/934f4e983109407a9773bfc706f06f9d-11737">夸克网盘</a></h3><br/> 
-<br/> 
-<br/> 
+<h1 id="https-www-adobe-com-cn-creativecloud-catalog-desktop-html"><a href="#https-www-adobe-com-cn-creativecloud-catalog-desktop-html" class="headerlink" title="https://www.adobe.com/cn/creativecloud/catalog/desktop.html"></a><a target="_blank" rel="noopener" href="https://www.adobe.com/cn/creativecloud/catalog/desktop.html">https://www.adobe.com/cn/creativecloud/catalog/desktop.html</a></h1><h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/4bd234fa2684#/list/share/934f4e983109407a9773bfc706f06f9d-11737">夸克网盘</a></h3><br> 
+<br> 
+<br> 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
@@ -641,480 +1150,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-菜鸟AI开发入门：AidLux将旧手机变开发服务器"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"
-    >菜鸟AI开发入门：AidLux将旧手机变开发服务器</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/02/27/%E8%8F%9C%E9%B8%9FAI%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%EF%BC%9AAidLux%E5%B0%86%E6%97%A7%E6%89%8B%E6%9C%BA%E5%8F%98%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
-  <time datetime="2023-02-27T03:07:25.000Z" itemprop="datePublished">2023-02-27</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="AidLux是什么"><a href="#AidLux是什么" class="headerlink" title="AidLux是什么"></a>AidLux是什么</h3><p>AidLux是一个基于安卓手机环境的AI应用开发和部署平台，为开发者带来强大、简单、无限创意可能的奇妙体验！</p>
-<p>使用安卓手机的安装方式：打开手机应用商店搜索AidLux</p>
-<h3 id="下载方式：https-community-aidlux-com-aidluxdownload"><a href="#下载方式：https-community-aidlux-com-aidluxdownload" class="headerlink" title="下载方式：https://community.aidlux.com/aidluxdownload"></a>下载方式：<a target="_blank" rel="noopener" href="https://community.aidlux.com/aidluxdownload">https://community.aidlux.com/aidluxdownload</a></h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271107391.png"/>
-
-<p>AidLux强大的功能（搬运工）</p>
-<p>1、一部设备同时运行两个系统环境，既是一部Android设备，同时也是一部Linux设备。两个生态的资源优势可同时被加以利用；</p>
-<p>2、集成主流AI框架（caffe、mxnet、keras、pytorch、tensorflow、ncnn、MindSpore、PaddlePaddle、TNN、opencv），无需配置，直接使用；</p>
-<p>3、海量的AI案例，人脸识别、人脸关键点识别、肢体识别、手势识别、头发识别、物体分类、物体跟踪、3D检测-、身体交换、换脸、人体抠图等。</p>
-<p>4、内置创新性的CPU+GPU+NPU智能加速技术，通过“硬件+框架+Op”多层优化，赋予深度学习运算性能的大幅度提升。并且提供统一API接口，在方便开发者调用的同时，还支持不同AI框架模型自动转换；</p>
-<p>5、支持多种开发语言：C/C++，Python，Java，JavaScript，Ruby，PHP，Go，Shell等；</p>
-<p>6、支持多种开发工具：AidCode，Wizard，VSCode，Jupyter notebook，pycharm，积木编程(青少年)；</p>
-<p>7、扩展性好：内置了极简的外设极速互连模块，通过USB和网络等方式控制Arduino、机械臂、高清摄像机、深度相机等；</p>
-<p>8、丰富的Linux软件：Git，MySql，Hadoop，Nginx，Apache，Vim，SSH，ROS，PCL点云，Eigen，Home Assistant和g2o等多种工具。</p>
-<p>AidLux初体验</p>
-<p>通过电脑网页端连接服务器端，然后开始体验。<br>官方文档：<a target="_blank" rel="noopener" href="https://docs.aidlux.com/">https://docs.aidlux.com/</a></p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108575.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108415.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271108500.png"/> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-VideoProc-v5-4终身许可赠品版"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/02/27/VideoProc-v5-4%E7%BB%88%E8%BA%AB%E8%AE%B8%E5%8F%AF%E8%B5%A0%E5%93%81%E7%89%88/"
-    >VideoProc v5.4终身许可赠品版</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/02/27/VideoProc-v5-4%E7%BB%88%E8%BA%AB%E8%AE%B8%E5%8F%AF%E8%B5%A0%E5%93%81%E7%89%88/" class="article-date">
-  <time datetime="2023-02-27T03:02:09.000Z" itemprop="datePublished">2023-02-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/">破解软件</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>VideoProc是一款简单实用的高级视频编辑器，功能非常强大的影片处理软件，软件集影片转档、影片压缩、影片下载、影片剪辑等功能为一体，是你在Windows上管理不同的多轨道、SD、HD、4K影片的绝佳方案。</p>
-<h3 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271102433.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271102340.png"/>
-
-<h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><p>下载安装-&gt;输入邮箱获取免费注册码 -&gt; 安装并运行软体 -&gt; 点击软体界面的左下角“注册” -&gt; 输入您的注册码以及电子邮件，然后点击“激活”。</p>
-<p>现在活动限时免费赠送v5.4版本注册码。这个限免版是永久免费的，功能也是完整的，只是不能升级</p>
-<p>申请地址：<a target="_blank" rel="noopener" href="https://www.videoproc.com/giveaway/index-zh.htm?ttref=w1bd-ocy2212-appi">https://www.videoproc.com/giveaway/index-zh.htm?ttref=w1bd-ocy2212-appi</a></p>
-<h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/55fbc862bc68#/list/share/e957bda9f08e44d49e679be18f9b03ea-18969">夸克网盘</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-2023全新SF授权系统源码-V3-7全开源无加密版本"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/02/27/2023%E5%85%A8%E6%96%B0SF%E6%8E%88%E6%9D%83%E7%B3%BB%E7%BB%9F%E6%BA%90%E7%A0%81-V3-7%E5%85%A8%E5%BC%80%E6%BA%90%E6%97%A0%E5%8A%A0%E5%AF%86%E7%89%88%E6%9C%AC/"
-    >2023全新SF授权系统源码 V3.7全开源无加密版本</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/02/27/2023%E5%85%A8%E6%96%B0SF%E6%8E%88%E6%9D%83%E7%B3%BB%E7%BB%9F%E6%BA%90%E7%A0%81-V3-7%E5%85%A8%E5%BC%80%E6%BA%90%E6%97%A0%E5%8A%A0%E5%AF%86%E7%89%88%E6%9C%AC/" class="article-date">
-  <time datetime="2023-02-27T02:42:18.000Z" itemprop="datePublished">2023-02-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h1><p>2023全新SF授权系统源码 V3.7全开源无加密版本</p>
-<h1 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h1><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271042465.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271042453.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271042410.png"/>
-
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iRoTK0op3kud">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-Photoshop-2023-v24-2-0-315特别版"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/02/27/Photoshop-2023-v24-2-0-315%E7%89%B9%E5%88%AB%E7%89%88/"
-    >Photoshop 2023 v24.2.0.315特别版</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/02/27/Photoshop-2023-v24-2-0-315%E7%89%B9%E5%88%AB%E7%89%88/" class="article-date">
-  <time datetime="2023-02-27T02:36:47.000Z" itemprop="datePublished">2023-02-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/">破解软件</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>Adobe图像处理软件 Photoshop 2023 正式版 (24.2.0) 2023年2月版发布.Adobe Photoshop 2023破解版(简称PS)是一款全球流行的专业图像处理软件及照片和设计软件.Adobe Photoshop中文破解版是Adobe Creative Cloud 创意云桌面程序中心的图形设计软件热门产品,它是平面设计领域和数字图象处理行业标准.</p>
-<h3 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h3><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271039502.png"/>
-
-<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>Adobe Photoshop 2023 正式版2023年2月版（版本 24.2.0）</p>
-<p>helpx.adobe.com/photoshop/kb/fixed-issues.html#photoshop-desktop-fixed-issues</p>
-<p>新增功能和增强功能 | Photoshop 最新版本</p>
-<p><a target="_blank" rel="noopener" href="https://helpx.adobe.com/cn/photoshop/using/whats-new.html">https://helpx.adobe.com/cn/photoshop/using/whats-new.html</a></p>
-<p>dobe Photoshop 2023 正式版2022年10月惯例发布！</p>
-<p>PS2023新增一键删除和填充,实时高斯迷糊,实时渐变,新的神经过滤器</p>
-<h3 id="运行要求"><a href="#运行要求" class="headerlink" title="运行要求"></a>运行要求</h3><p>PS2022/PS2021最低硬件要求：支持SSE 4.2 及更高版指令集的 2GHz以上CPU</p>
-<p>PS2022/PS2021最低系统要求：Windows 10 2004 及更高版64位 不支持LTSC</p>
-<p>PS2020安装程序要求：Windows 10 1809 及更高版64位</p>
-<p>PS2020软件运行要求：Windows 7 及更高版64位</p>
-<p>PS2019最低系统要求：Windows 7 及更高版64位</p>
-<h1 id="如何使用新增的AI神经网络滤镜功能-Neural-Fiters-？"><a href="#如何使用新增的AI神经网络滤镜功能-Neural-Fiters-？" class="headerlink" title="如何使用新增的AI神经网络滤镜功能 (Neural Fiters) ？"></a>如何使用新增的AI神经网络滤镜功能 (Neural Fiters) ？</h1><p>﹂要求：登陆，需要联网在线下载组件（网盘有最新离线完整组件包）</p>
-<p>﹂界面菜单-&gt;帮助-&gt;登陆-&gt;登陆成功后，点滤镜菜单-&gt;Neural Fiters</p>
-<p>﹂提示：如果首次登陆提示试用到期，无需理会，重启软件就可以使用</p>
-<h3 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h3><p>  by vposy, m0nkrus</p>
-<p>官方版改装，免激活处理，多国语言完整版</p>
-<p>移除软件主屏幕的已经授权/试用到期的通知提示</p>
-<p>此免激活处理可使用云存储、云同步和其他在线服务</p>
-<p>禁用Adobe产品后台跟踪器和匿名数据日志上报程序</p>
-<p>安装程序：基于Adobe产品独立安装程序版本 5.7.1.1</p>
-<p>安装程序：解除 Windows 10 初期版系统上安装限制（by m0nkrus）</p>
-<p>安装程序：移除原始安装程序的Adobe Desktop Common (公用库) 组件</p>
-<p>安装程序：移除原始安装程序的Adobe Creative Cloud (创意云程序) 组件</p>
-<p>安装界面：界面支持选择安装位置和界面语言，以及安装完后立即运行软件</p>
-<p>Adobe CCX Process (Adobe产品数据辅助程序) 组件版本更新最新版</p>
-<p>Adobe CC Library (Adobe产品库) 模块组件版本更新到最新版</p>
-<p>Adobe Camera Raw (Adobe增效工具滤镜) 版本更新到最新版</p>
-<p>Adobe CoreSync (Adobe产品云同步)组件版本最新版</p>
-<p>Adobe CAI 更新到版本最新版</p>
-<h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/28ed67c3accd#/list/share/70cb7ce901a246d2a7795cc1c71729c6-21343">夸克网盘</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-【优选源码】20国语言在线客服-AI智能客服"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/02/27/%E3%80%90%E4%BC%98%E9%80%89%E6%BA%90%E7%A0%81%E3%80%9120%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D-AI%E6%99%BA%E8%83%BD%E5%AE%A2%E6%9C%8D/"
-    >【优选源码】20国语言在线客服/AI智能客服</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/02/27/%E3%80%90%E4%BC%98%E9%80%89%E6%BA%90%E7%A0%81%E3%80%9120%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D-AI%E6%99%BA%E8%83%BD%E5%AE%A2%E6%9C%8D/" class="article-date">
-  <time datetime="2023-02-27T02:29:57.000Z" itemprop="datePublished">2023-02-27</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="自带教程，无授权，可以快捷的部署起来。-跟之前那个13国语言防黑客服一个公司出的。"><a href="#自带教程，无授权，可以快捷的部署起来。-跟之前那个13国语言防黑客服一个公司出的。" class="headerlink" title="自带教程，无授权，可以快捷的部署起来。 跟之前那个13国语言防黑客服一个公司出的。"></a>自带教程，无授权，可以快捷的部署起来。 跟之前那个13国语言防黑客服一个公司出的。</h3><p>不过这个带前端注册了，想做在线客服业务的，这个算不错的选择了。</p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302271030215.png"/>
-
-<h3 id="链接：https-pan-baidu-com-s-1bARkE8-5GmlokyPuMPINmg-pwd-a2z0-提取码：a2z0"><a href="#链接：https-pan-baidu-com-s-1bARkE8-5GmlokyPuMPINmg-pwd-a2z0-提取码：a2z0" class="headerlink" title="链接：https://pan.baidu.com/s/1bARkE8-5GmlokyPuMPINmg?pwd=a2z0  提取码：a2z0"></a>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1bARkE8-5GmlokyPuMPINmg?pwd=a2z0">https://pan.baidu.com/s/1bARkE8-5GmlokyPuMPINmg?pwd=a2z0</a>  提取码：a2z0</h3><h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/i8yt40op3jxa">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
 
     </footer>
   </div>

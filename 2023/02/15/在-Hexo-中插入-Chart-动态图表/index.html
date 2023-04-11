@@ -122,11 +122,11 @@
 <p>其中 <code>chart</code> 是标签名，<code>endchart</code> 是结束标签，不需要更改，<code>90%</code> 是图表容器的相对宽度，默认是<code>100%</code>，<code>300</code> 是图表容器的高度，默认是按正常比例缩放的，你可以通过设置 <code>options</code> 里面的 <code>aspectRatio</code> 属性来调整宽高比例，另外还有许多属性可以自定义，你可以查看 <a target="_blank" rel="noopener" href="https://www.chartjs.org/docs/latest/general/responsive.html">官方文档</a>。在标签之间的部分，都是需要自己填充的图表数据和属性。</p>
 <p>我们来看一个样例，你可以把鼠标移上去看看动态效果。</p>
 <div style="width: 90%;margin: 0 auto">
-    <canvas id="chart7267" style="height: 300px"></canvas>
+    <canvas id="chart6083" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart7267').getContext('2d');
+    var ctx = document.getElementById('chart6083').getContext('2d');
     var options = {type:'line',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First dataset',backgroundColor:'rgb(255, 99, 132)',borderColor:'rgb(255, 99, 132)',data:[0,10,5,2,20,30,45]}]},options:{responsive:true,title:{display:true,text:'Chart.js Line Chart'}}};
     new Chart(ctx, options);
 </script>
@@ -137,61 +137,61 @@
 
 <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>现在你已经基本学会了在Hexo中插入图表了，我再展示一些更炫酷的图表吧，你可以自己去尝试一下。</p>
 <h2 id="柱状-条形图"><a href="#柱状-条形图" class="headerlink" title="柱状/条形图"></a>柱状/条形图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5441" style="height: 300px"></canvas>
+    <canvas id="chart2030" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5441').getContext('2d');
+    var ctx = document.getElementById('chart2030').getContext('2d');
     var options = {"type":"bar","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"label":"My First Dataset","data":[65,59,80,81,56,55,40],"fill":false,"backgroundColor":["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],"borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],"borderWidth":1}]},"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="环形-amp-饼图"><a href="#环形-amp-饼图" class="headerlink" title="环形&amp;饼图"></a>环形&amp;饼图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart1940" style="height: 300px"></canvas>
+    <canvas id="chart1054" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart1940').getContext('2d');
+    var ctx = document.getElementById('chart1054').getContext('2d');
     var options = {"type":"pie","data":{"labels":["Red","Blue","Yellow"],"datasets":[{"label":"My First Dataset","data":[300,50,100],"backgroundColor":["rgb(255, 99, 132)","rgb(54, 162, 235)","rgb(255, 205, 86)"]}]}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart4096" style="height: 300px"></canvas>
+    <canvas id="chart5068" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart4096').getContext('2d');
+    var ctx = document.getElementById('chart5068').getContext('2d');
     var options = {"type":"radar","data":{"labels":["Eating","Drinking","Sleeping","Designing","Coding","Cycling","Running"],"datasets":[{"label":"My First Dataset","data":[65,59,90,81,56,55,40],"fill":true,"backgroundColor":"rgba(255, 99, 132, 0.2)","borderColor":"rgb(255, 99, 132)","pointBackgroundColor":"rgb(255, 99, 132)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(255, 99, 132)"},{"label":"My Second Dataset","data":[28,48,40,19,96,27,100],"fill":true,"backgroundColor":"rgba(54, 162, 235, 0.2)","borderColor":"rgb(54, 162, 235)","pointBackgroundColor":"rgb(54, 162, 235)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgb(54, 162, 235)"}]},"options":{"elements":{"line":{"tension":0,"borderWidth":3}}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="气泡图"><a href="#气泡图" class="headerlink" title="气泡图"></a>气泡图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart3226" style="height: 300px"></canvas>
+    <canvas id="chart958" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart3226').getContext('2d');
+    var ctx = document.getElementById('chart958').getContext('2d');
     var options = {"type":"bubble","data":{"datasets":[{"label":"First Dataset","data":[{"x":20,"y":30,"r":6},{"x":25,"y":20,"r":8},{"x":32,"y":6,"r":7},{"x":35,"y":26,"r":9},{"x":40,"y":10,"r":5}],"backgroundColor":"rgb(255, 99, 132)"}]}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="离散图"><a href="#离散图" class="headerlink" title="离散图"></a>离散图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart127" style="height: 300px"></canvas>
+    <canvas id="chart6181" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart127').getContext('2d');
+    var ctx = document.getElementById('chart6181').getContext('2d');
     var options = {type:'scatter',data:{labels:['January','February','March','April','May','June','July'],datasets:[{label:'My First dataset',borderColor:'rgb(255, 99, 132)',backgroundColor:'rgb(255, 99, 132)',data:[{x:12,y:45,},{x:12,y:13,},{x:56,y:3,},{x:5,y:87,},{x:43,y:76,},{x:34,y:8,},{x:9,y:53,}]},{label:'My Second dataset',borderColor:'rgb(54, 162, 235)',backgroundColor:'rgb(54, 162, 235)',data:[{x:56,y:12,},{x:7,y:12,},{x:87,y:24,},{x:34,y:45,},{x:65,y:27,},{x:8,y:37,},{x:24,y:89,}]}],options:{title:{display:true,text:'Chart.js Scatter Chart'},}}};
     new Chart(ctx, options);
 </script>
 
 <h2 id="混合图"><a href="#混合图" class="headerlink" title="混合图"></a>混合图</h2><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart9185" style="height: 300px"></canvas>
+    <canvas id="chart3964" style="height: 300px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart9185').getContext('2d');
+    var ctx = document.getElementById('chart3964').getContext('2d');
     var options = {"type":"bar","data":{"labels":["January","February","March","April"],"datasets":[{"label":"Bar Dataset","data":[10,20,30,40],"borderColor":"rgb(255, 99, 132)","backgroundColor":"rgba(255, 99, 132, 0.2)"},{"label":"Line Dataset","data":[50,50,50,50],"type":"line","fill":false,"borderColor":"rgb(54, 162, 235)"}]},"options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}};
     new Chart(ctx, options);
 </script>

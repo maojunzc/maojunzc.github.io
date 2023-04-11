@@ -174,6 +174,509 @@
     
     
     <article
+  id="post-自动任务v1-0-支持解锁手机-启动软件-点击自定义坐标-滑动屏幕"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/"
+    >自动任务v1.0 --- 支持解锁手机, 启动软件, 点击自定义坐标, 滑动屏幕</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/" class="article-date">
+  <time datetime="2023-03-13T02:14:11.000Z" itemprop="datePublished">2023-03-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/">破解软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法"><a href="#声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法" class="headerlink" title="声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法."></a>声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法.</h2><p>软件名称: 自动任务v1.0<br>用途:  自动执行一些繁琐的任务,  例如: 打卡, 签到.<br>验证手机:  RedMi K30 Ultra<br>手机系统:  安卓12, MIUI13<br>软件界面:<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303131014200.png"><br><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303131412500.png"></p>
+<p>软件界面十分简洁, 大概讲讲吧,</p>
+<p>启动时间<br>        意思: 到达这个时间, 将会解锁手机, 并运行相关指令,  如果将时间改为666,  那么就会在每次启动软件的10秒后, 自动执行指令.</p>
+<p>支持的指令如下:</p>
+<ol>
+<li><p>等待时间</p>
+<pre><code> 格式:   等待时间,5000;
+ 意思:  执行完一个指令后, 需要等一段时间再执行下一个指令, 就用到这个了, 特别是启动软件后,  需要等的时间比较长，时间单位为毫秒.
+</code></pre>
+</li>
+<li><p>点击坐标</p>
+<pre><code> 格式: 点击坐标,100,100;
+ 意思:  点击屏幕的坐标为100,100
+</code></pre>
+</li>
+<li><p>滑动屏幕</p>
+<pre><code> 格式:  滑动屏幕,500,1800,500,200;
+ 意思:  从屏幕坐标500,1800滑动到屏幕坐标500,200; 一个上滑的动作.
+</code></pre>
+</li>
+<li><p>点击文本</p>
+<pre><code> 格式:  点击文本,签到;
+ 意思:  打开的软件界面有签到两个字, 但我不想用坐标点击, 那么就可以用点击文本的方式了, 但是AutoJs.Pro已经禁止识别部分软件的控件了, 所以这个不是100%有效.
+</code></pre>
+</li>
+<li><p>输入文本</p>
+<pre><code> 格式:  输入文本,吾爱破解论坛;
+ 意思: 点击了一个输入框后, 然后在那个输入框输入吾爱破解论坛.
+</code></pre>
+</li>
+<li><p>返回桌面; 最近任务; 返回键</p>
+<pre><code> 意思:  模拟按下手机的这些按键.
+</code></pre>
+</li>
+<li><p>退出软件</p>
+<pre><code> 意思: 执行完指令后, 软件不再使用了, 就可以用退出软件这个指令.
+</code></pre>
+</li>
+</ol>
+<p>注意事项:<br>        软件需要开启无障碍服务,  用于手机解锁和操作指令.<br>        软件注意后台保活, 方法自行网上搜索.<br>        界面中用到的符号都是英文标点符号, 请勿用错.<br>        如有问题可以点击软件界面中 吾爱破解论坛的网址查看日志.</p>
+<p>如果该软件对你有帮助,  请给免费评分鼓励一下,   谢谢大家.</p>
+<p>下载地址:<a target="_blank" rel="noopener" href="https://wwtr.lanzoue.com/b03vx7y7g">https://wwtr.lanzoue.com/b03vx7y7g</a><br>密码:52pj</p>
+<br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-学校人员统计系统源码调查问卷表"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/09/%E5%AD%A6%E6%A0%A1%E4%BA%BA%E5%91%98%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F%E6%BA%90%E7%A0%81%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E8%A1%A8/"
+    >学校人员统计系统源码调查问卷表</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/09/%E5%AD%A6%E6%A0%A1%E4%BA%BA%E5%91%98%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F%E6%BA%90%E7%A0%81%E8%B0%83%E6%9F%A5%E9%97%AE%E5%8D%B7%E8%A1%A8/" class="article-date">
+  <time datetime="2023-03-09T03:39:45.000Z" itemprop="datePublished">2023-03-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="源码介绍"><a href="#源码介绍" class="headerlink" title="源码介绍"></a>源码介绍</h1><p>学校人员统计系统源码调查问卷表(学校人员统计系统源码怎么做)，简单源码无数据库可用来人员统计，收集调查问卷，留言板，等功能开源无加密。</p>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303091141650.png">
+
+
+
+<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iCJCP0pnozxg">蓝奏网盘</a></h1><br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-安卓一木记账v5-2-8高级版"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/09/%E5%AE%89%E5%8D%93%E4%B8%80%E6%9C%A8%E8%AE%B0%E8%B4%A6v5-2-8%E9%AB%98%E7%BA%A7%E7%89%88/"
+    >安卓一木记账v5.2.8高级版</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/09/%E5%AE%89%E5%8D%93%E4%B8%80%E6%9C%A8%E8%AE%B0%E8%B4%A6v5-2-8%E9%AB%98%E7%BA%A7%E7%89%88/" class="article-date">
+  <time datetime="2023-03-09T01:43:39.000Z" itemprop="datePublished">2023-03-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/">破解软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>一木记账是一款专注效率的智能记账软件。便捷好用的生活记账本，适用于旅游记账，旅行记账，生意记账，学生记账，学生账本，亲子账本，装修记账，人情记账，日常记账，家庭账本，随手记账等。再也不担心钱花哪儿了，简洁的记账流程，清晰的图表展示，让你随时随地掌握资金流向！注册个账号即可使用！</p>
+<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303090943266.png">
+
+
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p>2023.03.03 v5.2.8</p>
+<p>1.自动记账新增自动添加偏好设置；</p>
+<p>2.优化部分自动记账识别场景；</p>
+<p>3.优化导入导出相关问题；</p>
+<p>4.日历视图新增回到今日按钮；</p>
+<p>5.修复url scheme相关问题；</p>
+<p>6.优化部分交互；</p>
+<p>7.修复已知的BUG；</p>
+<p>2022.09.25 v5.1.5</p>
+<p>1.支持随手记账单的导入</p>
+<p>2.货币型基金买入卖出记录支持编辑</p>
+<p>3.优化横屏下悬浮球的显示</p>
+<p>4.分类隐藏设置显示交互优化</p>
+<p>5.优化自动记账部分识别逻辑</p>
+<p>6.修复流水对账中没有包含起始日0点账单的问题</p>
+<p>7.修复部分基金查询不到的问题</p>
+<p>8.修复非会员进入共享账本时。会自动切换成系统账本的问题</p>
+<p>9.修复共享账本同名称收入没有一起统计的问题</p>
+<p>10.修复债务收款不支持时间编辑的问题</p>
+<p>11.其他问题修复及优化</p>
+<p>2022.02.05 v4.8.2</p>
+<p>1.账户、报销、借贷支持自定义分组；</p>
+<p>2.信贷账户详情页新增还款提醒；</p>
+<p>3.优化账户选择对话框，可按分组选择；</p>
+<p>4.信贷账户每期账单可编辑入账日期；</p>
+<p>5.记账页面分类可按照备注自动切换；</p>
+<p>6.修复部分期货数据获取失败的问题；</p>
+<p>7.修复截图导入长图时，系统会提示删除图片提示的问题；</p>
+<p>8.其他优化及BUG修复；</p>
+<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><h1 id="蓝奏网盘-https-wwqh-lanzouw-com-iSpuu0pngo8h-密码-avw1"><a href="#蓝奏网盘-https-wwqh-lanzouw-com-iSpuu0pngo8h-密码-avw1" class="headerlink" title="蓝奏网盘:https://wwqh.lanzouw.com/iSpuu0pngo8h    密码:avw1"></a>蓝奏网盘:<a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iSpuu0pngo8h">https://wwqh.lanzouw.com/iSpuu0pngo8h</a>    密码:avw1</h1><br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-美化版毒鸡汤社会语录源码"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/09/%E7%BE%8E%E5%8C%96%E7%89%88%E6%AF%92%E9%B8%A1%E6%B1%A4%E7%A4%BE%E4%BC%9A%E8%AF%AD%E5%BD%95%E6%BA%90%E7%A0%81/"
+    >美化版毒鸡汤社会语录源码</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/09/%E7%BE%8E%E5%8C%96%E7%89%88%E6%AF%92%E9%B8%A1%E6%B1%A4%E7%A4%BE%E4%BC%9A%E8%AF%AD%E5%BD%95%E6%BA%90%E7%A0%81/" class="article-date">
+  <time datetime="2023-03-09T01:33:17.000Z" itemprop="datePublished">2023-03-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="安装指南"><a href="#安装指南" class="headerlink" title="安装指南"></a>安装指南</h1><p>下载源码修改一些自己的信息<br>上传到普通站点目录就可以访问了</p>
+<h1 id="网页调用方法"><a href="#网页调用方法" class="headerlink" title="网页调用方法"></a>网页调用方法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;https://你的域名/api/?format=js&amp;charset=utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;div id=&quot;hitokoto&quot;&gt;&lt;script&gt;hitokoto()&lt;/script&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/ibeT70png5pa">蓝奏网盘</a></h1><br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-QuickTron潜伏式AGV配置说明"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/07/QuickTron%E6%BD%9C%E4%BC%8F%E5%BC%8FAGV%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"
+    >QuickTron潜伏式AGV配置说明</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/07/QuickTron%E6%BD%9C%E4%BC%8F%E5%BC%8FAGV%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/" class="article-date">
+  <time datetime="2023-03-07T09:57:44.000Z" itemprop="datePublished">2023-03-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PMP/">PMP</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  Here's something encrypted, password is required to continue reading. 
+      <a class="article-more-link" href="/2023/03/07/QuickTron%E6%BD%9C%E4%BC%8F%E5%BC%8FAGV%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PMP/" rel="tag">PMP</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-2023-3-7"
   class="article article-type-post"
   itemscope
@@ -205,15 +708,15 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1974443815&auto=1&height=66"></iframe>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1974443815&auto=1&height=66"></iframe>
 
-<br/> 
-<br/> 
-<br/> 
-<br/> 
-<br/> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
 
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071754839.jpg"/> 
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071754839.jpg"> 
       <!-- reward -->
       
     </div>
@@ -294,9 +797,9 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>万兴PDF专家是一款国产PDF全套解决方案专家，专注于PDF的创建、编辑、转换、标注、保护、管理、水印、压缩、签名等功能。这款强大的专业PDF编辑软件，以简约风格及强大的功能在国外名声大噪，除了传统的阅读、编辑、注释等功能外，它还提供了表单填写、数据提取、格式转换等强大功能。Wondershare PDFelement，全能型数字文档处理工具，PDF文档的全方位解决方案，除OCR功能外，还具有PDF创建，编辑PDF，PDF表单，PDF安全与分享等功能。您可以编辑PDF文件，图像和页面，签署数字签名和注释PDF，将PDF转换成Word或各种类型文件，如Word、Excel、PPT、EPUB、HTML、Text、RTF等多种格式。</p>
-<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537283.png"/>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537397.png"/>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071534805.png"/>
+<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537283.png">
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071537397.png">
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071534805.png">
 
 <h1 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h1><p>  PDF阅读器 + PDF创建器 + PDF编辑器 + PDF转换器 + OCR识别工具</p>
 <p>支持PDF文档或PDF扫描件转换为RTF/Word/Excel/PPT/EPUB/HTML/Text/图片等常用格式</p>
@@ -307,7 +810,7 @@
 <p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p>
 <p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p>
 <p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p>
-<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#x59;&#x47;&#46;&#x54;&#x65;&#x61;&#109;">&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#x59;&#x47;&#46;&#x54;&#x65;&#x61;&#109;</a></p>
+<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#74;&#111;&#x6e;&#103;&#97;&#x6e;&#x40;&#80;&#89;&#x47;&#46;&#x54;&#x65;&#97;&#x6d;">&#74;&#111;&#x6e;&#103;&#97;&#x6e;&#x40;&#80;&#89;&#x47;&#46;&#x54;&#x65;&#97;&#x6d;</a></p>
 <ul>
 <li><p>目前全球独家破解万兴PDF8.0版本跟进</p>
 </li>
@@ -315,9 +818,9 @@
 </li>
 </ul>
 <h1 id="运行要求"><a href="#运行要求" class="headerlink" title="运行要求"></a>运行要求</h1><p>.NET Framwork , Windows 7 或更高版</p>
-<h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fc1975440e56#/list/share/e99d2c3172954f40b5773d0146fc5163-8658">夸克网盘</a></h3><br/> 
-<br/> 
-<br/> 
+<h3 id="夸克网盘"><a href="#夸克网盘" class="headerlink" title="夸克网盘"></a><a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fc1975440e56#/list/share/e99d2c3172954f40b5773d0146fc5163-8658">夸克网盘</a></h3><br> 
+<br> 
+<br> 
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
@@ -401,7 +904,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h1><p>太极app是一个帮助你免Root,免解锁免刷机使用Xposed模块的APP框架.模块通过它改变系统和应用的行为,既能以传统的 Root/刷机方式运作,也能免Root/ 免刷机运行;并且它支持 Android 5.0 ~ 13.简单来说,太极虚拟框架就是个虚拟Xposed框架,能够加载Xposed模块,修改系统和内置APP,拦截方法,执行hook逻辑等.可以让你的应用程序拥有强大的功能，比如随意修改微信步数、免费下载网易云收费音乐、微信红包提醒，钉钉签到，各种实用的功能等你来发现。</p>
-<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071458521.png"/>
+<h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071458521.png">
 
 
 <p>更新日志<br>exp.weishu.me/update.json</p>
@@ -440,9 +943,9 @@
 <p>3.由于 太极·Magisk 不再需要修改 APP，因此 可以完美解决 微信/QQ 等应用无法被其他应用识别的问题。</p>
 <p>4.太极·Magisk 有能力对系统做更多地控制，因此可以做到更加稳定</p>
 <p>官方下载</p>
-<h1 id="软件：https-taichi-cool-zh-download-html"><a href="#软件：https-taichi-cool-zh-download-html" class="headerlink" title="软件：https://taichi.cool/zh/download.html"></a>软件：<a target="_blank" rel="noopener" href="https://taichi.cool/zh/download.html">https://taichi.cool/zh/download.html</a></h1><h1 id="模块：https-taichi-cool-zh-module"><a href="#模块：https-taichi-cool-zh-module" class="headerlink" title="模块：https://taichi.cool/zh/module/"></a>模块：<a target="_blank" rel="noopener" href="https://taichi.cool/zh/module/">https://taichi.cool/zh/module/</a></h1><br/> 
-<br/> 
-<br/> 
+<h1 id="软件：https-taichi-cool-zh-download-html"><a href="#软件：https-taichi-cool-zh-download-html" class="headerlink" title="软件：https://taichi.cool/zh/download.html"></a>软件：<a target="_blank" rel="noopener" href="https://taichi.cool/zh/download.html">https://taichi.cool/zh/download.html</a></h1><h1 id="模块：https-taichi-cool-zh-module"><a href="#模块：https-taichi-cool-zh-module" class="headerlink" title="模块：https://taichi.cool/zh/module/"></a>模块：<a target="_blank" rel="noopener" href="https://taichi.cool/zh/module/">https://taichi.cool/zh/module/</a></h1><br> 
+<br> 
+<br> 
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
@@ -526,12 +1029,12 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>最新可用代挂网源码，上传源码，访问域名安装即可使用，对接LoginSystem，全套代挂成本只要0.8一月，后台填写LoginSystem密钥即可，LoginSystem地址在后台设置里面。</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071103842.png"/>
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071103842.png">
 
 
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/imQDD0pi7wmf">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
+<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/imQDD0pi7wmf">蓝奏网盘</a></h3><br> 
+<br> 
+<br> 
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
@@ -614,17 +1117,17 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905005.png"/>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905417.png"/>
+  <img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905005.png">
+<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303070905417.png">
 
 <p>全功能在线截图生成器工具网页版网站源码</p>
 <p>源码项目全部开源，支持电脑和手机端在线制作生成！该源码可直接上传虚拟空间解压缩即可访问，搭建操作简单方便！源码为html，可二开！</p>
 <p>要是正式使用我推荐大家购买一个收费主机，有条件的可以购买服务器进行搭建效果更好</p>
 <h1 id="工具功能介绍"><a href="#工具功能介绍" class="headerlink" title="工具功能介绍"></a>工具功能介绍</h1><p>在线一键制作各种截图生成，包含生成功能：微信对话、微信领取红包、微信付款详情、微信收款详情、微信转账详情、微信零钱页面详情、微信扫码付款账单、微信对话和红包带安卓设置、微信朋友圈转发详情、支付宝聊天详情、支付宝转账详情、支付宝账户余额详情、淘宝订单详情、QQ聊天详情、手机短信聊天详情！</p>
 <p>在线生成工具仅供娱乐参考！请勿非法使用！</p>
-<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/inHKI0phz5yh">蓝奏网盘</a></h1><br/> 
-<br/> 
-<br/> 
+<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/inHKI0phz5yh">蓝奏网盘</a></h1><br> 
+<br> 
+<br> 
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
  
@@ -638,515 +1141,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-使用Picgo-GitHub-jsDelivr搭建CDN加速免费图床"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"
-    >使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" class="article-date">
-  <time datetime="2023-03-06T03:37:00.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常写Markdown或者博客的同学，肯定都要用到图床。图床是什么呢？其实相当于一个存储图片的网站，类似百度云这样，不过上传图片到图床后可以直接通过外链进行访问。</p>
-<p>比如把本地一张a.jpg上传到图床后，便可以拿到一个链接：</p>
-<p><a target="_blank" rel="noopener" href="https://www.xxx.com/img/a.jpg">https://www.xxx.com/img/a.jpg</a></p>
-<p>然后点击这个链接就可以访问图片a了。今天来聊聊怎么搭建可靠的图床吧~</p>
-<p>为什么会产生这个需求呢？因为小编经常写博文什么的，现在的做法是在简书上上传图片，然后把生成的图片链接放到Markdown文档上面，写好文档以后就可以批量复制到各大博客平台投稿了。</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061137456.png"/>
-
-<p>但是这样有个隐患：万一简书哪天挂掉了，那么我放到csdn、cnbolgs等这些平台的文章图片都会挂掉。即使简书一直维持现状，但万一哪天它不高兴了，做了个外链防盗（图片外链只能在本站显示），那同样会遇到上面的问题。</p>
-<p>比如小编之前放在简书上的文章，复制到csdn上后。不知道怎么回事：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061138846.png"/>
-
-<p>说多了都是泪。因此，趁早做好准备，免得以后出现问题就麻烦了。毕竟有些博客的图片只是随手一截，还真找不到备份……</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h1 id="1-Github"><a href="#1-Github" class="headerlink" title="1.Github"></a>1.Github</h1><h1 id="2-picgo"><a href="#2-picgo" class="headerlink" title="2.picgo"></a>2.picgo</h1><h1 id="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"><a href="#之前有介绍过一篇如何让搭建gitub仓库及picgo的使用" class="headerlink" title="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"></a>之前有介绍过一篇如何让搭建gitub仓库及picgo的使用</h1><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h2 id="1-创建Repository"><a href="#1-创建Repository" class="headerlink" title="1. 创建Repository"></a>1. 创建Repository</h2><p>鼠标移动到右上角，点击”New repository”按钮：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061140559.png"/></p>
-<p>填写相关信息，创建一个存储图片的仓库：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141996.png"/>
-
-<h2 id="2-配置token-key"><a href="#2-配置token-key" class="headerlink" title="2. 配置token key"></a>2. 配置token key</h2><p>生成一个Token用于操作GitHub repository。回到主页，点击”Settings”按钮：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141405.png"/>
-
-<p>进入页面后，点击”Developer settings”按钮<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142014.png"/></p>
-<p>点击”Personal access tokens”按钮，然后点击Generate token：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142644.png"/>
-
-<p>填写描述，选择”repo”权限，然后拉到下面点击”Generate token”按钮</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142968.png"/>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：创建成功后，会生成一串token，这串token之后不会再显示，所以第一次看到的时候，可以用个小本本保存起来哦，忘记了只有重新生成，每次都不一样。</span><br></pre></td></tr></table></figure>
-
-<h2 id="Picgo配置"><a href="#Picgo配置" class="headerlink" title="Picgo配置"></a>Picgo配置</h2><p>拿到了刚刚记录了GitHub token后，打开picgo，按照如下设置即可：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061143122.png"/></p>
-<p>设定仓库名按照“账户名/仓库名的格式填写”，比如我的是：maojunzc/maojunzc。</p>
-<p>分支名统一填写“master”。</p>
-<p>设定Token将之前的Token粘贴在这里。</p>
-<p>指定存储路径留空。</p>
-<p>自定义域名的作用是在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上。默认留空也可以正常使用。这里为了使用CDN加快图片的访问速度，</p>
-<h3 id="自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名"><a href="#自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名" class="headerlink" title="自定义域名我们按照这样去填写：https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名"></a>自定义域名我们按照这样去填写：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/GitHub%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名</a></h3><p>比如我的是：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc">https://cdn.jsdelivr.net/gh/maojunzc/maojunzc</a><br>点击确定后就配置完成了，我们截图后点击剪切板图片上传，如果上传成功，拿到的外链放到Markdown中正常访问，就OK啦。</p>
-<p>当然快捷上传的快捷键也可以到设置中进行配置。可以看到GitHub仓库中多了很多我们上传的图片。</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061145683.png"/>
-
-<br/> 
-<br/> 
-<br/> 
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-网页chatgpt-最新模型-可自定义api"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/"
-    >网页chatgpt 最新模型 可自定义api</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/%E7%BD%91%E9%A1%B5chatgpt-%E6%9C%80%E6%96%B0%E6%A8%A1%E5%9E%8B-%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89api/" class="article-date">
-  <time datetime="2023-03-06T03:18:19.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ChatGPT/">ChatGPT</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>最新网页版chatgpt 支持自定义api</p>
-<p>国内服务器，虚拟主机都支持搭建</p>
-<p>chatgpt 最新模型 </p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061118260.png"/>
-
-<p>自定义api入口：域名/adminkey.php</p>
-<p>直接把源码放到根目录即可运行</p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061119841.png"/>
-
-<h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iygzw0pdrkyf">蓝奏网盘</a></h1> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ChatGPT/" rel="tag">ChatGPT</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-BlogHelper-v1-0-30：一键发布本地文章到主流博客平台"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"
-    >BlogHelper v1.0.30：一键发布本地文章到主流博客平台</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/BlogHelper-v1-0-30%EF%BC%9A%E4%B8%80%E9%94%AE%E5%8F%91%E5%B8%83%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0%E5%88%B0%E4%B8%BB%E6%B5%81%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/" class="article-date">
-  <time datetime="2023-03-06T03:15:32.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/PC%E8%BD%AF%E4%BB%B6/">PC软件</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>BlogHelper 是一个没有界面，只存放在系统托盘中的应用，它的目的是帮助人们更方便地发布文章。</p>
-<p>该软件具有以下功能：</p>
-<ul>
-<li>一键发布本地文章到知乎、简书、博客园、CSDN、掘金、SegmentFault (思否)、开源中国等博客平台。</li>
-<li>支持多种图床，包括新浪、SM.MS、Github、Imgur、七牛云、腾讯云、阿里云、又拍云。</li>
-</ul>
-<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHelper">https://github.com/onblog/BlogHelper</a></p>
-<p>Windows 下载链接：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.exe<br>Mac 下载链接：<a target="_blank" rel="noopener" href="https://github.com/onblog/BlogHe">https://github.com/onblog/BlogHe</a> … ogHelper-1.0.30.dmg</p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061116768.png"/>
-
-<br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PC%E8%BD%AF%E4%BB%B6/" rel="tag">PC软件</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-在线检测网速流量HTML单页源码"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/%E5%9C%A8%E7%BA%BF%E6%A3%80%E6%B5%8B%E7%BD%91%E9%80%9F%E6%B5%81%E9%87%8FHTML%E5%8D%95%E9%A1%B5%E6%BA%90%E7%A0%81/"
-    >在线检测网速流量HTML单页源码</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/%E5%9C%A8%E7%BA%BF%E6%A3%80%E6%B5%8B%E7%BD%91%E9%80%9F%E6%B5%81%E9%87%8FHTML%E5%8D%95%E9%A1%B5%E6%BA%90%E7%A0%81/" class="article-date">
-  <time datetime="2023-03-06T02:40:32.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061041598.png"/>
-
-<p>在线检测网速流量 HTML 单页源码 测试您的网速，多地查询您的 IP 地址，同时具备网络延迟实时检测，流量杀手，流量消耗器，流量消失器，支持定量完成，支持多线程，适配 iOS 后台运行，网页由原生 js 编写，直接部署在静态存储服务即可，非常实用在线测速流量的小工具，可以直接上传空间或者本地浏览器打开访问 HTML</p>
-<h3 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/iUm3N0pdojsf">蓝奏网盘</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-微信小程序转app教程"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BD%ACapp%E6%95%99%E7%A8%8B/"
-    >微信小程序转app教程</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%BD%ACapp%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2023-03-06T02:37:28.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>移动互联网快速发展时，轻量简洁的小程序，背靠微信平台的天然流量，因开发难度低、运行速度快、更新迭代快、运维成本低等优势，一度有成为主流的趋势。随后，小而美的微信小程序，因“小”体量而内容体积有限制、受微信平台玩法限制等原因逐渐体现。而APP，前期有着开发难度较高、速度慢、后期维护难、更新迭代相对慢、用户运营成本高等特点，但长久来看，更好的用户体验、自有平台生态，让这两谁也无法取代谁。</p>
-<p>小程序和APP各有特色，它们适用于不同需求的客户。我们可以看出，对于功能比较简单的需求，小程序可以满足；但如果是一些功能繁多的需求，小程序无法承载过多功能。对于开发者来说，小程序开发快、成本相对低，对于预算较低、希望快速应用的公司来说，开发小程序不失为一种不错的选择；而对于预算较高的中大型公司，做APP、网站、小程序等全套开发，更能够提高用户体验，通过自身APP沉淀用户数据，提升企业价值。</p>
-<p>如何将已有小程序和App合二为一？</p>
-<p>这对于开发人员是个难题。App和小程序拥有着完全独立的技术架构，一个成型的App转小程序可以利用各大小程序平台提供的组件模板开发，而且适配速度可观。小程序转APP需要脱离这些小程序平台，适应更加庞大的技术架构流程，难度更大。</p>
-<p>但现在有了FinClip，让问题解决变得简单易懂。就算你不擅于编程也能轻松搞定这一切！这里手把手教大家把小程序一键打包转为App的方法：</p>
-<p>1、第一步</p>
-<p>从 FinClip 官网下载 FIDE 工具，已经提供了 Mac 和 Windows 两个版本。</p>
-<p>2、第二步</p>
-<p>下载安装完成后，打开 FIDE 工具，可以选择从零开始开发一款小程序或在“项目目录”选择已有的小程序代码包进行上传。</p>
-<p>3、第三步</p>
-<p>上传代码包后系统自动进行编译，编译过程大概1-2分钟，速度还是非常快的。</p>
-<p>4、第四步</p>
-<p>编译完成后会出现小程序运行的界面，此时点击右上角的“生成 App”即可进入打包 App 的正式环节。</p>
-<p>5、第五步</p>
-<p>点击后会出现功能的介绍及提示，这里点击“下一步”即可。</p>
-<p>6、第六步</p>
-<p>小程序生成App需要确认配置小程序信息，这里可以选择你在 FinClip 管理后台已设置好的小程序信息即可。</p>
-<p>7、第七步</p>
-<p>根据提示完成 App 信息的填写，这个的“关联应用”同样需要在 FinClip 管理后台提前进行“应用绑定”设置，什么是 Bundle ID ，如何填写官方也有非常详细的指引，大家可以根据下方的文字找到相应的文档，我在下面也放了官方的说明截图。</p>
-<p>8、第八步</p>
-<p>到这里就完成了所有信息的填写，点击“下一步”之后进入到生成App的等待过程。</p>
-<p>完成</p>
-<p>整个过程是不是非常简单，超低门槛，仅需几步点击即可完成操作。</p>
-<p>一些tips：</p>
-<p>FinClip技术，旨在帮助任何企业实现：自主拥有能运行小程序的App、自主拥有小程序商店和生态、同时支持自己的小程序在第三方平台运行、并让小程序和App之间无缝跳转。首先整个产品的定位是一个小程序容器，相当于 App 集成 FinClip SDK 后便拥有了小程序的运行能力，同时 FinClip 兼容微信小程序语法，可快速将微信小程序搬到自有App中，同时支持手机、电脑、智能手表、IoT等终端设备运行小程序，可以做到一端开发，iOS、Android、Windows、MacOS、麒麟等多端运行。</p>
-<p>FinClip还提供包括管理后台、FinClip助手、FIDE等服务工具，可以帮助企业进行从小程序开发、小程序测试、小程序上下架等整个闭环管理。</p>
-<p>想要进一步了解FinClip更多信息，可以登录FinClip官网了解和注册体验。</p>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038324.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038359.png"/>
-<img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303061038848.png"/>
-
-<h3 id="FinClip官网"><a href="#FinClip官网" class="headerlink" title="FinClip官网"></a><a target="_blank" rel="noopener" href="https://www.finclip.com/">FinClip官网</a></h3><br/> 
-<br/> 
-<br/> 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
 
     </footer>
   </div>
