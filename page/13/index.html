@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+
+
+<html lang="zn-CH">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> maojunzc</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="maojunzc" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/maojunzc"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">maojunzc</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '喜欢就争取，得到就珍惜，错过就忘记'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&amp;uin=26198573&amp;site=qq&amp;menu=yes">
+                <img src="https://s1.ax1x.com/2023/02/14/pSoIsmQ.jpg" width="300" alt="maojunzc0">
+            </a>
+        </li>
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://gitee.com/enterprises?invite_code=Z2l0ZWUtNzkwODYxOA%3D%3D">
+                <img src="https://s1.ax1x.com/2023/02/14/pSoI2Yq.jpg" width="300" alt="maojunzc1">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-在-Hexo-中插入-Chart-动态图表"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/%E5%9C%A8-Hexo-%E4%B8%AD%E6%8F%92%E5%85%A5-Chart-%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/"
+    >在 Hexo 中插入 Chart 动态图表</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/%E5%9C%A8-Hexo-%E4%B8%AD%E6%8F%92%E5%85%A5-Chart-%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/" class="article-date">
+  <time datetime="2023-02-15T02:18:45.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><code>Chartjs</code>是一款简单优雅的数据可视化工具，对比其他图表库如echarts、highcharts、c3、flot、amchart等，它的画面效果、动态效果都更精致，它的 <a target="_blank" rel="noopener" href="https://chartjs.bootcss.com/">文档首页</a> 就透出一股小清新，基于 HTML5 Canvas，它拥有更好的性能且响应式，基本满足了一般数据展示的需要，包括折线图，条形图，饼图，散点图，雷达图，极地图，甜甜圈图等。</p> 
+      <a class="article-more-link" href="/2023/02/15/%E5%9C%A8-Hexo-%E4%B8%AD%E6%8F%92%E5%85%A5-Chart-%E5%8A%A8%E6%80%81%E5%9B%BE%E8%A1%A8/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-Sakurairo-强大的二次元wordpress主题"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/Sakurairo-%E5%BC%BA%E5%A4%A7%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%85%83wordpress%E4%B8%BB%E9%A2%98/"
+    >Sakurairo-强大的二次元wordpress主题</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/Sakurairo-%E5%BC%BA%E5%A4%A7%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%85%83wordpress%E4%B8%BB%E9%A2%98/" class="article-date">
+  <time datetime="2023-02-15T02:14:33.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>一个多彩，轻松上手，体验完善，具有强大自定义功能，支持多语言的WordPress主题</p>
+<p>Sakurairo-强大的二次元wordpress主题<br><img src="https://static.xkwo.com/xiaok/956e95c106084b3d937bbcf7f9be685c.jpg"></p>
+<h2 id="下载地址-https-wwqh-lanzouw-com-b01qfa0le-密码-3ome"><a href="#下载地址-https-wwqh-lanzouw-com-b01qfa0le-密码-3ome" class="headerlink" title="下载地址:https://wwqh.lanzouw.com/b01qfa0le  密码:3ome"></a>下载地址:<a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/b01qfa0le">https://wwqh.lanzouw.com/b01qfa0le</a>  密码:3ome</h2><br> 
+<br> 
+<br> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-支付宝当面付配置详细教程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%BD%93%E9%9D%A2%E4%BB%98%E9%85%8D%E7%BD%AE%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"
+    >支付宝当面付配置详细教程</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/%E6%94%AF%E4%BB%98%E5%AE%9D%E5%BD%93%E9%9D%A2%E4%BB%98%E9%85%8D%E7%BD%AE%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2023-02-15T02:09:50.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>支付宝当面付配置详细教程如下<br>新版支付宝接口改用了RSA2的密钥。操作以下步骤之前确保你有电脑，因为需要用到电脑软件生成密钥！</p>
+<p>第一步：申请支付宝官方支付接口</p>
+<p>首先需要申请支付宝官方支付接口，如果没申请接口，即使是配置上密钥也是无法使用的。</p>
+<p>申请地址是：<a target="_blank" rel="noopener" href="https://b.alipay.com/signing/productSetV2.htm">https://b.alipay.com/signing/productSetV2.htm</a><br><img src="https://static.xkwo.com/xiaok/b326fca44fdf4aa294cb1709c14a8de1.png"><br>然后打开网址：<a target="_blank" rel="noopener" href="https://open.alipay.com/platform/developerIndex.htm">https://open.alipay.com/platform/developerIndex.htm</a><br><img src="https://static.xkwo.com/xiaok/c21663158a224e1e8b1ffcd1f7ad13fa.png"><br>第二步：下载并安装“支付宝开放平台开发助手”</p>
+<p>安装完后直接运行即可。</p>
+<p>第三步：点击【生成密钥】（密钥长度和密钥格式都为默认，不用改），如下图所示<br><img src="https://static.xkwo.com/xiaok/cf34eb28c70847a1b6b539c6cdd3bef8.png"><br>将【应用私钥】填写到网站后台相应的配置项内。</p>
+<p>第四步：进入支付宝开放平台密钥页面，可以看到APPID，将APPID填写到网站后台。</p>
+<p>然后点击【接口加签方式】后面的【设置】<br><img src="https://static.xkwo.com/xiaok/e005c8102d644a54bd0c422d2c28553b.png"><br>接口价签模式选择“公钥”，然后将刚才在软件里面生成的【应用公钥】填写到下方输入框内：</p>
+<p>保存设置之后，会出现一个【支付宝公钥】，将支付宝公钥复制后填写到网站后台。</p>
+<p>至此，支付宝新版接口的密钥已经配置完毕了。</p>
+<p>要注意的是【支付宝公钥】和【应用公钥】是不一样的，千万不能搞混了！另外【应用公钥】和【应用私钥】是一一对应的，也就是填写到网站后台的【应用私钥】和提交到支付宝那边的【应用公钥】是同一对才可以！</p>
+<p>支付宝公钥怎么获取请看下图<br><img src="https://static.xkwo.com/xiaok/58d04c2ceafc4fb4863b5c06a1fe5e13.png"></p>
+<br> 
+<br> 
+<br> 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-OneNice简洁大方且开源免费的WordPress主题"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/OneNice%E7%AE%80%E6%B4%81%E5%A4%A7%E6%96%B9%E4%B8%94%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84WordPress%E4%B8%BB%E9%A2%98/"
+    >OneNice简洁大方且开源免费的WordPress主题</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/OneNice%E7%AE%80%E6%B4%81%E5%A4%A7%E6%96%B9%E4%B8%94%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84WordPress%E4%B8%BB%E9%A2%98/" class="article-date">
+  <time datetime="2023-02-15T01:19:46.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>OneNice是一款超级简洁的WordPress主题，支持中英文，免费开源，无任何加密，无任何冗余代码，无任何授权限制，可随便使用</p>
+<p>OneNice简洁大方且开源免费的WordPress主题<br><img src="https://static.xkwo.com/xiaok/ac52976ceca14296980ee24d3a9b2463.png"></p>
+<h2 id="下载地址-https-whpx8-lanzoul-com-iDnMy0nf011g"><a href="#下载地址-https-whpx8-lanzoul-com-iDnMy0nf011g" class="headerlink" title="下载地址:https://whpx8.lanzoul.com/iDnMy0nf011g"></a>下载地址:<a target="_blank" rel="noopener" href="https://whpx8.lanzoul.com/iDnMy0nf011g">https://whpx8.lanzoul.com/iDnMy0nf011g</a></h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-【解锁会员版】BitDock比特工具栏"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/%E3%80%90%E8%A7%A3%E9%94%81%E4%BC%9A%E5%91%98%E7%89%88%E3%80%91BitDock%E6%AF%94%E7%89%B9%E5%B7%A5%E5%85%B7%E6%A0%8F/"
+    >【解锁会员版】BitDock比特工具栏</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/%E3%80%90%E8%A7%A3%E9%94%81%E4%BC%9A%E5%91%98%E7%89%88%E3%80%91BitDock%E6%AF%94%E7%89%B9%E5%B7%A5%E5%85%B7%E6%A0%8F/" class="article-date">
+  <time datetime="2023-02-15T01:09:10.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PC%E8%BD%AF%E4%BB%B6/">PC软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="BitDock比特工具栏-一款运行在Windows上的极简工具栏"><a href="#BitDock比特工具栏-一款运行在Windows上的极简工具栏" class="headerlink" title="BitDock比特工具栏   一款运行在Windows上的极简工具栏"></a>BitDock比特工具栏   一款运行在Windows上的极简工具栏</h3><p><img src="https://static.xkwo.com/xiaok/712a4c0fe31f4b5aaca9f53a834b98ce.jpg"><br>官网链接：<a target="_blank" rel="noopener" href="http://bitdock.cn/">http://bitdock.cn/</a></p>
+<p>【解锁会员版】BitDock比特工具栏<br>软件截图：同理，用过我软件的都知道，在使用软件的时候会开ip过滤。如果浏览器没网请关闭开启/退出软件（不能直接关机/重启电脑[ip过滤未恢复]）<br><img src="https://static.xkwo.com/xiaok/4830341da129430083bffdfb2952ddc5.jpg"><br>【解锁会员版】BitDock比特工具栏</p>
+<p>功能截图：<br><img src="https://static.xkwo.com/xiaok/7ef8d2d6091143cf9efc6418ba55bc29.jpg"><br><img src="https://static.xkwo.com/xiaok/f86a4efc7fa54e788707c8189f40dc03.jpg"></p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>1、需要登录自己的账号【需登录】</p>
+<p>2、软件用易语言编写可能会误报误杀，开启软件后会代{过}{滤}理浏览器IP，如果遇到其他网页断网请退出软件</p>
+<p>3、登录账号时请勾选自动登录，那么重启电脑后还是显示VIP（比特桌面&amp;BitDock），打开Dock设置时会重新联网获取数据，所以使用Dock设置（云备份那张图）时需要打开开启软件功能。</p>
+<p>3、下载地址：<a target="_blank" rel="noopener" href="https://wwby.lanzouo.com/iwYSy0nevm3e">https://wwby.lanzouo.com/iwYSy0nevm3e</a>    密码:abz8 </p>
+<br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PC%E8%BD%AF%E4%BB%B6/" rel="tag">PC软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-免费直连防红源码"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/14/%E5%85%8D%E8%B4%B9%E7%9B%B4%E8%BF%9E%E9%98%B2%E7%BA%A2%E6%BA%90%E7%A0%81/"
+    >免费直连防红源码</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/14/%E5%85%8D%E8%B4%B9%E7%9B%B4%E8%BF%9E%E9%98%B2%E7%BA%A2%E6%BA%90%E7%A0%81/" class="article-date">
+  <time datetime="2023-02-14T10:02:10.000Z" itemprop="datePublished">2023-02-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%BA%90%E7%A0%81/">源码</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="免费直连防红源码分享-内置接口无广告"><a href="#免费直连防红源码分享-内置接口无广告" class="headerlink" title="免费直连防红源码分享 内置接口无广告"></a>免费直连防红源码分享 内置接口无广告</h3><p>更新了V1.3版本<br>1.更新了QQ直连防红<br>2.更新自适应网站<br>3.更新官方gay短网址接口<br>直链版源码下载地址 <a target="_blank" rel="noopener" href="https://9a18.lanzoub.com/iDv0I0nd2bvg">https://9a18.lanzoub.com/iDv0I0nd2bvg</a></p>
+<p>最近一年来 腾讯检测机制加强了，我看QQ里，好多站都被拦截了，然后就自己搞了个防红，给大家使用。<br>————————///////////———–<br>旧爱防红程序免费版</p>
+<p>V1.2版本  2023.2.10<br>1.修复了不能生成的问题<br>2.修复了跳转模板问题<br>3.更新官方短网址接口</p>
+<p>跳转版源码地址 <a target="_blank" rel="noopener" href="https://9a18.lanzoub.com/i95Nc0n5zlte">https://9a18.lanzoub.com/i95Nc0n5zlte</a><br>搭建教程 上传主机或服务器 访问域名就可以用</p>
+<p>不用担心接口死的问题 我会在这里更新</p>
+<h1 id="使用方法：输入自己的网站域名-点击生成-显示的短网址-就是你的防红链接啦-可以在QQ微信内打开"><a href="#使用方法：输入自己的网站域名-点击生成-显示的短网址-就是你的防红链接啦-可以在QQ微信内打开" class="headerlink" title="使用方法：输入自己的网站域名 点击生成 显示的短网址 就是你的防红链接啦  可以在QQ微信内打开"></a>使用方法：输入自己的网站域名 点击生成 显示的短网址 就是你的防红链接啦  可以在QQ微信内打开</h1><p><img src="https://static.xkwo.com/xiaok/862f9a2c9b5747589b471a2e198742ab.png"><br>免费直连防红源码分享 内置接口无广告免费直连防红源码分享 内置接口无广告</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-ChatGPT"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/14/ChatGPT/"
+    >ChatGPT</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/14/ChatGPT/" class="article-date">
+  <time datetime="2023-02-14T09:44:01.000Z" itemprop="datePublished">2023-02-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ChatGPT/">ChatGPT</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="README"><a href="#README" class="headerlink" title="README"></a>README</h3><p>[ChatGPT手机学习版  无须注册 无须登陆 直接使用:<a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/b01qezjwd">https://wwqh.lanzouw.com/b01qezjwd</a><br>密码:3nl4]<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSTJkmd"><img src="https://s1.ax1x.com/2023/02/14/pSTJkmd.png" alt="pSTJkmd.png" border="0"></a></p>
+<h3 id="chatgpt最新账号共享"><a href="#chatgpt最新账号共享" class="headerlink" title="chatgpt最新账号共享"></a>chatgpt最新账号共享</h3><p>账号1：<a href="mailto:&#118;&#105;&#99;&#107;&#121;&#x65;&#56;&#x39;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#118;&#105;&#99;&#107;&#121;&#x65;&#56;&#x39;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>  密码：LeZ25X5dwL<br>账号2：<a href="mailto:&#x65;&#117;&#x67;&#101;&#110;&#105;&#101;&#x76;&#x35;&#x35;&#x32;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x65;&#117;&#x67;&#101;&#110;&#105;&#101;&#x76;&#x35;&#x35;&#x32;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a>  密码2：4w95MnvIvc<br>账号3：<a href="mailto:&#x61;&#121;&#97;&#x6b;&#x6f;&#110;&#101;&#x77;&#117;&#121;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#121;&#97;&#x6b;&#x6f;&#110;&#101;&#x77;&#117;&#121;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>  密码3：q8UCd2lST4<br>账号4：<a href="mailto:&#108;&#117;&#x64;&#x6d;&#105;&#108;&#x6c;&#x61;&#115;&#x74;&#x65;&#x62;&#x39;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#108;&#117;&#x64;&#x6d;&#105;&#108;&#x6c;&#x61;&#115;&#x74;&#x65;&#x62;&#x39;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a>  密码4：7sb54Oii8I<br>账号5：<a href="mailto:&#99;&#x68;&#x72;&#x38;&#57;&#x6b;&#x75;&#99;&#x68;&#116;&#x6f;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#99;&#x68;&#x72;&#x38;&#57;&#x6b;&#x75;&#99;&#x68;&#116;&#x6f;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>  密码5：Cea7IQj5ud<br>账号6：<a href="mailto:&#x65;&#109;&#x69;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x65;&#109;&#x69;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码6：ENC82hip2A<br>账号7：<a href="mailto:&#x6c;&#121;&#100;&#x69;&#97;&#118;&#x6e;&#x39;&#x6b;&#x74;&#x75;&#116;&#x6f;&#x6b;&#x79;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x6c;&#121;&#100;&#x69;&#97;&#118;&#x6e;&#x39;&#x6b;&#x74;&#x75;&#116;&#x6f;&#x6b;&#x79;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a>  密码7：6351VsZz25<br>账号8：<a href="mailto:&#116;&#117;&#108;&#97;&#103;&#106;&#x33;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#116;&#117;&#108;&#97;&#103;&#106;&#x33;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>  密码8：Wx99eCqer7<br>账号9：<a href="mailto:&#112;&#x72;&#x75;&#101;&#53;&#x36;&#122;&#106;&#101;&#x68;&#108;&#x65;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#112;&#x72;&#x75;&#101;&#53;&#x36;&#122;&#106;&#101;&#x68;&#108;&#x65;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码9：8398k84X85<br>账号10：<a href="mailto:&#x76;&#101;&#x72;&#x6e;&#x69;&#x74;&#97;&#103;&#113;&#50;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x76;&#101;&#x72;&#x6e;&#x69;&#x74;&#97;&#103;&#113;&#50;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码10：geFfr4H0x9<br>账号11：<a href="mailto:&#107;&#105;&#x72;&#x73;&#x74;&#105;&#x65;&#x61;&#x6c;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#107;&#105;&#x72;&#x73;&#x74;&#105;&#x65;&#x61;&#x6c;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>  密码11：1FBbV8OJg9<br>账号12：<a href="mailto:&#x72;&#97;&#108;&#x70;&#104;&#x6e;&#97;&#x6d;&#x65;&#114;&#51;&#50;&#100;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x72;&#97;&#108;&#x70;&#104;&#x6e;&#97;&#x6d;&#x65;&#114;&#51;&#50;&#100;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a>  密码12：F85T86YtbL<br>账号13：<a href="mailto:&#99;&#101;&#x6c;&#x69;&#x6e;&#x61;&#x62;&#x75;&#x6c;&#x6c;&#x69;&#101;&#x76;&#x6d;&#117;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#99;&#101;&#x6c;&#x69;&#x6e;&#x61;&#x62;&#x75;&#x6c;&#x6c;&#x69;&#101;&#x76;&#x6d;&#117;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码13：OqTz0lj525<br>账号14：<a href="mailto:&#99;&#x68;&#x61;&#110;&#97;&#x66;&#x64;&#105;&#x64;&#x65;&#x6c;&#97;&#101;&#x74;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#x68;&#x61;&#110;&#97;&#x66;&#x64;&#105;&#x64;&#x65;&#x6c;&#97;&#101;&#x74;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码14：6x3CM4pPYY<br>账号15：<a href="mailto:&#x61;&#108;&#x69;&#116;&#97;&#x30;&#55;&#x70;&#x62;&#111;&#103;&#100;&#111;&#x6e;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#108;&#x69;&#116;&#97;&#x30;&#55;&#x70;&#x62;&#111;&#103;&#100;&#111;&#x6e;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码15：Umppl1ylc0<br>账号16：<a href="mailto:&#97;&#x76;&#101;&#114;&#105;&#x6c;&#108;&#x74;&#x78;&#103;&#116;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#97;&#x76;&#101;&#114;&#105;&#x6c;&#108;&#x74;&#x78;&#103;&#116;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>  密码16：94cymN2p42ChatGPT</p>
+<h2 id="登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港"><a href="#登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港" class="headerlink" title="登录地址：https://chat.openai.com/auth/login     注：需自备网络，不可用香港"></a>登录地址：<a target="_blank" rel="noopener" href="https://chat.openai.com/auth/login">https://chat.openai.com/auth/login</a>     注：需自备网络，不可用香港</h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android%E8%BD%AF%E4%BB%B6/" rel="tag">Android软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/12/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> maojunzc
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+            <center>
+                网站已运行:<span id="run_time" style="color:black"></span>
+            </center>
+
+            <script>
+                function runTime() {
+                    var d = new Date(), str = '';
+                    BirthDay = new Date("February 15,2023");
+                    today = new Date();
+                    timeold = (today.getTime() - BirthDay.getTime());
+                    sectimeold = timeold / 1000
+                    secondsold = Math.floor(sectimeold);
+                    msPerDay = 24 * 60 * 60 * 1000
+                    msPerYear = 365 * 24 * 60 * 60 * 1000
+                    e_daysold = timeold / msPerDay
+                    e_yearsold = timeold / msPerYear
+                    daysold = Math.floor(e_daysold);
+                    yearsold = Math.floor(e_yearsold);
+                    //str = yearsold + "年";
+                    str += daysold + "天";
+                    str += d.getHours() + '时';
+                    str += d.getMinutes() + '分';
+                    str += d.getSeconds() + '秒';
+                    return str;
+                }
+                setInterval(function () { $('#run_time').html(runTime()) }, 1000);
+            </script>
+
+    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="maojunzc"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">相册</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/maojunzc">maojunzc</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/PMP">PMP</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/guestbook">留言板</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

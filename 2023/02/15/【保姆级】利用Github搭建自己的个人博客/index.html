@@ -142,10 +142,10 @@
 <p>输入生成命令：ssh-keygen -t rsa -C “邮件地址”后。连续回车三次即可<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EWKf"><img src="https://s1.ax1x.com/2023/02/15/pS7EWKf.png" alt="pS7EWKf.png" border="0"></a><br>可以看到在用户文件夹下生成了一个ssh文件夹<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7E7Ps"><img src="https://s1.ax1x.com/2023/02/15/pS7E7Ps.png" alt="pS7E7Ps.png" border="0"></a><br>接着打开github主页，点击个人设置，点击左侧的SSH and GPG keys，点击New SSH key<br><img src="https://img1.imgtp.com/2023/02/15/ZB25fEcp.png" alt="1676433764057.png" title="1676433764057.png"><br>将id_rsa.pub复制的内容粘贴到key中，title随便起一个就行</p>
 <p>点击 Add SSH key</p>
 <p>测试是否成功：</p>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a></p>
 <p>输入测试命令后，接着输入yes，出现下面这个提示说明成功</p>
 <p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EHGn"><img src="https://s1.ax1x.com/2023/02/15/pS7EHGn.png" alt="pS7EHGn.png" border="0"></a><br>配置账号和密码</p>
-<p>$ git config –global user.name “maojunzc” #你的github用户名<br>$ git config –global user.email “<a href="mailto:&#x78;&#120;&#x78;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#x6d;">&#x78;&#120;&#x78;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#x6d;</a>“ #填写你的github注册邮箱</p>
+<p>$ git config –global user.name “maojunzc” #你的github用户名<br>$ git config –global user.email “<a href="mailto:&#x78;&#x78;&#120;&#64;&#49;&#x36;&#51;&#46;&#x63;&#x6f;&#109;">&#x78;&#x78;&#120;&#64;&#49;&#x36;&#51;&#46;&#x63;&#x6f;&#109;</a>“ #填写你的github注册邮箱</p>
 <p>备注：用户名和邮箱记得改为 自己的</p>
 <h3 id="03-搭建个人博客"><a href="#03-搭建个人博客" class="headerlink" title="03 搭建个人博客"></a>03 搭建个人博客</h3><p>1.新建博客<br>开始之前先介绍一下heox的基本命令</p>
 <p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #部署到GitHub<br>hexo help  # 查看帮助<br>hexo version  #查看Hexo的版本<br>对应的缩写，比如：</p>
@@ -170,7 +170,7 @@
 <p>仓库名称格式： 用户名.github.io</p>
 <p>我的仓库名称为：maojunzc.github.io</p>
 <p>因为这个仓库名称将作为你github博客的访问地址<br>编辑_config.yml，_config.yml在博客存放目录下</p>
-<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:liyunchen/liyunchen.github.io.git<br>  branch: main</p>
+<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a>:liyunchen/liyunchen.github.io.git<br>  branch: main</p>
 <p>repository仓库地址改为自己的</p>
 <p>branch看自己的github仓库是master还是main，我的是main，所以就填写main</p>
 <p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7k8LF"><img src="https://s1.ax1x.com/2023/02/15/pS7k8LF.png" alt="pS7k8LF.png" border="0"></a></p>
