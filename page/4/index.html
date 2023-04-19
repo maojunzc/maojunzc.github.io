@@ -174,6 +174,132 @@
     
     
     <article
+  id="post-自动任务v1-0-支持解锁手机-启动软件-点击自定义坐标-滑动屏幕"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/"
+    >自动任务v1.0 --- 支持解锁手机, 启动软件, 点击自定义坐标, 滑动屏幕</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/13/%E8%87%AA%E5%8A%A8%E4%BB%BB%E5%8A%A1v1-0-%E6%94%AF%E6%8C%81%E8%A7%A3%E9%94%81%E6%89%8B%E6%9C%BA-%E5%90%AF%E5%8A%A8%E8%BD%AF%E4%BB%B6-%E7%82%B9%E5%87%BB%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%90%E6%A0%87-%E6%BB%91%E5%8A%A8%E5%B1%8F%E5%B9%95/" class="article-date">
+  <time datetime="2023-03-13T02:14:11.000Z" itemprop="datePublished">2023-03-13</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/">破解软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法"><a href="#声明-此软件需要无障碍及后台运行-无法保证所有手机可用-特别是杀后台特别严重的手机-请自行搜索防杀后台的方法" class="headerlink" title="声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法."></a>声明:  此软件需要无障碍及后台运行,  无法保证所有手机可用,  特别是杀后台特别严重的手机,  请自行搜索防杀后台的方法.</h2><p>软件名称: 自动任务v1.0<br>用途:  自动执行一些繁琐的任务,  例如: 打卡, 签到.<br>验证手机:  RedMi K30 Ultra<br>手机系统:  安卓12, MIUI13<br>软件界面:<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303131014200.png"><br><img src="https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202303131412500.png"></p>
+<p>软件界面十分简洁, 大概讲讲吧,</p>
+<p>启动时间<br>        意思: 到达这个时间, 将会解锁手机, 并运行相关指令,  如果将时间改为666,  那么就会在每次启动软件的10秒后, 自动执行指令.</p>
+<p>支持的指令如下:</p>
+<ol>
+<li><p>等待时间</p>
+<pre><code> 格式:   等待时间,5000;
+ 意思:  执行完一个指令后, 需要等一段时间再执行下一个指令, 就用到这个了, 特别是启动软件后,  需要等的时间比较长，时间单位为毫秒.
+</code></pre>
+</li>
+<li><p>点击坐标</p>
+<pre><code> 格式: 点击坐标,100,100;
+ 意思:  点击屏幕的坐标为100,100
+</code></pre>
+</li>
+<li><p>滑动屏幕</p>
+<pre><code> 格式:  滑动屏幕,500,1800,500,200;
+ 意思:  从屏幕坐标500,1800滑动到屏幕坐标500,200; 一个上滑的动作.
+</code></pre>
+</li>
+<li><p>点击文本</p>
+<pre><code> 格式:  点击文本,签到;
+ 意思:  打开的软件界面有签到两个字, 但我不想用坐标点击, 那么就可以用点击文本的方式了, 但是AutoJs.Pro已经禁止识别部分软件的控件了, 所以这个不是100%有效.
+</code></pre>
+</li>
+<li><p>输入文本</p>
+<pre><code> 格式:  输入文本,吾爱破解论坛;
+ 意思: 点击了一个输入框后, 然后在那个输入框输入吾爱破解论坛.
+</code></pre>
+</li>
+<li><p>返回桌面; 最近任务; 返回键</p>
+<pre><code> 意思:  模拟按下手机的这些按键.
+</code></pre>
+</li>
+<li><p>退出软件</p>
+<pre><code> 意思: 执行完指令后, 软件不再使用了, 就可以用退出软件这个指令.
+</code></pre>
+</li>
+</ol>
+<p>注意事项:<br>        软件需要开启无障碍服务,  用于手机解锁和操作指令.<br>        软件注意后台保活, 方法自行网上搜索.<br>        界面中用到的符号都是英文标点符号, 请勿用错.<br>        如有问题可以点击软件界面中 吾爱破解论坛的网址查看日志.</p>
+<p>如果该软件对你有帮助,  请给免费评分鼓励一下,   谢谢大家.</p>
+<p>下载地址:<a target="_blank" rel="noopener" href="https://wwtr.lanzoue.com/b03vx7y7g">https://wwtr.lanzoue.com/b03vx7y7g</a><br>密码:52pj</p>
+<br> 
+<br> 
+<br> 
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/" rel="tag">破解软件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-学校人员统计系统源码调查问卷表"
   class="article article-type-post"
   itemscope
@@ -590,7 +716,8 @@
 <br> 
 <br> 
 
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303071754839.jpg"> 
+<p><img src="/2023/03/07/2023-3-7/ebb83ebed2c0d627f40fbf788cd7af7.jpg" alt="maojunzc"></p>
+ 
       <!-- reward -->
       
     </div>
@@ -684,7 +811,7 @@
 <p>编辑功能，能让用户直接在PDF中进行文字编辑，跟使用Word一样</p>
 <p>注释工具：包括高亮、下划线、删除线、画笔、签章、文本标注等</p>
 <p>OCR字符识别技术：扫描件也可以OCR图文转换为可编辑的文档</p>
-<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#x6f;&#x6e;&#x67;&#x61;&#x6e;&#x40;&#x50;&#x59;&#x47;&#46;&#x54;&#x65;&#97;&#109;">&#x4a;&#x6f;&#x6e;&#x67;&#x61;&#x6e;&#x40;&#x50;&#x59;&#x47;&#46;&#x54;&#x65;&#97;&#109;</a></p>
+<h1 id="版本特点"><a href="#版本特点" class="headerlink" title="版本特点"></a>版本特点</h1><p>by <a href="mailto:&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#89;&#71;&#46;&#84;&#101;&#x61;&#x6d;">&#x4a;&#x6f;&#110;&#x67;&#x61;&#110;&#64;&#80;&#89;&#71;&#46;&#84;&#101;&#x61;&#x6d;</a></p>
 <ul>
 <li><p>目前全球独家破解万兴PDF8.0版本跟进</p>
 </li>
@@ -1015,130 +1142,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a></li></ul>
-
-    </footer>
-  </div>
-
-    
-
-
-<script type="text/javascript">
-   fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-    })
-    .catch(console.error)
-</script>
-
-
-
-
-<style>
-.v[data-class=v] .veditor {
-    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
-</style>
-
-
-
-
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-使用Picgo-GitHub-jsDelivr搭建CDN加速免费图床"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"
-    >使用Picgo+GitHub+ jsDelivr搭建CDN加速免费图床</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/06/%E4%BD%BF%E7%94%A8Picgo-GitHub-jsDelivr%E6%90%AD%E5%BB%BACDN%E5%8A%A0%E9%80%9F%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/" class="article-date">
-  <time datetime="2023-03-06T03:37:00.000Z" itemprop="datePublished">2023-03-06</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经常写Markdown或者博客的同学，肯定都要用到图床。图床是什么呢？其实相当于一个存储图片的网站，类似百度云这样，不过上传图片到图床后可以直接通过外链进行访问。</p>
-<p>比如把本地一张a.jpg上传到图床后，便可以拿到一个链接：</p>
-<p><a target="_blank" rel="noopener" href="https://www.xxx.com/img/a.jpg">https://www.xxx.com/img/a.jpg</a></p>
-<p>然后点击这个链接就可以访问图片a了。今天来聊聊怎么搭建可靠的图床吧~</p>
-<p>为什么会产生这个需求呢？因为小编经常写博文什么的，现在的做法是在简书上上传图片，然后把生成的图片链接放到Markdown文档上面，写好文档以后就可以批量复制到各大博客平台投稿了。</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061137456.png">
-
-<p>但是这样有个隐患：万一简书哪天挂掉了，那么我放到csdn、cnbolgs等这些平台的文章图片都会挂掉。即使简书一直维持现状，但万一哪天它不高兴了，做了个外链防盗（图片外链只能在本站显示），那同样会遇到上面的问题。</p>
-<p>比如小编之前放在简书上的文章，复制到csdn上后。不知道怎么回事：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061138846.png">
-
-<p>说多了都是泪。因此，趁早做好准备，免得以后出现问题就麻烦了。毕竟有些博客的图片只是随手一截，还真找不到备份……</p>
-<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h1 id="1-Github"><a href="#1-Github" class="headerlink" title="1.Github"></a>1.Github</h1><h1 id="2-picgo"><a href="#2-picgo" class="headerlink" title="2.picgo"></a>2.picgo</h1><h1 id="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"><a href="#之前有介绍过一篇如何让搭建gitub仓库及picgo的使用" class="headerlink" title="之前有介绍过一篇如何让搭建gitub仓库及picgo的使用"></a>之前有介绍过一篇如何让搭建gitub仓库及picgo的使用</h1><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h2 id="1-创建Repository"><a href="#1-创建Repository" class="headerlink" title="1. 创建Repository"></a>1. 创建Repository</h2><p>鼠标移动到右上角，点击”New repository”按钮：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061140559.png"></p>
-<p>填写相关信息，创建一个存储图片的仓库：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141996.png">
-
-<h2 id="2-配置token-key"><a href="#2-配置token-key" class="headerlink" title="2. 配置token key"></a>2. 配置token key</h2><p>生成一个Token用于操作GitHub repository。回到主页，点击”Settings”按钮：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061141405.png">
-
-<p>进入页面后，点击”Developer settings”按钮<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142014.png"></p>
-<p>点击”Personal access tokens”按钮，然后点击Generate token：</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142644.png">
-
-<p>填写描述，选择”repo”权限，然后拉到下面点击”Generate token”按钮</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061142968.png">
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：创建成功后，会生成一串token，这串token之后不会再显示，所以第一次看到的时候，可以用个小本本保存起来哦，忘记了只有重新生成，每次都不一样。</span><br></pre></td></tr></table></figure>
-
-<h2 id="Picgo配置"><a href="#Picgo配置" class="headerlink" title="Picgo配置"></a>Picgo配置</h2><p>拿到了刚刚记录了GitHub token后，打开picgo，按照如下设置即可：<br><img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061143122.png"></p>
-<p>设定仓库名按照“账户名/仓库名的格式填写”，比如我的是：maojunzc/maojunzc。</p>
-<p>分支名统一填写“master”。</p>
-<p>设定Token将之前的Token粘贴在这里。</p>
-<p>指定存储路径留空。</p>
-<p>自定义域名的作用是在上传图片后成功后，PicGo会将“自定义域名+上传的图片名”生成的访问链接，放到剪切板上。默认留空也可以正常使用。这里为了使用CDN加快图片的访问速度，</p>
-<h3 id="自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名"><a href="#自定义域名我们按照这样去填写：https-cdn-jsdelivr-net-gh-GitHub用户名-仓库名" class="headerlink" title="自定义域名我们按照这样去填写：https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名"></a>自定义域名我们按照这样去填写：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/GitHub%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/GitHub用户名/仓库名</a></h3><p>比如我的是：<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc">https://cdn.jsdelivr.net/gh/maojunzc/maojunzc</a><br>点击确定后就配置完成了，我们截图后点击剪切板图片上传，如果上传成功，拿到的外链放到Markdown中正常访问，就OK啦。</p>
-<p>当然快捷上传的快捷键也可以到设置中进行配置。可以看到GitHub仓库中多了很多我们上传的图片。</p>
-<img src="https://cdn.jsdelivr.net/gh/maojunzc/maojunzc/202303061145683.png">
-
-<br> 
-<br> 
-<br> 
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
 
     </footer>
   </div>

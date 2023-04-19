@@ -174,6 +174,158 @@
     
     
     <article
+  id="post-【保姆级】利用Github搭建自己的个人博客"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/02/15/%E3%80%90%E4%BF%9D%E5%A7%86%E7%BA%A7%E3%80%91%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"
+    >【保姆级】利用Github搭建自己的个人博客</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/02/15/%E3%80%90%E4%BF%9D%E5%A7%86%E7%BA%A7%E3%80%91%E5%88%A9%E7%94%A8Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2023-02-15T03:41:38.000Z" itemprop="datePublished">2023-02-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>之前闲着没事,就利用Github建了一个个人博客网站,效果还不错,今天就来分享一下.<br>建立自己个人博客网站的好处:<br>1.面试装逼,这个不必多说…<br>2.把平时积累的知识和项目记录下来,方便日后查看使用<br>3.不受其他博客平台的限制</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>开始之前,先大致介绍一下用到的技术和相关概念</p>
+<p>Github是什么:<br>GitHub是一个利用Git进行版本控制、专门用于存放软件代码与内容的共享虚拟主机服务,很多人都把它称作程序员的同性交友网站,具体为啥这么叫我也不知道</p>
+<p>GitHub Pages是什么？<br>Github Pages设计的初衷是为托管在GitHub上的项目提供介绍页面,开发者们可以通过GitHub Pages为他们的每一个项目创建一个用于介绍该项目的静态网站,不过由于他的空间免费而且稳定,因此用它搭建一个个人博客网站是再好不过了.</p>
+<p>Git是什么？<br>Git是一个开源的分布式版本控制系统,可以有效、高速的处理从很小到非常大的项目版本管理.它的作用<br>和Svn类似,就是一个版本控制的工具,用它可以将我们写的代码提交到Github上.</p>
+<p>Jekyll是什么？<br>jekyll是一个简单的免费的Blog生成工具,将纯文本转化为静态网站和博客;由于咱们的GitHub Pages生成的是静态页面,每次更新博客都需要手动更改HTML,这就使得每次写博客都变得很麻烦,而用了这个工具以后,它会根据预先设置好的格式来生成博客内容,你就无需关心html代码,只需要把重心放在博客的写作上.</p>
+<p>Liquid是什么?<br>Liquid是一种模板语言,可以在HTML页面中使用它;而他的作用就是使用标记、对象和过滤器的组合来加载一些动态内容.</p>
+<p>废话不多说,下面来讲讲大致流程<br>1.登陆你的个Github账号(注册的话这里就不讲了…)<br>2.新建一个仓库用来保存个人网站项目<br>3.把做好的个人网站上传到Github上<br>4.上传成功后,根据域名来访问你的主页</p>
+<h3 id="01、环境准备"><a href="#01、环境准备" class="headerlink" title="01、环境准备"></a>01、环境准备</h3><p>在搭建Github博客之前，先准备一下环境（安装下方的顺序来安装，别弄混了）</p>
+<h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h2><p>官方地址：<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>1、访问git官方地址，下载对应的安装包，进行安装（简单的点击下一步）。</p>
+<p>2、安装好之后，鼠标右键可以看到：Git Bash Here，点击后打开了。</p>
+<p>3、输入：git –version</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7E9jf"><img src="https://s1.ax1x.com/2023/02/15/pS7E9jf.png" alt="pS7E9jf.png" border="0"></a><br>出现这个说明git安装成功。</p>
+<h2 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h2><p>官方地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<p>1、访问nodejs官方地址，下载对应的安装包，进行安装（简单的点击下一步）。</p>
+<p>2、安装好之后，配置环境变量，并在终端里面输入：node -v<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EFHg"><img src="https://s1.ax1x.com/2023/02/15/pS7EFHg.png" alt="pS7EFHg.png" border="0"></a><br>出现这个说明nodejs安装成功~</p>
+<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h2><p>安装命令：npm install hexo -g<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EV4s"><img src="https://s1.ax1x.com/2023/02/15/pS7EV4s.png" alt="pS7EV4s.png" border="0"></a><br>测试是否安装成功，命令：hexo -v<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EeCn"><img src="https://s1.ax1x.com/2023/02/15/pS7EeCn.png" alt="pS7EeCn.png" border="0"></a></p>
+<h3 id="4-安装hexo依赖"><a href="#4-安装hexo依赖" class="headerlink" title="4.安装hexo依赖"></a>4.安装hexo依赖</h3><p>命令：npm install –save hexo-deployer-git<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EG59"><img src="https://s1.ax1x.com/2023/02/15/pS7EG59.png" alt="pS7EG59.png" border="0"></a><br>02、git配置SSH key<br>相信看到本文的你应该听过github，并且也注册了自己的github账号，如果现在还没有的可以去github注册一个账号。</p>
+<p>为什么要配置SSH key？</p>
+<p>目的：可以免密的将本地的源码和资源上传到github，无需要每次都输账号和密码。</p>
+<p>先看本地是否配置好SSH key（命令：cd ~/.ssh）<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7Et81"><img src="https://s1.ax1x.com/2023/02/15/pS7Et81.png" alt="pS7Et81.png" border="0"></a><br>这里我之前就配置了，现在删除配置，重新配置一边，方便读者可以跟着进行配置。</p>
+<p>再次查看<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7ErUH"><img src="https://s1.ax1x.com/2023/02/15/pS7ErUH.png" alt="pS7ErUH.png" border="0"></a><br>可以看到提示：/c/Users/Administrator/.ssh: No such file or directory</p>
+<p>备注：</p>
+<p>因为ssh配置好之后是保存到 c:/用户/Administrator/.ssh<br>1.配置ssh<br>先生成ssh key</p>
+<p>ssh-keygen -t rsa -C “邮件地址”</p>
+<p>备注：这里的邮件地址是github账号绑定的邮件地址</p>
+<p>输入生成命令：ssh-keygen -t rsa -C “邮件地址”后。连续回车三次即可<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EWKf"><img src="https://s1.ax1x.com/2023/02/15/pS7EWKf.png" alt="pS7EWKf.png" border="0"></a><br>可以看到在用户文件夹下生成了一个ssh文件夹<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7E7Ps"><img src="https://s1.ax1x.com/2023/02/15/pS7E7Ps.png" alt="pS7E7Ps.png" border="0"></a><br>接着打开github主页，点击个人设置，点击左侧的SSH and GPG keys，点击New SSH key<br><img src="https://img1.imgtp.com/2023/02/15/ZB25fEcp.png" alt="1676433764057.png" title="1676433764057.png"><br>将id_rsa.pub复制的内容粘贴到key中，title随便起一个就行</p>
+<p>点击 Add SSH key</p>
+<p>测试是否成功：</p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;</a></p>
+<p>输入测试命令后，接着输入yes，出现下面这个提示说明成功</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7EHGn"><img src="https://s1.ax1x.com/2023/02/15/pS7EHGn.png" alt="pS7EHGn.png" border="0"></a><br>配置账号和密码</p>
+<p>$ git config –global user.name “maojunzc” #你的github用户名<br>$ git config –global user.email “<a href="mailto:&#120;&#120;&#x78;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#111;&#109;">&#120;&#120;&#x78;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#111;&#109;</a>“ #填写你的github注册邮箱</p>
+<p>备注：用户名和邮箱记得改为 自己的</p>
+<h3 id="03-搭建个人博客"><a href="#03-搭建个人博客" class="headerlink" title="03 搭建个人博客"></a>03 搭建个人博客</h3><p>1.新建博客<br>开始之前先介绍一下heox的基本命令</p>
+<p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #部署到GitHub<br>hexo help  # 查看帮助<br>hexo version  #查看Hexo的版本<br>对应的缩写，比如：</p>
+<p>hexo n == hexo new</p>
+<p>hexo g == hexo generate</p>
+<p>新建一个保存博客的存放目录，比如辰哥的是：D:\公众号\0722</p>
+<p>进入到本地博客存放目录</p>
+<p>初始化 个人博客</p>
+<p>命令：hexo init</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7Eb2q"><img src="https://s1.ax1x.com/2023/02/15/pS7Eb2q.png" alt="pS7Eb2q.png" border="0"></a></p>
+<p>可以看到博客存放目录出现了如下内容：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7Eqx0"><img src="https://s1.ax1x.com/2023/02/15/pS7Eqx0.png" alt="pS7Eqx0.png" border="0"></a><br>生成静态网页<br>命令：hexo g</p>
+<p>预览<br>命令：hexo s</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7Vixx"><img src="https://s1.ax1x.com/2023/02/15/pS7Vixx.png" alt="pS7Vixx.png" border="0"></a></p>
+<h3 id="报错解决："><a href="#报错解决：" class="headerlink" title="报错解决："></a>报错解决：</h3><p>问题：hexo g报错,line.mathALL is not funciton问题解决<br>原因：nodejs版本低于12</p>
+<p>解决：两种方法</p>
+<p>方法1）请将nodejs升级到高于12.0.0的版本</p>
+<p>方法2）config.xml中的 highlight-&gt;enable的值从true更改为false，这样可以避免异常。</p>
+<p>在浏览器这访问：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>这一步可以遇到其他问题可以百度或者查看hexo官方文档，不进行赘述</p>
+<h3 id="2-部署到github"><a href="#2-部署到github" class="headerlink" title="2.部署到github"></a>2.部署到github</h3><p>新建一个github仓库<br><img src="https://pic.imgdb.cn/item/63ec6692f144a0100764ae16.jpg"><br>给仓库起个名称，注意！注意！注意！</p>
+<p>仓库名称格式： 用户名.github.io</p>
+<p>我的仓库名称为：maojunzc.github.io</p>
+<p>因为这个仓库名称将作为你github博客的访问地址<br>编辑_config.yml，_config.yml在博客存放目录下</p>
+<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a>:liyunchen/liyunchen.github.io.git<br>  branch: main</p>
+<p>repository仓库地址改为自己的</p>
+<p>branch看自己的github仓库是master还是main，我的是main，所以就填写main</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pS7k8LF"><img src="https://s1.ax1x.com/2023/02/15/pS7k8LF.png" alt="pS7k8LF.png" border="0"></a></p>
+<p>发布到github</p>
+<p>命令：hexo d<br><img src="https://pic.imgdb.cn/item/63ec66b0f144a0100764f1bd.jpg"><br>在浏览器访问</p>
+<p><a target="_blank" rel="noopener" href="https://maojunzc.github.io/">https://maojunzc.github.io/</a>  （你自己的blog网址）<br>可以看到成功访问</p>
+<p>这个博客地址已经是部署到了公网，感兴趣的读者也可以访问</p>
+<p>最后编写博客不进行赘述，自行理解或者百度</p>
+<p>编写好之后，开始部署到github</p>
+<p>1.生成html文件</p>
+<p>hexo g</p>
+<p>2.上传到github</p>
+<p>hexo d</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+
+
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
+</script>
+
+
+
+
+<style>
+.v[data-class=v] .veditor {
+    background-image: url(https://maojunzc-1309564363.cos.ap-nanjing.myqcloud.com/202302201500682.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+</style>
+
+
+
+
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-在-Hexo-中插入-Chart-动态图表"
   class="article article-type-post"
   itemscope
@@ -729,7 +881,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h3 id="README"><a href="#README" class="headerlink" title="README"></a>README</h3><p>[ChatGPT手机学习版  无须注册 无须登陆 直接使用:<a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/b01qezjwd">https://wwqh.lanzouw.com/b01qezjwd</a><br>密码:3nl4]<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSTJkmd"><img src="https://s1.ax1x.com/2023/02/14/pSTJkmd.png" alt="pSTJkmd.png" border="0"></a></p>
-<h3 id="chatgpt最新账号共享"><a href="#chatgpt最新账号共享" class="headerlink" title="chatgpt最新账号共享"></a>chatgpt最新账号共享</h3><p>账号1：<a href="mailto:&#118;&#105;&#99;&#107;&#121;&#x65;&#56;&#x39;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#118;&#105;&#99;&#107;&#121;&#x65;&#56;&#x39;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>  密码：LeZ25X5dwL<br>账号2：<a href="mailto:&#x65;&#117;&#x67;&#101;&#110;&#105;&#101;&#x76;&#x35;&#x35;&#x32;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#x65;&#117;&#x67;&#101;&#110;&#105;&#101;&#x76;&#x35;&#x35;&#x32;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a>  密码2：4w95MnvIvc<br>账号3：<a href="mailto:&#x61;&#121;&#97;&#x6b;&#x6f;&#110;&#101;&#x77;&#117;&#121;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#121;&#97;&#x6b;&#x6f;&#110;&#101;&#x77;&#117;&#121;&#111;&#64;&#x68;&#x6f;&#x74;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>  密码3：q8UCd2lST4<br>账号4：<a href="mailto:&#108;&#117;&#x64;&#x6d;&#105;&#108;&#x6c;&#x61;&#115;&#x74;&#x65;&#x62;&#x39;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#108;&#117;&#x64;&#x6d;&#105;&#108;&#x6c;&#x61;&#115;&#x74;&#x65;&#x62;&#x39;&#64;&#x68;&#111;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a>  密码4：7sb54Oii8I<br>账号5：<a href="mailto:&#99;&#x68;&#x72;&#x38;&#57;&#x6b;&#x75;&#99;&#x68;&#116;&#x6f;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#99;&#x68;&#x72;&#x38;&#57;&#x6b;&#x75;&#99;&#x68;&#116;&#x6f;&#64;&#104;&#x6f;&#116;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>  密码5：Cea7IQj5ud<br>账号6：<a href="mailto:&#x65;&#109;&#x69;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x65;&#109;&#x69;&#x6c;&#x30;&#x33;&#109;&#x6b;&#x40;&#x68;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码6：ENC82hip2A<br>账号7：<a href="mailto:&#x6c;&#121;&#100;&#x69;&#97;&#118;&#x6e;&#x39;&#x6b;&#x74;&#x75;&#116;&#x6f;&#x6b;&#x79;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x6c;&#121;&#100;&#x69;&#97;&#118;&#x6e;&#x39;&#x6b;&#x74;&#x75;&#116;&#x6f;&#x6b;&#x79;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a>  密码7：6351VsZz25<br>账号8：<a href="mailto:&#116;&#117;&#108;&#97;&#103;&#106;&#x33;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#116;&#117;&#108;&#97;&#103;&#106;&#x33;&#64;&#x68;&#111;&#x74;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a>  密码8：Wx99eCqer7<br>账号9：<a href="mailto:&#112;&#x72;&#x75;&#101;&#53;&#x36;&#122;&#106;&#101;&#x68;&#108;&#x65;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#112;&#x72;&#x75;&#101;&#53;&#x36;&#122;&#106;&#101;&#x68;&#108;&#x65;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码9：8398k84X85<br>账号10：<a href="mailto:&#x76;&#101;&#x72;&#x6e;&#x69;&#x74;&#97;&#103;&#113;&#50;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x76;&#101;&#x72;&#x6e;&#x69;&#x74;&#97;&#103;&#113;&#50;&#64;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a>  密码10：geFfr4H0x9<br>账号11：<a href="mailto:&#107;&#105;&#x72;&#x73;&#x74;&#105;&#x65;&#x61;&#x6c;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#107;&#105;&#x72;&#x73;&#x74;&#105;&#x65;&#x61;&#x6c;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a>  密码11：1FBbV8OJg9<br>账号12：<a href="mailto:&#x72;&#97;&#108;&#x70;&#104;&#x6e;&#97;&#x6d;&#x65;&#114;&#51;&#50;&#100;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#x72;&#97;&#108;&#x70;&#104;&#x6e;&#97;&#x6d;&#x65;&#114;&#51;&#50;&#100;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a>  密码12：F85T86YtbL<br>账号13：<a href="mailto:&#99;&#101;&#x6c;&#x69;&#x6e;&#x61;&#x62;&#x75;&#x6c;&#x6c;&#x69;&#101;&#x76;&#x6d;&#117;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#99;&#101;&#x6c;&#x69;&#x6e;&#x61;&#x62;&#x75;&#x6c;&#x6c;&#x69;&#101;&#x76;&#x6d;&#117;&#64;&#104;&#x6f;&#x74;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码13：OqTz0lj525<br>账号14：<a href="mailto:&#99;&#x68;&#x61;&#110;&#97;&#x66;&#x64;&#105;&#x64;&#x65;&#x6c;&#97;&#101;&#x74;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#x68;&#x61;&#110;&#97;&#x66;&#x64;&#105;&#x64;&#x65;&#x6c;&#97;&#101;&#x74;&#x40;&#104;&#x6f;&#116;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>  密码14：6x3CM4pPYY<br>账号15：<a href="mailto:&#x61;&#108;&#x69;&#116;&#97;&#x30;&#55;&#x70;&#x62;&#111;&#103;&#100;&#111;&#x6e;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#108;&#x69;&#116;&#97;&#x30;&#55;&#x70;&#x62;&#111;&#103;&#100;&#111;&#x6e;&#x40;&#x68;&#111;&#x74;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a>  密码15：Umppl1ylc0<br>账号16：<a href="mailto:&#97;&#x76;&#101;&#114;&#105;&#x6c;&#108;&#x74;&#x78;&#103;&#116;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#97;&#x76;&#101;&#114;&#105;&#x6c;&#108;&#x74;&#x78;&#103;&#116;&#x40;&#x68;&#x6f;&#x74;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>  密码16：94cymN2p42ChatGPT</p>
+<h3 id="chatgpt最新账号共享"><a href="#chatgpt最新账号共享" class="headerlink" title="chatgpt最新账号共享"></a>chatgpt最新账号共享</h3><p>账号1：<a href="mailto:&#x76;&#105;&#99;&#107;&#121;&#x65;&#x38;&#x39;&#x40;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x76;&#105;&#99;&#107;&#121;&#x65;&#x38;&#x39;&#x40;&#x68;&#111;&#x74;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a>  密码：LeZ25X5dwL<br>账号2：<a href="mailto:&#x65;&#117;&#x67;&#101;&#110;&#x69;&#x65;&#x76;&#53;&#x35;&#50;&#x40;&#104;&#111;&#116;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x65;&#117;&#x67;&#101;&#110;&#x69;&#x65;&#x76;&#53;&#x35;&#50;&#x40;&#104;&#111;&#116;&#109;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a>  密码2：4w95MnvIvc<br>账号3：<a href="mailto:&#x61;&#121;&#97;&#x6b;&#x6f;&#x6e;&#101;&#119;&#117;&#x79;&#x6f;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#x61;&#121;&#97;&#x6b;&#x6f;&#x6e;&#101;&#119;&#117;&#x79;&#x6f;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a>  密码3：q8UCd2lST4<br>账号4：<a href="mailto:&#x6c;&#x75;&#100;&#x6d;&#105;&#x6c;&#x6c;&#x61;&#115;&#116;&#x65;&#98;&#x39;&#x40;&#x68;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x6c;&#x75;&#100;&#x6d;&#105;&#x6c;&#x6c;&#x61;&#115;&#116;&#x65;&#98;&#x39;&#x40;&#x68;&#x6f;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a>  密码4：7sb54Oii8I<br>账号5：<a href="mailto:&#99;&#x68;&#x72;&#56;&#57;&#107;&#x75;&#99;&#104;&#x74;&#111;&#x40;&#104;&#x6f;&#x74;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#99;&#x68;&#x72;&#56;&#57;&#107;&#x75;&#99;&#104;&#x74;&#111;&#x40;&#104;&#x6f;&#x74;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>  密码5：Cea7IQj5ud<br>账号6：<a href="mailto:&#x65;&#109;&#105;&#x6c;&#x30;&#51;&#109;&#x6b;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">&#x65;&#109;&#105;&#x6c;&#x30;&#51;&#109;&#x6b;&#64;&#104;&#111;&#116;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;</a>  密码6：ENC82hip2A<br>账号7：<a href="mailto:&#108;&#121;&#100;&#105;&#x61;&#118;&#x6e;&#x39;&#x6b;&#116;&#x75;&#x74;&#x6f;&#x6b;&#x79;&#x40;&#104;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#108;&#121;&#100;&#105;&#x61;&#118;&#x6e;&#x39;&#x6b;&#116;&#x75;&#x74;&#x6f;&#x6b;&#x79;&#x40;&#104;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a>  密码7：6351VsZz25<br>账号8：<a href="mailto:&#x74;&#x75;&#108;&#x61;&#x67;&#106;&#51;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x74;&#x75;&#108;&#x61;&#x67;&#106;&#51;&#64;&#x68;&#111;&#x74;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>  密码8：Wx99eCqer7<br>账号9：<a href="mailto:&#x70;&#x72;&#x75;&#101;&#53;&#54;&#122;&#x6a;&#x65;&#x68;&#108;&#x65;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#x70;&#x72;&#x75;&#101;&#53;&#54;&#122;&#x6a;&#x65;&#x68;&#108;&#x65;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>  密码9：8398k84X85<br>账号10：<a href="mailto:&#118;&#101;&#x72;&#110;&#x69;&#116;&#97;&#103;&#113;&#50;&#x40;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#118;&#101;&#x72;&#110;&#x69;&#116;&#97;&#103;&#113;&#50;&#x40;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a>  密码10：geFfr4H0x9<br>账号11：<a href="mailto:&#107;&#x69;&#x72;&#115;&#116;&#x69;&#101;&#x61;&#108;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#107;&#x69;&#x72;&#115;&#116;&#x69;&#101;&#x61;&#108;&#116;&#x71;&#x77;&#x40;&#x68;&#111;&#116;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a>  密码11：1FBbV8OJg9<br>账号12：<a href="mailto:&#114;&#x61;&#108;&#112;&#104;&#x6e;&#x61;&#x6d;&#101;&#114;&#51;&#50;&#x64;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#114;&#x61;&#108;&#112;&#104;&#x6e;&#x61;&#x6d;&#101;&#114;&#51;&#50;&#x64;&#x40;&#x68;&#x6f;&#x74;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a>  密码12：F85T86YtbL<br>账号13：<a href="mailto:&#x63;&#x65;&#108;&#x69;&#110;&#x61;&#x62;&#117;&#108;&#x6c;&#x69;&#x65;&#x76;&#109;&#117;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x63;&#x65;&#108;&#x69;&#110;&#x61;&#x62;&#117;&#108;&#x6c;&#x69;&#x65;&#x76;&#109;&#117;&#x40;&#x68;&#111;&#x74;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a>  密码13：OqTz0lj525<br>账号14：<a href="mailto:&#x63;&#104;&#97;&#x6e;&#x61;&#x66;&#100;&#105;&#100;&#101;&#108;&#x61;&#101;&#x74;&#x40;&#x68;&#x6f;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x63;&#104;&#97;&#x6e;&#x61;&#x66;&#100;&#105;&#100;&#101;&#108;&#x61;&#101;&#x74;&#x40;&#x68;&#x6f;&#116;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>  密码14：6x3CM4pPYY<br>账号15：<a href="mailto:&#x61;&#x6c;&#x69;&#x74;&#x61;&#x30;&#55;&#112;&#x62;&#x6f;&#x67;&#x64;&#111;&#x6e;&#x40;&#x68;&#111;&#116;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x6c;&#x69;&#x74;&#x61;&#x30;&#55;&#112;&#x62;&#x6f;&#x67;&#x64;&#111;&#x6e;&#x40;&#x68;&#111;&#116;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>  密码15：Umppl1ylc0<br>账号16：<a href="mailto:&#97;&#118;&#x65;&#x72;&#105;&#x6c;&#x6c;&#116;&#120;&#103;&#116;&#x40;&#x68;&#111;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#97;&#118;&#x65;&#x72;&#105;&#x6c;&#x6c;&#116;&#120;&#103;&#116;&#x40;&#x68;&#111;&#116;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>  密码16：94cymN2p42ChatGPT</p>
 <h2 id="登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港"><a href="#登录地址：https-chat-openai-com-auth-login-注：需自备网络，不可用香港" class="headerlink" title="登录地址：https://chat.openai.com/auth/login     注：需自备网络，不可用香港"></a>登录地址：<a target="_blank" rel="noopener" href="https://chat.openai.com/auth/login">https://chat.openai.com/auth/login</a>     注：需自备网络，不可用香港</h2> 
       <!-- reward -->
       
