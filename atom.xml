@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-19T03:12:21.485Z</updated>
+  <updated>2023-04-20T01:12:17.751Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windhawk 模块化 W11 自定义修改软件</title>
+    <link href="http://example.com/2023/04/20/windhawk-%E6%A8%A1%E5%9D%97%E5%8C%96-W11-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://example.com/2023/04/20/windhawk-%E6%A8%A1%E5%9D%97%E5%8C%96-W11-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6/</id>
+    <published>2023-04-20T01:11:34.000Z</published>
+    <updated>2023-04-20T01:12:17.751Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>Windhawk</strong> 是一款 Windows 自定义软件，由 7+ Taskbar Tweaker 的开发者 Ramen Software 开发。它旨在改进 Windows 系统自定义设置的体验。</p><p>目前 Windhawk 已提供的自定义功能包括：</p><p>自定义任务栏时钟 – 添加秒数、定义自定义日期/时间格式、添加新闻提要等</p><p>打开 Windows 11 开始菜单后，立即显示所有应用</p><p>通过滚动任务栏来控制系统音量 在任务栏上单击鼠标中键关闭程序，而不是创建新实例</p><p>为记事本开启暗黑模式 通过滑动动画使窗口布置更加流畅</p><p>禁用任务栏上的分组，在任务栏为每个新窗口创建一个单独的按钮</p><p>使用鼠标滚轮切换 Chrome/Edge 标签页 使用鼠标左键重新排列任务栏缩略图</p><p>用任何程序中的其他文本替换任何文本 使任务栏图标大而清晰，或小而紧凑（仅限 Win11）</p><p>通过注入自定义 JavaScript 和 CSS 代码，来调整 Microsoft Visual Studio 代码</p><p>防止程序更改 Windows 计时器分辨率和增加功耗 在任务栏上显示正在运行的程序的文本标签（仅限 Win11）</p><p>自动拒绝（或接受）来自 WinDbg 的对话框，告知文件已更改</p><p>可以从官网下载安装包：<a href="https://ramensoftware.com/downloads/windhawk_setup.exe">https://ramensoftware.com/downloads/windhawk_setup.exe</a></p><p>用这个软件主要因为找了好久chrome和edge能实现标签页滚动和双击关闭的办法。这个软件里面有一个模块“Chrome/Edge scroll tabs with mouse wheel”发现能完美解决。有同样需求的坛友可以试一试。</p><p><img src="/2023/04/20/windhawk-%E6%A8%A1%E5%9D%97%E5%8C%96-W11-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6/b367cd088ff44c55b9468c8794219d44.png" alt="windhawk 模块化 W11 自定义修改软件"></p><br> <br> <br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="PC软件" scheme="http://example.com/categories/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="PC软件" scheme="http://example.com/tags/PC%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【shell】压缩包密码暴破脚本</title>
+    <link href="http://example.com/2023/04/20/%E3%80%90shell%E3%80%91%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%AF%86%E7%A0%81%E6%9A%B4%E7%A0%B4%E8%84%9A%E6%9C%AC/"/>
+    <id>http://example.com/2023/04/20/%E3%80%90shell%E3%80%91%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%AF%86%E7%A0%81%E6%9A%B4%E7%A0%B4%E8%84%9A%E6%9C%AC/</id>
+    <published>2023-04-20T01:09:28.000Z</published>
+    <updated>2023-04-20T01:10:51.331Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本来一开始是打算用python的，但一想python写保存路径，到最后还是放弃了，因为python的目录写法，终究逃不掉 Windows <code>c:/xxx/</code>、Mac <code>~/xxxx/</code> ，这就造成了平台上的不适配，那我还不如索性写两份体验体验。</p><p>谈谈这次遇到的小问题，主要问题其实在注释上已经说明了，不过还是单拿出了，方便观看与讨论：</p><ul><li>发现 <code>brew install p7zip &gt; /dev/null 2&gt;&amp;1</code> 运行效率较低，也算是个无心之举。跑代码测试的时候，我发现这种写法，明显感觉比<code>if</code>慢好多，所以就pass掉了。</li><li>在Mac上，7z并不支持验证rar压缩包密码；Mac下面的rar，也不支持zip的密码验证。这个是p7zip与rar（两者都是 brew 安装）的实验结论。</li><li>密码暴破没成功，没有输出echo，主要是自己逻辑上出现了问题：break之后又执行了常规的输出，定位代码处<code># echo &quot;$?&quot;</code>，需要外部使用变量来固化状态值，再做判断（类似批处理的延迟变量）。</li></ul><p>细节方面就是：dos2unix，关于LF格式和CRLF格式的TXT文件了，统一处理，问题不大。</p><p>代码本地测试效果</p><p><img src="https://static.xkwo.com/xiaok/374e45d0aa504b13afbe5bfb5c9877ff.png" alt="【shell】压缩包密码暴破脚本"></p><p>在线测试效果图，顺带还发现了个有趣的现象：特权提升的$username，由自己的本地用户名，变成了“root”</p><p><img src="https://static.xkwo.com/xiaok/d2c30bd7359e460fb8b892b62152c576.png" alt="【shell】压缩包密码暴破脚本"></p><p><img src="https://static.xkwo.com/xiaok/d0c191d51d1d4141baaf6d725b95f107.png" alt="【shell】压缩包密码暴破脚本"></p><p>与Windows版本的效果</p><p><img src="https://static.xkwo.com/xiaok/0447d726cdb8488ca4c687693c94b6c3.png" alt="【shell】压缩包密码暴破脚本"></p><p>整体来说，由于系统的差异明显，以及batch、shell的实现各有差异，殊途同归了，算是。可以粗糙理解为类似《富士山下》、《爱情转移》粤语歌与普通话的两种唱法。</p><p>附源码：<a href="https://github.com/hoochanlon/ihs-simple/blob/main/d-shell/7z_rar_sensei.sh">https://github.com/hoochanlon/ihs-simple/blob/main/d-shell/7z_rar_sensei.sh</a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"># 实验</span><br><span class="line">## brew install p7zip &gt; <span class="regexp">/dev/</span><span class="literal">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span> 运行效率较低，大概有<span class="number">2</span>～<span class="number">3</span>秒不等，<span class="keyword">if</span>算了</span><br><span class="line">## 在<span class="title class_">Mac</span>上，7z并不支持验证rar压缩包密码；<span class="title class_">Mac</span>下面的rar，也不支持zip的密码验证。</span><br><span class="line">## 网上txt为<span class="variable constant_">CRLF</span>的问题，dos2unix搞定。</span><br><span class="line">## 密码没找到，没输出，排查问题如下：</span><br><span class="line">### $0 用于存储上一个命令的退出状态。当一个命令成功执行时，它的退出状态为 <span class="number">0</span>，否则为非零值。</span><br><span class="line">### 直接不在外层初始化flag，容易算数异常，推测是作用域问题。</span><br><span class="line"></span><br><span class="line"># 缺什么就安装什么</span><br><span class="line">[ ! -e $(which rar) ] &amp;&amp; brew install rar</span><br><span class="line">[ ! -e $(which 7z) ] &amp;&amp; brew install p7zip</span><br><span class="line">[ ! -e $(which dos2unix) ] &amp;&amp; brew install dos2unix</span><br><span class="line"></span><br><span class="line"># 不存在就下载密码本</span><br><span class="line"><span class="keyword">if</span> [ ! -f ~<span class="regexp">/Downloads/</span>rarpasswd.<span class="property">txt</span> ]; then</span><br><span class="line">    curl -o ~<span class="regexp">/Downloads/</span>rarpasswd.<span class="property">txt</span> <span class="attr">https</span>:<span class="comment">//ghproxy.com/https://raw.githubusercontent.com/hoochanlon/ihs-simple/main/d-txt/rarpasswd.txt</span></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"># 保存密码本为基本路径格式</span><br><span class="line"># 无法输出用户名 <span class="comment">// ，储存变量结果后，再输出 /Users/&lt;用户名&gt; 正常。</span></span><br><span class="line">username=$USER</span><br><span class="line">passwd_txt=<span class="string">&quot;/Users/$username/Downloads/rarpasswd.txt&quot;</span></span><br><span class="line"># <span class="variable constant_">CRLF</span>文本换成<span class="variable constant_">LF</span>文本</span><br><span class="line">dos2unix $passwd_txt &gt;<span class="regexp">/dev/</span><span class="literal">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line"></span><br><span class="line"># has_passwd_rar=<span class="string">&quot;/Users/chanlonhoo/Desktop/BlackFell.zip&quot;</span></span><br><span class="line">echo -e <span class="string">&quot;\n&quot;</span></span><br><span class="line">read -p <span class="string">&quot;将压缩包文件拖入到终端: &quot;</span> has_passwd_rar</span><br><span class="line"></span><br><span class="line"># 打上flag，保存<span class="keyword">break</span>状态码，固化存储。</span><br><span class="line">found_passwd_tag_num=<span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">unrar_passwd_find</span>(<span class="params"></span>) &#123;</span><br><span class="line">    # 遍历密码文件中的每一行密码</span><br><span class="line">    <span class="keyword">while</span> read password; <span class="keyword">do</span></span><br><span class="line">        # 尝试使用当前密码解压缩压缩包</span><br><span class="line">        unrar t -p$password <span class="string">&quot;$has_passwd_rar&quot;</span> &gt;<span class="regexp">/dev/</span><span class="literal">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        # 检查解压缩命令的退出码</span><br><span class="line">        <span class="keyword">if</span> [ $? -eq <span class="number">0</span> ]; then</span><br><span class="line">            # 如果退出码为 <span class="number">0</span>，说明密码正确，输出提示信息并退出循环</span><br><span class="line">            echo -e <span class="string">&quot;\n密码是: $password \n&quot;</span></span><br><span class="line">            # flag</span><br><span class="line">            found_passwd_tag_num=<span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        fi</span><br><span class="line">    done &lt;$passwd_txt</span><br><span class="line">    # echo <span class="string">&quot;$?&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> [ $found_passwd_tag_num -ne <span class="number">1</span> ]; then</span><br><span class="line">        echo -e <span class="string">&quot;\n没找到正确的密码。\n&quot;</span></span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">7z_passwd_find() &#123;</span><br><span class="line">    # 遍历密码文件中的每一行密码</span><br><span class="line">    <span class="keyword">while</span> read password; <span class="keyword">do</span></span><br><span class="line">        # 尝试使用当前密码解压缩压缩包</span><br><span class="line">        7z t -p$password <span class="string">&quot;$has_passwd_rar&quot;</span> &gt;<span class="regexp">/dev/</span><span class="literal">null</span> <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        # 检查解压缩命令的退出码</span><br><span class="line">        <span class="keyword">if</span> [ $? -eq <span class="number">0</span> ]; then</span><br><span class="line">            # 如果退出码为 <span class="number">0</span>，说明密码正确，输出提示信息并退出循环</span><br><span class="line">            echo -e <span class="string">&quot;\n密码是: $password \n&quot;</span></span><br><span class="line">            # flag</span><br><span class="line">            found_passwd_tag_num=<span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        fi</span><br><span class="line">    done &lt;<span class="string">&quot;$passwd_txt&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> [ $found_passwd_tag_num -ne <span class="number">1</span> ]; then</span><br><span class="line">        echo -e <span class="string">&quot;\n没找到正确的密码。\n&quot;</span></span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 判断文件名后缀是否包含rar</span><br><span class="line"><span class="keyword">if</span> [[ $&#123;has_passwd_rar##*.&#125; == <span class="string">&quot;rar&quot;</span> ]]; then</span><br><span class="line">    unrar_passwd_find</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    7z_passwd_find</span><br><span class="line">fi</span><br></pre></td></tr></table></figure><br> <br> <br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>会声会影2023 v26.0.2胡桃的特别版</title>
@@ -445,54 +493,6 @@
     
     
     <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工程快速调试工具、NetAssist网络调试助手</title>
-    <link href="http://example.com/2023/04/04/%E5%B7%A5%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%81NetAssist%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B/"/>
-    <id>http://example.com/2023/04/04/%E5%B7%A5%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E3%80%81NetAssist%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B/</id>
-    <published>2023-04-04T06:24:13.000Z</published>
-    <updated>2023-04-04T06:26:16.445Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>工程快速调试工具系列（UDP.TCP端口诊断）<br><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142509.png"></p><h1 id="下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5"><a href="#下载地址：-https-zksk-lanzouf-com-iPj0H0rmir1g-密码-cqo5" class="headerlink" title="下载地址： https://zksk.lanzouf.com/iPj0H0rmir1g 密码:cqo5"></a>下载地址： <a href="https://zksk.lanzouf.com/iPj0H0rmir1g">https://zksk.lanzouf.com/iPj0H0rmir1g</a> 密码:cqo5</h1><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404142538.png"><p>NetAssist网络调试助手，是Windows平台下开发的TCP/IP网络调试工具，集TCP/UDP服务端及客户端于一体，是网络应用开发及调试工作必备的专业工具之一，可以帮助网络应用设计、开发、测试人员检查所开发的网络应用软/硬件的数据收发状况，提高开发速度，简化开发复杂度，成为TCP/UDP应用开发调试的得力助手。NetAssist网络调试助手是绿色软件，无所安装，只有一个执行文件，适用于各版本Windows操作系统，不需要微软dotNet框架支持。可以作为客户端或服务器端使用：可以在一台PC上同时启动多个网络调试助手，并可设置其中一个作为服务端，其他作为客户端，然后操作客户端去连接开启的服务端。只要协议、地址及端口均设置正确就能成功进行连接通信。典型应用场合：通过网络调试助手与自行开发的网络程序或者网络设备进行通信联调。软件支持UDP、TCP协议，集成服务端与客户端，作为服务端时可以管理多个客户端连接；支持单播/广播；支持ASCII/Hex两种模式的数据收发，发送和接收的数据可以在十六进制和ASCII码之间任意转换；可以自动发送校验位，支持多种校验格式；支持发送的数据中嵌入脚本代码以实现动态数据发送；支持建立自动应答规则，实现指令自动应答/回复功能；支持间隔发送，循环发送，批处理发送，输入数据可以从外部文件导入；可以保存预定义指令/数据序列，任何时候都可以通过工具面板发送预定义的指令或数据，便于通信联调。软件界面支持中/英文，默认自适应操作系统的语言环境。</p><p>下载:<a href="https://zksk.lanzouf.com/iQ7vi0rmt6za">https://zksk.lanzouf.com/iQ7vi0rmt6za</a> 密码:zktk</p><br> <br> <br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安卓谁喝酒v1.3.0绿化版</title>
-    <link href="http://example.com/2023/04/04/%E5%AE%89%E5%8D%93%E8%B0%81%E5%96%9D%E9%85%92v1-3-0%E7%BB%BF%E5%8C%96%E7%89%88/"/>
-    <id>http://example.com/2023/04/04/%E5%AE%89%E5%8D%93%E8%B0%81%E5%96%9D%E9%85%92v1-3-0%E7%BB%BF%E5%8C%96%E7%89%88/</id>
-    <published>2023-04-04T06:08:37.000Z</published>
-    <updated>2023-04-04T06:15:11.195Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>谁喝酒是一种聚会娱乐工具，由于其简单易用，运气成分和趣味性高，使聚会更富有娱乐性和刺激性，深受广大玩家喜爱。内含大话骰、weaphones、taproulette、炸弹骰、真心话大冒险等精彩玩法。夏天快到了，每逢大热天的时候，总想着跟三五好友找一烧烤摊吃烧烤喝啤酒，但既然要喝啤酒就少不了玩各种游戏活跃气氛。</p><img src="https://gitee.com/best_aaa/best_aaa/raw/master/img/20230404140918.png"><h1 id="蓝奏网盘"><a href="#蓝奏网盘" class="headerlink" title="蓝奏网盘"></a><a href="https://wwqh.lanzouw.com/iZfeS0s2h33e">蓝奏网盘</a></h1><h1 id="密码-2h0n"><a href="#密码-2h0n" class="headerlink" title="密码:2h0n"></a>密码:2h0n</h1><h1 id><a href="#" class="headerlink" title></a></h1><h1 id="小程序在线使用：maojunzc"><a href="#小程序在线使用：maojunzc" class="headerlink" title="小程序在线使用：maojunzc"></a>小程序在线使用：maojunzc</h1><br> <br> <br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">免责声明</span><br><span class="line"></span><br><span class="line">本站提供的一切软件、教程和内容信息仅限用于学习和研究目的；不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负。本站信息来自网络收集整理，版权争议与本站无关。您必须在下载后的24个小时之内，从您的电脑或手机中彻底删除上述内容。如果您喜欢该程序和内容，请支持正版，购买注册，得到更好的正版服务。我们非常重视版权问题，如有侵权请邮件与我们联系处理。敬请谅解！</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="破解软件" scheme="http://example.com/categories/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="破解软件" scheme="http://example.com/tags/%E7%A0%B4%E8%A7%A3%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
