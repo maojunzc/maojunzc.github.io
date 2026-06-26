@@ -1,4 +1,4 @@
-.sidebar {
+﻿.sidebar {
   left: -8rem;
   width: 8rem;
 }
@@ -35,5 +35,29 @@
   }
   .content.on {
     transform: translateX(0);
+  }
+}
+
+/* 增大捐献二维码尺寸 */
+#reward .reward-img {
+  width: 18rem !important;
+  height: 18rem !important;
+}
+@media (max-width:768px) {
+  #reward .reward-img {
+    max-width: 14rem !important;
+    max-height: 14rem !important;
+  }
+}
+
+/* 放大捐献二维码 */
+#reward .reward-img {
+  width: 20rem !important;
+  height: 20rem !important;
+}
+@media (max-width: 768px) {
+  #reward .reward-img {
+    max-width: 16rem !important;
+    max-height: 16rem !important;
   }
 }
