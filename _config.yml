@@ -1,4 +1,4 @@
-# Hexo Configuration
+﻿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
@@ -106,13 +106,13 @@ deploy:
   repository: git@github.com:maojunzc/maojunzc.github.io.git
   branch: main
 
-# 搜索 hexo-generator-searchdb 
+# 鎼滅储 hexo-generator-searchdb 
 search:
   path: search.xml
   field: post
   format: html
 
-# rss，安装 hexo-generator-feed  
+# rss锛屽畨瑁?hexo-generator-feed  
   feed:
     type: atom
     path: atom.xml
@@ -131,21 +131,19 @@ search:
 # aplayer
   aplayer:
     meting: true
-	
-#文章顶置
+?
+#鏂囩珷椤剁疆
   index_generator:
     path: ''
     per_page: 10
     order_by: -date
-	
-#hexo-blog-encrypt插件加密
+?
+#hexo-blog-encrypt鎻掍欢鍔犲瘑
 encrypt:
   enable: true
-  default_abstract: 这是一篇加密文章，你无权查看。
-  default_message: 输入密码，查看文章。
+  default_abstract: 杩欐槸涓€绡囧姞瀵嗘枃绔狅紝浣犳棤鏉冩煡鐪嬨€?
+  default_message: 杈撳叆瀵嗙爜锛屾煡鐪嬫枃绔犮€?
 
 # Toc
-toc: true
-
-
+toc: true?
 
