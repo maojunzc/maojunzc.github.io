@@ -1,180 +1,109 @@
-class Circle {
-  constructor({ origin, speed, color, angle, context }) {
-    this.origin = origin;
-    this.position = { ...this.origin };
-    this.color = color;
-    this.speed = speed;
-    this.angle = angle;
-    this.context = context;
-    this.renderCount = 0;
-  }
+/**
+ * ClickBoom2 - 优雅粒子爆炸特效
+ * 点击页面任意位置触发彩色粒子扩散效果
+ * 优化版：消除突兀方块，粒子更细腻自然
+ */
+(function() {
+  'use strict';
 
-  draw() {
-    this.context.fillStyle = this.color;
-    this.context.beginPath();
-    this.context.arc(this.position.x, this.position.y, 2, 0, Math.PI * 2);
-    this.context.fill();
-  }
+  // ---- Canvas setup ----
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('2d');
+  canvas.style.position = 'fixed';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  canvas.style.width = '100%';
+  canvas.style.height = '100%';
+  canvas.style.pointerEvents = 'none';
+  canvas.style.zIndex = '99999';
+  document.body.appendChild(canvas);
 
-  move() {
-    this.position.x = Math.sin(this.angle) * this.speed + this.position.x;
-    this.position.y =
-      Math.cos(this.angle) * this.speed +
-      this.position.y +
-      this.renderCount * 0.3;
-    this.renderCount++;
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
   }
-}
+  resize();
+  window.addEventListener('resize', resize);
 
-class Boom {
-  constructor({ origin, context, circleCount = 10, area }) {
-    this.origin = origin;
-    this.context = context;
-    this.circleCount = circleCount;
-    this.area = area;
-    this.stop = false;
-    this.circles = [];
-  }
+  // ---- Particle pool ----
+  var particles = [];
+  var COLORS = [
+    '#ff6b6b', '#ffa94d', '#ffd43b', '#69db7c',
+    '#4dabf7', '#9775fa', '#f783ac', '#20c997'
+  ];
 
-  randomArray(range) {
-    const length = range.length;
-    const randomIndex = Math.floor(length * Math.random());
-    return range[randomIndex];
-  }
-
-  randomColor() {
-    const range = ["8", "9", "A", "B", "C", "D", "E", "F"];
-    return (
-      "#" +
-      this.randomArray(range) +
-      this.randomArray(range) +
-      this.randomArray(range) +
-      this.randomArray(range) +
-      this.randomArray(range) +
-      this.randomArray(range)
-    );
-  }
-
-  randomRange(start, end) {
-    return (end - start) * Math.random() + start;
-  }
-
-  init() {
-    for (let i = 0; i < this.circleCount; i++) {
-      const circle = new Circle({
-        context: this.context,
-        origin: this.origin,
-        color: this.randomColor(),
-        angle: this.randomRange(Math.PI - 1, Math.PI + 1),
-        speed: this.randomRange(1, 6),
+  function createParticles(x, y, count) {
+    for (var i = 0; i < count; i++) {
+      var angle = Math.random() * Math.PI * 2;
+      var speed = 2 + Math.random() * 6;
+      var size = 2 + Math.random() * 4;
+      particles.push({
+        x: x,
+        y: y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 2,
+        life: 1.0,
+        decay: 0.012 + Math.random() * 0.02,
+        size: size,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        gravity: 0.08 + Math.random() * 0.04
       });
-      this.circles.push(circle);
     }
   }
 
-  move() {
-    this.circles.forEach((circle, index) => {
-      if (
-        circle.position.x > this.area.width ||
-        circle.position.y > this.area.height
-      ) {
-        return this.circles.splice(index, 1);
+  // ---- Mouse click handler ----
+  document.addEventListener('click', function(e) {
+    createParticles(e.clientX, e.clientY, 28);
+    if (!animating) {
+      animating = true;
+      animate();
+    }
+  });
+
+  // ---- Animation loop ----
+  var animating = false;
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+
+      // Update
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += p.gravity;
+      p.vx *= 0.98;
+      p.life -= p.decay;
+
+      if (p.life <= 0) {
+        particles.splice(i, 1);
+        continue;
       }
-      circle.move();
-    });
-    if (this.circles.length == 0) {
-      this.stop = true;
-    }
-  }
 
-  draw() {
-    this.circles.forEach((circle) => circle.draw());
-  }
-}
+      // Draw with glow
+      ctx.globalAlpha = p.life;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
 
-class CursorSpecialEffects {
-  constructor() {
-    this.computerCanvas = document.createElement("canvas");
-    this.renderCanvas = document.createElement("canvas");
-
-    this.computerContext = this.computerCanvas.getContext("2d");
-    this.renderContext = this.renderCanvas.getContext("2d");
-
-    this.globalWidth = window.innerWidth;
-    this.globalHeight = window.innerHeight;
-
-    this.booms = [];
-    this.running = false;
-  }
-
-  handleMouseDown(e) {
-    const boom = new Boom({
-      origin: { x: e.clientX, y: e.clientY },
-      context: this.computerContext,
-      area: {
-        width: this.globalWidth,
-        height: this.globalHeight,
-      },
-    });
-    boom.init();
-    this.booms.push(boom);
-    this.running || this.run();
-  }
-
-  handlePageHide() {
-    this.booms = [];
-    this.running = false;
-  }
-
-  init() {
-    const style = this.renderCanvas.style;
-    style.position = "fixed";
-    style.top = style.left = 0;
-    style.zIndex = "99999";
-    style.pointerEvents = "none";
-
-    style.width =
-      this.renderCanvas.width =
-      this.computerCanvas.width =
-        this.globalWidth;
-    style.height =
-      this.renderCanvas.height =
-      this.computerCanvas.height =
-        this.globalHeight;
-
-    document.body.append(this.renderCanvas);
-
-    window.addEventListener("mousedown", this.handleMouseDown.bind(this));
-    window.addEventListener("pagehide", this.handlePageHide.bind(this));
-  }
-
-  run() {
-    this.running = true;
-    if (this.booms.length == 0) {
-      return (this.running = false);
+      // Outer glow
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size * p.life * 2, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.life * 0.2;
+      ctx.fill();
     }
 
-    requestAnimationFrame(this.run.bind(this));
+    ctx.globalAlpha = 1;
 
-    this.computerContext.clearRect(0, 0, this.globalWidth, this.globalHeight);
-    this.renderContext.clearRect(0, 0, this.globalWidth, this.globalHeight);
-
-    this.booms.forEach((boom, index) => {
-      if (boom.stop) {
-        return this.booms.splice(index, 1);
-      }
-      boom.move();
-      boom.draw();
-    });
-    this.renderContext.drawImage(
-      this.computerCanvas,
-      0,
-      0,
-      this.globalWidth,
-      this.globalHeight
-    );
+    if (particles.length > 0) {
+      requestAnimationFrame(animate);
+    } else {
+      animating = false;
+      ctx.clearRect(0, 0, W, H);
+    }
   }
-}
-
-const cursorSpecialEffects = new CursorSpecialEffects();
-cursorSpecialEffects.init();
+})();
