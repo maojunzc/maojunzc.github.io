@@ -618,6 +618,107 @@
   margin-bottom: 0.5rem;
 }
 
+/* ========== About Page ========== */
+.about-hero {
+  padding: 1.5rem 0;
+}
+.about-quote {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text-secondary);
+  font-style: italic;
+  letter-spacing: 1px;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--primary);
+  background: rgba(108, 92, 231, 0.05);
+  border-radius: 0 12px 12px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.about-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.about-section h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.about-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-contact li {
+  display: flex;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.about-contact li:last-child {
+  border-bottom: none;
+}
+.about-contact .label {
+  width: 5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.about-contact .value {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+.about-contact .value a {
+  color: var(--primary-light) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.about-contact .value a:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.about-qrcodes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.qrcode-item {
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.qrcode-item:hover {
+  transform: translateY(-6px);
+}
+.qrcode-item img {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  object-fit: cover;
+}
+.qrcode-item:hover img {
+  border-color: rgba(108, 92, 231, 0.4);
+  box-shadow: 0 12px 40px rgba(108, 92, 231, 0.15);
+}
+.qrcode-label {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
   #subtitle { }
