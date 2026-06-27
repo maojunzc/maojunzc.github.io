@@ -1,4 +1,4 @@
-﻿# Hexo Configuration
+# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
@@ -8,12 +8,12 @@ subtitle: ''
 description: ''
 keywords:
 author: maojunzc
-language: zn-CH
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://maojunzc.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -106,44 +106,38 @@ deploy:
   repository: git@github.com:maojunzc/maojunzc.github.io.git
   branch: main
 
-# 鎼滅储 hexo-generator-searchdb 
+# Search (hexo-generator-searchdb)
 search:
   path: search.xml
   field: post
   format: html
 
-# rss锛屽畨瑁?hexo-generator-feed  
-  feed:
-    type: atom
-    path: atom.xml
-    limit: 20
-    hub:
-    content:
-    content_limit: 140
-    content_limit_delim: " "
-    order_by: -date
-# sitemap
-  sitemap:
-    path: sitemap.xml
-  baidusitemap:
-    path: baidusitemap.xml
-  
-# aplayer
-  aplayer:
-    meting: true
-?
-#鏂囩珷椤剁疆
-  index_generator:
-    path: ''
-    per_page: 10
-    order_by: -date
-?
-#hexo-blog-encrypt鎻掍欢鍔犲瘑
+# RSS (hexo-generator-feed)
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# Aplayer
+aplayer:
+  meting: true
+
+# Blog Encrypt (hexo-blog-encrypt)
 encrypt:
   enable: true
-  default_abstract: 杩欐槸涓€绡囧姞瀵嗘枃绔狅紝浣犳棤鏉冩煡鐪嬨€?
-  default_message: 杈撳叆瀵嗙爜锛屾煡鐪嬫枃绔犮€?
+  default_abstract: 这是一篇加密文章，你无权查看。
+  default_message: 输入密码，查看文章。
 
 # Toc
-toc: true?
-
+toc: true

@@ -1,4 +1,4 @@
-﻿.sidebar {
+.sidebar {
   left: -8rem;
   width: 8rem;
 }
@@ -38,19 +38,7 @@
   }
 }
 
-/* 增大捐献二维码尺寸 */
-#reward .reward-img {
-  width: 18rem !important;
-  height: 18rem !important;
-}
-@media (max-width:768px) {
-  #reward .reward-img {
-    max-width: 14rem !important;
-    max-height: 14rem !important;
-  }
-}
-
-/* 放大捐献二维码 */
+/* 增大打赏二维码尺寸 */
 #reward .reward-img {
   width: 20rem !important;
   height: 20rem !important;

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 
 
-<html lang="zn-CH">
+<html lang="zh-CN">
   
 
     <head>
@@ -154,7 +154,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>鎵竴鎵紝鍒嗕韩鍒板井淇?/p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/about/" alt="寰俊鍒嗕韩浜岀淮鐮?>
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/about/" alt="微信鍒嗕韩浜岀淮鐮?>
     </div>
 </div>
 
@@ -178,7 +178,7 @@
     path: window.location.pathname,
     avatar: "monsterid",
     placeholder: "缁欐垜鐨勬枃绔犲姞鐐硅瘎璁哄惂~",
-	enableQQ: 'true', 
+	enableQQ: true, 
     recordIP: true,
     emojiCDN: '//i0.hdslb.com/bfs/emote/', 
     emojiMaps: {
@@ -271,7 +271,8 @@
    fetch('https://v1.hitokoto.cn')
     .then(response => response.json())
     .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+      var veditorEl = document.getElementById("veditor");
+      if(veditorEl) veditorEl.setAttribute("placeholder",data.hitokoto+"__"+data.from);
     })
     .catch(console.error)
 </script>
@@ -340,7 +341,7 @@
 
 
             <center>
-                缃戠珯宸茶繍琛?<span id="run_time" style="color:black"></span>
+                网站已运行<span id="run_time" style="color:black"></span>
             </center>
 
             <script>
@@ -390,23 +391,23 @@
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/">涓婚〉</a>
+      <a class="nav-item-link" href="/">首页</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">褰掓。</a>
+      <a class="nav-item-link" href="/archives">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">鍒嗙被</a>
+      <a class="nav-item-link" href="/categories">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags">鏍囩</a>
+      <a class="nav-item-link" href="/tags">标签</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">鐩稿唽</a>
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">相册</a>
     </li>
     
     <li class="nav-item">
@@ -418,15 +419,15 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/guestbook">鐣欒█鏉?/a>
+      <a class="nav-item-link" href="/guestbook">留言板/a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/friends">鍙嬮摼</a>
+      <a class="nav-item-link" href="/friends">友链</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/about">鍏充簬鎴?/a>
+      <a class="nav-item-link" href="/about">关于我/a>
     </li>
     
   </ul>
@@ -459,18 +460,18 @@
 <!-- #reward -->
 <div id="reward">
   <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>璇锋垜鍠濇澂鍜栧暋鍚</p>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧</p>
   <div class="reward-box">
     
     <div class="reward-item">
       <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">鏀粯瀹?/span>
+      <span class="reward-type">支付宝/span>
     </div>
     
     
     <div class="reward-item">
       <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">寰俊</span>
+      <span class="reward-type">微信</span>
     </div>
     
   </div>

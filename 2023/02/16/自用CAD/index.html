@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="zn-CH">
+<html lang="zh-CN">
   
 
     <head>
@@ -230,7 +230,7 @@
     path: window.location.pathname,
     avatar: "monsterid",
     placeholder: "给我的文章加点评论吧~",
-	enableQQ: 'true', 
+	enableQQ: true, 
     recordIP: true,
     emojiCDN: '//i0.hdslb.com/bfs/emote/', 
     emojiMaps: {
@@ -323,7 +323,8 @@
    fetch('https://v1.hitokoto.cn')
     .then(response => response.json())
     .then(data => {
-      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+      var veditorEl = document.getElementById("veditor");
+      if(veditorEl) veditorEl.setAttribute("placeholder",data.hitokoto+"__"+data.from);
     })
     .catch(console.error)
 </script>
