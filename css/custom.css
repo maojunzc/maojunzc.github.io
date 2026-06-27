@@ -688,34 +688,47 @@
 
 .about-qrcodes {
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  align-items: center;
+}
+.about-qr-row {
+  display: flex;
   gap: 2.5rem;
   justify-content: center;
-  margin: 2.5rem 0;
   flex-wrap: wrap;
+}
+.about-qr-row-gzh {
+  width: 100%;
 }
 .qrcode-item {
   text-align: center;
   transition: all 0.4s ease;
-  max-width: 200px;
 }
 .qrcode-item:hover {
   transform: translateY(-6px);
 }
 .qrcode-item img {
-  width: 180px;
-  height: 180px;
   border-radius: 16px;
   border: 2px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
-  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
-/* QQ二维码是长方形，用contain保持完整显示 */
-.qrcode-item img.qq-qr,
-.qrcode-item-qq img {
-  object-fit: contain !important;
-  background: #fff;
-  padding: 4px;
+/* 微信+QQ: 统一高度自适应宽度 */
+.qrcode-item img {
+  height: 257px;
+  width: auto;
+  max-width: 100%;
+}
+/* 公众号: 横向长图 */
+.qrcode-item-gzh img {
+  height: auto;
+  width: 90%;
+  max-width: 504px;
+  object-fit: contain;
 }
 .qrcode-item:hover img {
   border-color: rgba(108, 92, 231, 0.4);
