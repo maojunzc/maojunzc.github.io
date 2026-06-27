@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+import glob, os
+
+# ===== 1. Rewrite index.html completely =====
+index_html = """<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -116,10 +119,10 @@
             timeold = (today.getTime() - BirthDay.getTime());
             msPerDay = 24 * 60 * 60 * 1000;
             daysold = Math.floor(timeold / msPerDay);
-            str += daysold + '天';
-            str += d.getHours() + '时';
-            str += d.getMinutes() + '分';
-            str += d.getSeconds() + '秒';
+            str += daysold + '\u5929';
+            str += d.getHours() + '\u65f6';
+            str += d.getMinutes() + '\u5206';
+            str += d.getSeconds() + '\u79d2';
             return str;
           }
           setInterval(function() { $('#run_time').html(runTime()); }, 1000);
@@ -235,4 +238,76 @@
       <script>if (window.mermaid) { mermaid.initialize({ theme: "forest" }); }</script>
     </div>
   </body>
-</html>
+</html>"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(index_html)
+print('index.html rewritten - clean')
+
+# ===== 2. Fix corrupted Chinese in all other HTML files =====
+html_files = glob.glob('**/*.html', recursive=True)
+
+emoji_fixes = {
+    'tv_浜蹭翰': 'tv_亲亲', 'tv_鍋风瑧': 'tv_偷笑',
+    'tv_鍐嶈': 'tv_再见', 'tv_鍐锋紶': 'tv_冷漠',
+    'tv_鍙戞€': 'tv_发呆', 'tv_鍙戣储': 'tv_发财',
+    'tv_鍙埍': 'tv_可爱', 'tv_鍚愯': 'tv_吐血',
+    'tv_鍛': 'tv_皱眉', 'tv_鍛曞悙': 'tv_呕吐',
+    'tv_鍥': 'tv_困', 'tv_鍧忕瑧': 'tv_坏笑',
+    'tv_澶т浆': 'tv_大佬', 'tv_澶у摥': 'tv_大哭',
+    'tv_濮斿眻': 'tv_委屈', 'tv_瀹崇緸': 'tv_害羞',
+    'tv_灏村艾': 'tv_尴尬', 'tv_寰瑧': 'tv_微笑',
+    'tv_鎬濊€': 'tv_思考', 'tv_鎯婂悡': 'tv_惊悚',
+    'tv_鎵撹劯': 'tv_打脸', 'tv_鎶撶媯': 'tv_抓狂',
+    'tv_鎶犻蓟': 'tv_抠鼻', 'tv_鏂滅溂绗': 'tv_斜眼笑',
+    'tv_鏃犲': 'tv_无奈', 'tv_鏅': 'tv_捂脸',
+    'tv_娴佹睏': 'tv_流汗', 'tv_娴佹唱': 'tv_流泪',
+    'tv_娴侀蓟琛€': 'tv_流鼻血', 'tv_鐐硅禐': 'tv_点赞',
+    'tv_鐢熸皵': 'tv_生气', 'tv_鐢熺梾': 'tv_生病',
+    'tv_鐤戦棶': 'tv_疑问', 'tv_鐧界溂': 'tv_白眼',
+    'tv_鐨辩湁': 'tv_皱眉', 'tv_鐩灙鍙ｅ憜': 'tv_目瞪口呆',
+    'tv_鐫＄潃': 'tv_睡着', 'tv_绗戝摥': 'tv_笑哭',
+    'tv_鑵艰厗': 'tv_尴尬', 'tv_鑹': 'tv_色',
+    'tv_璋冧緝': 'tv_调皮', 'tv_璋冪毊': 'tv_调皮',
+    'tv_閯欒': 'tv_鄙视', 'tv_闂槾': 'tv_闭嘴',
+    'tv_闅捐繃': 'tv_难过', 'tv_棣': 'tv_香',
+    'tv_楝艰劯': 'tv_鬼脸', 'tv_榛戜汉闂彿': 'tv_黑人问号',
+    'tv_榧撴帉': 'tv_鼓掌',
+}
+
+common_fixes = {
+    '缁欐垜鐨勬枃绔犲姞鐐硅瘎璁哄惂~': '给我的文章加点评论吧~',
+    'Copyright锛': 'Copyright：',
+    '鍒嗕韩': '分享',
+    '鎵竴鎵': '扫一扫',
+    '鍒嗕韩鍒板井淇': '分享到微信',
+    '微信鍒嗕韩浜岀淮鐮': '微信分享二维码',
+    '璇勮': '评论',
+    'valine璇勮': 'valine评论',
+    'Hexo鍥捐〃鎻掍欢': 'Hexo图表插件',
+    'cnzz缁熻': 'cnzz统计',
+    '/img_url': 'https://via.placeholder.com/800x600',
+    'img_caption': 'photo',
+}
+
+all_fixes = {}
+all_fixes.update(emoji_fixes)
+all_fixes.update(common_fixes)
+
+for filepath in html_files:
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        changed = False
+        for old, new in all_fixes.items():
+            if old in content:
+                content = content.replace(old, new)
+                changed = True
+        if changed:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f'  Fixed: {filepath}')
+    except Exception as e:
+        print(f'  Error: {filepath}: {e}')
+
+print('\nAll fixes done!')
