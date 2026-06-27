@@ -334,6 +334,8 @@
   overflow: hidden;
   transition: all 0.3s ease;
   opacity: 0.85;
+  max-width: 100%;
+  flex: 0 1 auto;
 }
 .ads li:hover {
   opacity: 1;
@@ -343,6 +345,8 @@
 .ads li img {
   border-radius: 12px;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ========== Article Card ========== */
