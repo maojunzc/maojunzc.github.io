@@ -620,15 +620,15 @@
 
 /* ========== About Page ========== */
 .about-hero {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 .about-quote {
-  font-size: 1.2rem;
-  line-height: 2;
+  font-size: 1.3rem;
+  line-height: 2.2;
   color: var(--text-secondary);
   font-style: italic;
   letter-spacing: 1px;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2.5rem;
   border-left: 3px solid var(--primary);
   background: rgba(108, 92, 231, 0.05);
   border-radius: 0 12px 12px 0;
@@ -644,12 +644,12 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
 }
 .about-section h4 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
 }
 .about-contact {
@@ -659,21 +659,22 @@
 }
 .about-contact li {
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 1.05rem;
 }
 .about-contact li:last-child {
   border-bottom: none;
 }
 .about-contact .label {
-  width: 5rem;
+  width: 5.5rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 .about-contact .value {
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .about-contact .value a {
   color: var(--primary-light) !important;
@@ -687,14 +688,15 @@
 
 .about-qrcodes {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   flex-wrap: wrap;
 }
 .qrcode-item {
   text-align: center;
   transition: all 0.4s ease;
+  max-width: 200px;
 }
 .qrcode-item:hover {
   transform: translateY(-6px);
@@ -708,6 +710,13 @@
   transition: all 0.4s ease;
   object-fit: cover;
 }
+/* QQ二维码是长方形，用contain保持完整显示 */
+.qrcode-item img.qq-qr,
+.qrcode-item-qq img {
+  object-fit: contain !important;
+  background: #fff;
+  padding: 4px;
+}
 .qrcode-item:hover img {
   border-color: rgba(108, 92, 231, 0.4);
   box-shadow: 0 12px 40px rgba(108, 92, 231, 0.15);
@@ -716,7 +725,51 @@
   display: block;
   margin-top: 0.6rem;
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+}
+
+/* ========== Index Page - Contact Cards ========== */
+.index-intro {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+.index-contact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.index-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.index-contact-item:hover {
+  background: rgba(108, 92, 231, 0.1);
+  border-color: rgba(108, 92, 231, 0.3);
+  transform: translateY(-2px);
+}
+.index-contact-icon {
+  font-size: 1.3rem;
+  color: var(--primary-light);
+}
+.index-contact-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+.index-contact-text a {
+  color: var(--primary-light) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.index-contact-text a:hover {
+  color: #fff !important;
 }
 
 /* ========== Responsive ========== */
