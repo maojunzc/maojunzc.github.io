@@ -20,6 +20,18 @@
   --sidebar-width: 8rem;
 }
 
+/* Base font size - theme uses 1.4rem on body, so keep it readable on PC */
+body {
+  font-size: 16px !important;
+}
+
+/* Larger base font on desktop */
+@media (min-width: 1200px) {
+  body {
+    font-size: 17px !important;
+  }
+}
+
 /* ========== Sidebar ========== */
 .sidebar {
   left: 0 !important;
@@ -79,9 +91,9 @@
 }
 .nav-item-link {
   display: block !important;
-  padding: 10px 0 !important;
+  padding: 12px 0 !important;
   text-align: center !important;
-  font-size: 0.75rem !important;
+  font-size: 0.85rem !important;
   color: var(--text-secondary) !important;
   border-radius: 10px;
   transition: all 0.3s ease !important;
@@ -193,13 +205,13 @@
   margin: 0;
 }
 .cover-inner h1 a {
-  font-size: 4.5rem !important;
+  font-size: 5rem !important;
   font-weight: 800 !important;
   background: linear-gradient(135deg, #fff 0%, #a29bfe 40%, #fd79a8 70%, #00cec9 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   text-shadow: none !important;
   transition: all 0.3s ease;
   display: inline-block;
@@ -213,11 +225,11 @@
   margin-top: 1rem;
 }
 #subtitle {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .cover::after {
@@ -360,7 +372,7 @@
 }
 
 .article-title {
-  font-size: 1.6rem !important;
+  font-size: 1.8rem !important;
   font-weight: 700 !important;
 }
 .article-title a {
@@ -377,14 +389,14 @@
 
 .article-meta {
   color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   margin: 0.5rem 0 1rem;
 }
 
 .article-entry {
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.8;
-  font-size: 0.95rem;
+  line-height: 1.9;
+  font-size: 1.05rem;
 }
 
 /* ========== Float Buttons ========== */
@@ -445,7 +457,7 @@
   transform: rotate(90deg);
 }
 .reward-p {
-  font-size: 1.4rem !important;
+  font-size: 1.6rem !important;
   background: var(--gradient-warm);
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -498,7 +510,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .footer .outer {
   display: flex;
