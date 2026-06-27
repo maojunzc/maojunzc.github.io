@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="app">
-      <main class="content on">
+      <main class="content">
         <section class="cover">
           <a class="forkMe" href="https://github.com/maojunzc" target="_blank">
             <img width="149" height="149" src="/images/forkme.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" />
@@ -130,7 +130,7 @@
         <div class="todark" id="todark"><i class="ri-moon-line"></i></div>
       </div>
 
-      <aside class="sidebar on">
+      <aside class="sidebar">
         <button class="navbar-toggle"></button>
         <nav class="navbar">
           <div class="logo"><a href="/"><img src="/images/ayer-side.svg" alt="maojunzc" /></a></div>
@@ -234,5 +234,43 @@
       </script>
       <script>if (window.mermaid) { mermaid.initialize({ theme: "forest" }); }</script>
     </div>
-  </body>
+  
+<script>
+// Sidebar state persistence
+(function() {
+  var sidebar = document.querySelector('.sidebar');
+  var content = document.querySelector('.content');
+  var toggle = document.querySelector('.navbar-toggle');
+  
+  // Check saved state
+  var sidebarHidden = sessionStorage.getItem('sidebar_hidden');
+  if (sidebarHidden === 'true' && sidebar && content) {
+    sidebar.classList.add('off');
+    content.classList.add('off');
+  }
+  
+  // Save state on toggle
+  if (toggle && sidebar && content) {
+    toggle.addEventListener('click', function() {
+      var isHidden = sidebar.classList.contains('off');
+      sessionStorage.setItem('sidebar_hidden', isHidden ? 'false' : 'true');
+    });
+  }
+  
+  // Highlight current page nav item
+  var currentPath = window.location.pathname;
+  var navLinks = document.querySelectorAll('.nav-item-link');
+  navLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('//')) {
+      if (currentPath === href || 
+          (href !== '/' && currentPath.startsWith(href)) ||
+          (href === '/' && currentPath === '/')) {
+        link.classList.add('active');
+      }
+    }
+  });
+})();
+</script>
+</body>
 </html>

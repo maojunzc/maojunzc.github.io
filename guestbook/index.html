@@ -49,7 +49,7 @@
       
       
       
-    <main class="content on">
+    <main class="content">
       <section class="outer">
   <article
   id="page-"
@@ -367,6 +367,44 @@
     
 
   </div>
+
+<script>
+// Sidebar state persistence
+(function() {
+  var sidebar = document.querySelector('.sidebar');
+  var content = document.querySelector('.content');
+  var toggle = document.querySelector('.navbar-toggle');
+  
+  // Check saved state
+  var sidebarHidden = sessionStorage.getItem('sidebar_hidden');
+  if (sidebarHidden === 'true' && sidebar && content) {
+    sidebar.classList.add('off');
+    content.classList.add('off');
+  }
+  
+  // Save state on toggle
+  if (toggle && sidebar && content) {
+    toggle.addEventListener('click', function() {
+      var isHidden = sidebar.classList.contains('off');
+      sessionStorage.setItem('sidebar_hidden', isHidden ? 'false' : 'true');
+    });
+  }
+  
+  // Highlight current page nav item
+  var currentPath = window.location.pathname;
+  var navLinks = document.querySelectorAll('.nav-item-link');
+  navLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('//')) {
+      if (currentPath === href || 
+          (href !== '/' && currentPath.startsWith(href)) ||
+          (href === '/' && currentPath === '/')) {
+        link.classList.add('active');
+      }
+    }
+  });
+})();
+</script>
 </body>
 
 </html>
