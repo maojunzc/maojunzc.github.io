@@ -17,13 +17,13 @@
   var mouseTimer = null;
 
   var CONFIG = {
-    particleCount: 80,
-    maxDistance: 150,
-    particleRadius: 2,
-    lineWidth: 0.6,
-    color1: { r: 255, g: 107, b: 107 },  // #ff6b6b
-    color2: { r: 255, g: 169, b: 77 },    // #ffa94d
-    speed: 0.3
+    particleCount: 60,
+    maxDistance: 180,
+    particleRadius: 1.5,
+    lineWidth: 0.5,
+    color1: { r: 108, g: 92, b: 231 },   // #6c5ce7 purple
+    color2: { r: 253, g: 121, b: 168 },   // #fd79a8 pink
+    speed: 0.2
   };
 
   function resize() {
@@ -85,7 +85,7 @@
         var dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < CONFIG.maxDistance) {
-          var alpha = (1 - dist / CONFIG.maxDistance) * 0.5;
+          var alpha = (1 - dist / CONFIG.maxDistance) * 0.3;
           var color = lerpColor(dist / CONFIG.maxDistance);
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
@@ -96,13 +96,19 @@
         }
       }
 
-      // Draw particle dot
-      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 2);
-      grad.addColorStop(0, 'rgba(255, 107, 107, 0.8)');
-      grad.addColorStop(1, 'rgba(255, 169, 77, 0)');
+      // Draw particle dot with glow
+      var glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 3);
+      glow.addColorStop(0, 'rgba(108, 92, 231, 0.6)');
+      glow.addColorStop(0.5, 'rgba(253, 121, 168, 0.2)');
+      glow.addColorStop(1, 'rgba(0, 206, 201, 0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = glow;
+      ctx.fill();
+      
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
       ctx.fill();
     }
 
