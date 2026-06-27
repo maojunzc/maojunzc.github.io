@@ -1,19 +1,28 @@
 /* ========== Sidebar Styles ========== */
-/* Desktop: sidebar stays open by default, content is offset */
+/* 
+ * Theme original: sidebar hidden by default, toggled via .on class
+ * Our customization: sidebar visible by default (always expanded on desktop)
+ * We invert the logic: default = expanded, .on removal = collapsed
+ * 
+ * dist/main.js toggles .on class. With these styles:
+ * - Has .on class: sidebar EXPANDED (left: 0), content shifted (margin-left: 8rem)
+ * - No .on class: sidebar HIDDEN (left: -8rem), content full width
+ */
+
+/* Desktop: default expanded state */
 .sidebar {
   left: 0 !important;
   width: 8rem;
 }
 .content {
   margin-left: 8rem !important;
-  transition: margin-left 0.3s ease;
 }
 
-/* When sidebar is toggled OFF on desktop */
-.sidebar.off {
+/* When toggled OFF (no .on class): sidebar hidden, content full width */
+.sidebar:not(.on) {
   left: -8rem !important;
 }
-.content.off {
+.content:not(.on) {
   margin-left: 0 !important;
 }
 
@@ -22,6 +31,17 @@
 }
 .search-form-wrap {
   right: 8rem;
+}
+
+/* Override theme's .sidebar.on rule - already at left:0 by default */
+.sidebar.on {
+  left: 0 !important;
+}
+
+/* Override theme's .content.on rules */
+.content.on {
+  margin-left: 8rem !important;
+  transform: none !important;
 }
 
 @media (min-width: 768px) {
@@ -37,7 +57,7 @@
   .sidebar {
     left: 0 !important;
   }
-  .sidebar.off {
+  .sidebar:not(.on) {
     left: -8rem !important;
   }
   .content {
@@ -45,7 +65,11 @@
     transform: translateX(8rem);
     transition: transform 0.3s ease;
   }
-  .content.off {
+  .content:not(.on),
+  .content.on {
+    margin-left: 0 !important;
+  }
+  .content:not(.on) {
     transform: translateX(0);
   }
 }
@@ -277,10 +301,11 @@
   70% { transform: scale(1); }
 }
 
-/* ========== Breadcrumb / Nav Hover ========== */
+/* ========== Navbar Toggle ========== */
 .navbar-toggle {
   transition: all 0.3s ease !important;
   border-radius: 8px !important;
+  z-index: 99 !important;
 }
 .navbar-toggle:hover {
   background: rgba(255, 107, 107, 0.1) !important;
@@ -300,7 +325,7 @@
   outline: none !important;
 }
 
-/* ========== Particle Canvas (background) ========== */
+/* ========== Particle Canvas ========== */
 #particles-canvas {
   position: fixed;
   top: 0;
@@ -326,7 +351,7 @@
   }
 }
 
-/* ========== Responsive fix for small screens ========== */
+/* ========== Responsive ========== */
 @media (max-width: 768px) {
   #reward .reward-item {
     display: inline-block;
