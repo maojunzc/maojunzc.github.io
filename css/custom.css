@@ -20,17 +20,8 @@
   --sidebar-width: 8rem;
 }
 
-/* Base font size - theme uses 1.4rem on body, so keep it readable on PC */
-body {
-  font-size: 16px !important;
-}
-
-/* Larger base font on desktop */
-@media (min-width: 1200px) {
-  body {
-    font-size: 17px !important;
-  }
-}
+/* Base font size - keep theme default (1.4rem = ~22px on body) */
+/* 不覆盖body字体，保留主题原始大小 */
 
 /* ========== Sidebar ========== */
 .sidebar {
@@ -205,7 +196,7 @@ body {
   margin: 0;
 }
 .cover-inner h1 a {
-  font-size: 5rem !important;
+  font-size: 4.5rem !important;
   font-weight: 800 !important;
   background: linear-gradient(135deg, #fff 0%, #a29bfe 40%, #fd79a8 70%, #00cec9 100%) !important;
   -webkit-background-clip: text !important;
@@ -225,7 +216,7 @@ body {
   margin-top: 1rem;
 }
 #subtitle {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 3px;
   font-weight: 300;
@@ -372,7 +363,7 @@ body {
 }
 
 .article-title {
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
   font-weight: 700 !important;
 }
 .article-title a {
@@ -389,14 +380,14 @@ body {
 
 .article-meta {
   color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin: 0.5rem 0 1rem;
 }
 
 .article-entry {
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.9;
-  font-size: 1.05rem;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 /* ========== Float Buttons ========== */
@@ -457,7 +448,7 @@ body {
   transform: rotate(90deg);
 }
 .reward-p {
-  font-size: 1.6rem !important;
+  font-size: 1.4rem !important;
   background: var(--gradient-warm);
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -510,7 +501,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 .footer .outer {
   display: flex;
