@@ -1198,7 +1198,7 @@
     </ul>
     <ul>
       <li>
-        <!-- cnzz缁熻 -->
+        <!-- cnzz统计 -->
         
       </li>
     </ul>
@@ -1444,7 +1444,7 @@
                     let img = $em2.getAttribute('data-idx', i2)
                     let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
                     let title = $em2.getAttribute('alt')
-                    // 鑾峰緱鍘熷浘灏哄
+                    // 获得原图尺寸
                     const image = new Image()
                     image.src = src
                     items.push({
@@ -1510,7 +1510,7 @@
         let $span = $($btn.find('span'));
         $span[0].innerText = 'COPIED';
         
-        wait(function () { // 绛夊緟涓ょ閽熷悗鎭㈠
+        wait(function () { // 等待两秒钟后恢复
           $icon.removeClass('ri-checkbox-circle-line');
           $icon.addClass('ri-file-copy-2-line');
           $span[0].innerText = 'COPY';
@@ -1526,7 +1526,7 @@
         let $span = $($btn.find('span'));
         $span[0].innerText = 'COPY FAILED';
         
-        wait(function () { // 绛夊緟涓ょ閽熷悗鎭㈠
+        wait(function () { // 等待两秒钟后恢复
           $icon.removeClass('ri-time-line');
           $icon.addClass('ri-file-copy-2-line');
           $span[0].innerText = 'COPY';

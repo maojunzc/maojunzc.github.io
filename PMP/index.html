@@ -164,7 +164,7 @@
 
    
    
-<!-- valine璇勮 -->
+<!-- valine评论 -->
 <div id="vcomments-box">
   <div id="vcomments"></div>
 </div>
@@ -332,7 +332,7 @@
     </ul>
     <ul>
       <li>
-        <!-- cnzz缁熻 -->
+        <!-- cnzz统计 -->
         
       </li>
     </ul>
@@ -572,13 +572,13 @@
 
         $imgArr.forEach(($em, i) => {
             $em.onclick = () => {
-                // slider灞曞紑鐘舵€?                // todo: 杩欐牱涓嶅ソ锛屽悗闈㈡敼鎴愮姸鎬?                if (document.querySelector('.left-col.show')) return
+                // slider展开状态                // todo: 这样不好，后面改成状态                if (document.querySelector('.left-col.show')) return
                 let items = []
                 $imgArr.forEach(($em2, i2) => {
                     let img = $em2.getAttribute('data-idx', i2)
                     let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
                     let title = $em2.getAttribute('alt')
-                    // 鑾峰緱鍘熷浘灏哄
+                    // 获得原图尺寸
                     const image = new Image()
                     image.src = src
                     items.push({
@@ -644,7 +644,7 @@
         let $span = $($btn.find('span'));
         $span[0].innerText = 'COPIED';
         
-        wait(function () { // 绛夊緟涓ょ閽熷悗鎭㈠
+        wait(function () { // 等待两秒钟后恢复
           $icon.removeClass('ri-checkbox-circle-line');
           $icon.addClass('ri-file-copy-2-line');
           $span[0].innerText = 'COPY';
@@ -660,7 +660,7 @@
         let $span = $($btn.find('span'));
         $span[0].innerText = 'COPY FAILED';
         
-        wait(function () { // 绛夊緟涓ょ閽熷悗鎭㈠
+        wait(function () { // 等待两秒钟后恢复
           $icon.removeClass('ri-time-line');
           $icon.addClass('ri-file-copy-2-line');
           $span[0].innerText = 'COPY';
