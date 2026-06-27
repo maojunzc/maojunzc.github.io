@@ -84,7 +84,6 @@
   display: block !important;
   padding: 12px 0 !important;
   text-align: center !important;
-  font-size: 0.85rem !important;
   color: var(--text-secondary) !important;
   border-radius: 10px;
   transition: all 0.3s ease !important;
@@ -136,7 +135,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .navbar-toggle:hover {
@@ -196,7 +194,6 @@
   margin: 0;
 }
 .cover-inner h1 a {
-  font-size: 4.5rem !important;
   font-weight: 800 !important;
   background: linear-gradient(135deg, #fff 0%, #a29bfe 40%, #fd79a8 70%, #00cec9 100%) !important;
   -webkit-background-clip: text !important;
@@ -216,7 +213,6 @@
   margin-top: 1rem;
 }
 #subtitle {
-  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 3px;
   font-weight: 300;
@@ -246,7 +242,6 @@
 }
 .cover-learn-more a {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1.8rem;
   transition: all 0.3s ease;
   display: block;
   width: 40px;
@@ -367,7 +362,6 @@
 }
 
 .article-title {
-  font-size: 1.6rem !important;
   font-weight: 700 !important;
 }
 .article-title a {
@@ -384,14 +378,12 @@
 
 .article-meta {
   color: rgba(255, 255, 255, 0.4) !important;
-  font-size: 0.85rem;
   margin: 0.5rem 0 1rem;
 }
 
 .article-entry {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
-  font-size: 1rem;
 }
 
 /* ========== Float Buttons ========== */
@@ -418,7 +410,6 @@
   justify-content: center !important;
   cursor: pointer;
   transition: all 0.3s ease !important;
-  font-size: 1.1rem !important;
 }
 .totop:hover, .todark:hover {
   background: rgba(108, 92, 231, 0.2) !important;
@@ -445,14 +436,12 @@
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  font-size: 1.5rem;
 }
 #reward .close:hover {
   color: #fff;
   transform: rotate(90deg);
 }
 .reward-p {
-  font-size: 1.4rem !important;
   background: var(--gradient-warm);
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -490,7 +479,6 @@
 .reward-type {
   display: block;
   margin-top: 0.8rem;
-  font-size: 0.9rem;
   color: var(--text-secondary);
   transition: all 0.3s ease;
 }
@@ -505,7 +493,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.85rem;
 }
 .footer .outer {
   display: flex;
@@ -633,8 +620,7 @@
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
-  .cover-inner h1 a { font-size: 2.8rem !important; }
-  #subtitle { font-size: 1rem; }
+  #subtitle { }
   .reward-box { flex-direction: column; align-items: center; }
   #reward .reward-img { width: 10rem !important; height: 10rem !important; }
   .ads { flex-direction: column; align-items: center; }
