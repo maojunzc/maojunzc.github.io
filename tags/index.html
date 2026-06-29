@@ -19,7 +19,8 @@
     <style>.swal2-styled.swal2-confirm { font-size: 1.6rem; }</style>
     <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
     <link rel="alternate" href="/atom.xml" title="maojunzc" type="application/atom+xml" />
-  </head>
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+</head>
   <body>
     <div id="app">
       <main class="content on">
@@ -31,7 +32,9 @@
               </header>
               <div class="article-entry" itemprop="articleBody">
 <p>这里还没有标签</p>
-              </div>
+              
+<div id="waline"></div>
+</div>
             </div>
           </article>
         </section>
@@ -182,5 +185,17 @@
         </div>
       </div>
     </div>
-  </body>
+      <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+      init({
+        el: '#waline',
+        serverURL: 'https://my-blog-waline-five.vercel.app',
+        locale: {
+          placeholder: '欢迎留言...'
+        }
+      });
+    </script>
+
+</body>
 </html>
