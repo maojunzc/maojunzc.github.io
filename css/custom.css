@@ -39,14 +39,24 @@
   will-change: left;
 }
 
+/* 覆盖主题原生 z-index:9，提升到 custom.css 的层级 */
+.sidebar.on { left: 0 !important; }
+.sidebar:not(.on) {
+  left: calc(-1 * var(--sidebar-width)) !important;
+}
+
 .content {
-  margin-left: var(--sidebar-width) !important;
-  transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   color: #e0e0e0;
   background: #0a0a1a;
   animation: fadeIn 0.8s ease;
-  position: relative;
+  /* 主题原生：content 不随 sidebar 偏移，sidebar 用 fixed 覆盖 */
+  margin-left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 /* Dark背景应用于所有内容区 */
 .content, #main, .outer {
@@ -58,18 +68,26 @@
   z-index: 2;
   padding: 2rem 0;
 }
-.sidebar:not(.on) {
-  left: calc(-1 * var(--sidebar-width)) !important;
-}
-.content:not(.on) {
+
+/* 主题原生 .content.on 用 margin-left:0!important 保持原位，
+   sidebar 是 fixed 覆盖层，不占文档流 */
+.content.on {
   margin-left: 0 !important;
 }
-.sidebar.on { left: 0 !important; }
-.content.on { margin-left: var(--sidebar-width) !important; transform: none !important; }
-/* Footer 同步 sidebar 偏移 */
-.content:not(.on) ~ .footer,
-.content:not(.on) ~ center {
-  margin-left: 0 !important;
+
+/* Footer 对齐方式 */
+.footer {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 2rem 0;
+  color: rgba(255, 255, 255, 0.4);
+  margin-left: 0;
+}
+
+/* 覆盖主题原生 #app overflow:hidden 以支持 sticky 定位 */
+#app {
+  overflow: visible;
 }
 
 /* ========== Navbar ========== */
@@ -415,13 +433,13 @@
 
 /* ========== Float Buttons ========== */
 .float_btns {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  position: sticky;
+  bottom: 10rem;
+  right: 50px;
   z-index: 101;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  float: right;
+  width: 50px;
+  text-align: center;
 }
 
 .totop, .todark {
