@@ -25,8 +25,11 @@
 
 /* ========== Sidebar ========== */
 .sidebar {
-  left: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: var(--sidebar-width);
+  height: 100vh;
   background: linear-gradient(180deg, rgba(15, 15, 30, 0.95), rgba(30, 20, 50, 0.95)) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
@@ -43,6 +46,7 @@
   color: #e0e0e0;
   background: #0a0a1a;
   animation: fadeIn 0.8s ease;
+  position: relative;
 }
 /* Dark背景应用于所有内容区 */
 .content, #main, .outer {
@@ -62,6 +66,11 @@
 }
 .sidebar.on { left: 0 !important; }
 .content.on { margin-left: var(--sidebar-width) !important; transform: none !important; }
+/* Footer 同步 sidebar 偏移 */
+.content:not(.on) ~ .footer,
+.content:not(.on) ~ center {
+  margin-left: 0 !important;
+}
 
 /* ========== Navbar ========== */
 .navbar {
@@ -511,6 +520,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.04) !important;
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer .outer {
   display: flex;
