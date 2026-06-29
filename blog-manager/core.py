@@ -10,7 +10,6 @@ import shutil
 import subprocess
 import re
 import webbrowser
-import threading
 import time
 import base64
 import urllib.request
@@ -120,13 +119,6 @@ def get_git_status(repo_path):
         "unpushed": unpushed,
         "branch": current_branch,
     }
-
-def git_pull_before_push(repo_path, branch):
-    """push 前先 pull，避免冲突"""
-    r = run_git(["git", "pull", "origin", branch], repo_path)
-    if r.returncode != 0:
-        return False, r.stderr
-    return True, r.stdout
 
 
 # ============ 文章管理 ============
@@ -341,10 +333,8 @@ def process_markdown_images(content, file_dir, post_asset_dir, config, progress_
     config = load_config()
     image_host = config.get("image_host", "local")
     upload_log = []
-    new_content = content
     
     def replace_img(m):
-        nonlocal new_content
         alt_text = m.group(1)[2:-1]  # 去掉 ![ 和 ](
         img_path = m.group(2)
         
@@ -439,7 +429,8 @@ def publish_article(file_path, repo_path, remote_url, branch, git_name, git_emai
         with open(dest, "r", encoding="utf-8") as f:
             existing = f.read()
         if existing == processed_content:
-            return True, "文章已存在且内容相同，未重复发布", upload_log, dest
+            upload_log.append("ℹ️ 内容未变更，跳过发布")
+            return True, dest, upload_log, dest
         # 内容不同，覆盖并记录
         upload_log.append(f"⚠️ 目标文件已存在，内容已覆盖")
     
@@ -543,26 +534,3 @@ def drop_file_handler(dropped_path, config):
     
     else:
         return False, f"不支持的文件类型: {ext}", None
-
-
-# ============ 编码检测工具 ============
-
-def detect_encoding(file_path):
-    """尝试检测文件编码，返回 (encoding, has_bom)"""
-    # 检查 BOM
-    with open(file_path, "rb") as f:
-        bom = f.read(4)
-    
-    if bom[:3] == b'\xef\xbb\xbf':
-        return "utf-8-sig", True
-    elif bom[:4] == b'\xff\xfe\x00\x00':
-        return "utf-32-le", False
-    elif bom[:4] == b'\x00\x00\xfe\xff':
-        return "utf-32-be", False
-    elif bom[:2] == b'\xff\xfe':
-        return "utf-16-le", False
-    elif bom[:2] == b'\xfe\xff':
-        return "utf-16-be", False
-    
-    # 无 BOM，假设 UTF-8
-    return "utf-8", False

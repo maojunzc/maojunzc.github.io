@@ -824,29 +824,70 @@ class BlogManagerApp:
             return
 
         def run():
-            port = self.config.get("preview_port", 4000)
+            port = int(self.config.get("preview_port", 4000))
             self.set_status(f"启动本地服务器 (端口 {port})...")
-            # 用文章路径工作目录启动 hexo
-            cmd = f'cd /d "{repo}" && hexo server -p {port}'
-            subprocess.Popen(cmd, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
-            time.sleep(4)
-            webbrowser.open(f"http://localhost:{port}")
-            self.log(f"▶️ 本地预览: http://localhost:{port}")
-            self.set_status("本地预览已启动")
+            try:
+                # 使用列表形式避免命令注入，shell=False
+                self.hexo_process = subprocess.Popen(
+                    ["hexo", "server", "-p", str(port)],
+                    cwd=repo,
+                    creationflags=subprocess.CREATE_NEW_CONSOLE if sys.platform == "win32" else 0
+                )
+                time.sleep(4)
+                # 保存进程引用以便后续 kill
+                self.preview_port = port
+                webbrowser.open(f"http://localhost:{port}")
+                self.log(f"▶️ 本地预览: http://localhost:{port}")
+                self.set_status("本地预览已启动")
+            except FileNotFoundError:
+                self.log("❌ 未找到 hexo 命令，请确认已安装 Hexo CLI")
+                self.set_status("预览启动失败: hexo 未安装")
+            except Exception as e:
+                self.log(f"❌ 启动失败: {e}")
+                self.set_status("预览启动失败")
 
         threading.Thread(target=run, daemon=True).start()
 
     def stop_preview(self):
-        """停止 hexo server"""
-        if sys.platform == "win32":
-            # 只杀 hexo server 进程，不杀所有 node
-            subprocess.run(["taskkill", "/f", "/fi", "WINDOWTITLE eq hexo*"],
-                           capture_output=True, timeout=5)
-            # 备选：杀包含 hexo server 命令行的 node 进程
-            subprocess.run(["taskkill", "/f", "/fi", "IMAGENAME eq node.exe",
-                            "/fi", "WINDOWTITLE eq *hexo*"],
-                           capture_output=True, timeout=5)
-        self.log("⏹️ 已停止预览")
+        """停止 hexo server — 使用保存的进程引用精准 kill"""
+        if self.hexo_process:
+            try:
+                self.hexo_process.terminate()
+                self.hexo_process.wait(timeout=5)
+                self.hexo_process = None
+                self.log("⏹️ 已停止本地预览")
+            except Exception as e:
+                self.log(f"⚠️ 终止预览进程失败: {e}")
+                # 降级：尝试通过端口 kill
+                self._kill_by_port()
+        else:
+            self.log("⚠️ 没有正在运行的预览进程")
+    
+    def _kill_by_port(self):
+        """通过端口号查找并终止进程（降级方案）"""
+        port = getattr(self, 'preview_port', 4000)
+        try:
+            if sys.platform == "win32":
+                # 用 netstat 找 PID
+                r = subprocess.run(
+                    f'netstat -ano | findstr ":{port} "',
+                    capture_output=True, text=True, shell=True, timeout=5
+                )
+                for line in r.stdout.split("\n"):
+                    if f":{port}" in line and "LISTENING" in line:
+                        parts = line.strip().split()
+                        pid = parts[-1] if parts else ""
+                        if pid.isdigit():
+                            subprocess.run(["taskkill", "/f", "/pid", pid],
+                                          capture_output=True, timeout=5)
+                            self.log(f"⏹️ 已通过 PID={pid} 停止预览")
+                            return
+            else:
+                subprocess.run(["pkill", "-f", f"hexo.*:{port}"],
+                              capture_output=True, timeout=5)
+                self.log("⏹️ 已停止预览")
+        except Exception as e:
+            self.log(f"⚠️ 停止预览失败: {e}")
 
     # ==================== 图片上传 ====================
 
