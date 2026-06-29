@@ -43,12 +43,13 @@
 }
 
 /* ========== Content (main) ==========
-   主题原生: position:relative, z-index:1, margin-left:0
+   主题原生: position:relative, z-index:1, margin-left:0, height:100%
    sidebar 是 fixed 覆盖层，不影响文档流 */
 .content {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   color: #e0e0e0;
   background: #0a0a1a;
   animation: fadeIn 0.8s ease;
@@ -57,7 +58,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
-/* 主题原生 .content.on 保持 margin-left:0!important，我们不做覆盖 */
+/* Dark背景应用于所有内容区 */
 .content, #main, .outer {
   background: #0a0a1a;
 }
