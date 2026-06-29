@@ -38,12 +38,20 @@
 .content {
   margin-left: var(--sidebar-width) !important;
   transition: margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: #0a0a1a;
   min-height: 100vh;
   color: #e0e0e0;
+  background: #0a0a1a;
+}
+/* Dark背景应用于所有内容区 */
+.content, #main, .outer {
+  background: #0a0a1a;
 }
 
-/* Collapsed sidebar */
+#main {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 0;
+}
 .sidebar:not(.on) {
   left: calc(-1 * var(--sidebar-width)) !important;
 }
@@ -287,9 +295,11 @@
 }
 
 .outer {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ========== Notice Card ========== */
@@ -342,6 +352,17 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 600px) {
+  .ads {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ads li img {
+    width: 100% !important;
+    max-width: 320px;
+  }
 }
 
 /* ========== Article Card ========== */
