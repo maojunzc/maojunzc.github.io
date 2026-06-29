@@ -31,8 +31,9 @@
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
-  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.4s ease !important;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 100;
+  will-change: left;
 }
 
 .content {
@@ -41,6 +42,7 @@
   min-height: 100vh;
   color: #e0e0e0;
   background: #0a0a1a;
+  animation: fadeIn 0.8s ease;
 }
 /* Dark背景应用于所有内容区 */
 .content, #main, .outer {
@@ -287,12 +289,7 @@
 }
 
 /* ========== Main Content Area ========== */
-#main {
-  position: relative;
-  z-index: 2;
-  padding: 2rem 0;
-  background: #0a0a1a;
-}
+/* #main 已在 cover 后定义过，此处不再重复 */
 
 .outer {
   max-width: 960px;
@@ -412,7 +409,7 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 90;
+  z-index: 101;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -583,9 +580,8 @@
 }
 
 /* ========== Page Animations ========== */
-.content {
-  animation: fadeIn 0.8s ease;
-}
+/* .content 的动画已合并到主样式定义中 */
+/* fadeIn animation */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -731,18 +727,15 @@
   transform: translateY(-6px);
 }
 .qrcode-item img {
+  display: block;
+  margin: 0 auto;
+  height: 257px;
+  width: auto;
+  max-width: 100%;
   border-radius: 16px;
   border: 2px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
-  display: block;
-  margin: 0 auto;
-}
-/* 微信+QQ: 统一高度自适应宽度 */
-.qrcode-item img {
-  height: 257px;
-  width: auto;
-  max-width: 100%;
 }
 /* 公众号: 横向长图 */
 .qrcode-item-gzh img {
@@ -806,13 +799,43 @@
   color: #fff !important;
 }
 
-/* ========== Responsive ========== */
+/* ========== Responsive Enhancements ========== */
 @media (max-width: 768px) {
-  #subtitle { }
   .reward-box { flex-direction: column; align-items: center; }
   #reward .reward-img { width: 10rem !important; height: 10rem !important; }
   .ads { flex-direction: column; align-items: center; }
   .friends_ul { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  :root { --sidebar-width: 0px; }
+  .sidebar { display: none; }
+  .sidebar.on { display: block; --sidebar-width: 8rem; }
+  .cover { height: 70vh; min-height: 400px; }
+  .cover-inner h1 a { font-size: 2rem !important; }
+  #subtitle { font-size: 0.9rem; letter-spacing: 1px; }
+  .article { padding: 1.2rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-contact .label { width: 4rem; }
+  .index-contact { flex-direction: column; align-items: stretch; }
+  .page-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .cover { height: 60vh; min-height: 350px; }
+  .cover-inner { padding: 1rem; }
+  .cover-learn-more { bottom: 1.5rem; }
+  .outer { padding: 0 1rem; }
+  .friends_ul { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.6rem; }
+  .about-qr-row { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .about-qrcodes .qrcode-item img { height: 180px; }
+  .float_btns { bottom: 1rem; right: 1rem; }
+  .totop, .todark { width: 2.5rem !important; height: 2.5rem !important; }
+}
+
+/* Safari 100vh fix for cover */
+@supports (-webkit-touch-callout: none) {
+  .cover { height: -webkit-fill-available; }
 }
 
 /* ========== Animate.css Overrides ========== */

@@ -6,6 +6,7 @@ Blog Manager GUI - 桌面博客管理工具 v2.0
 import os
 import sys
 import json
+import re
 import shutil
 import subprocess
 import threading
@@ -145,12 +146,22 @@ class BlogManagerApp:
         search_frame.grid_columnconfigure(0, weight=1)
 
         self.search_var = StringVar()
-        self.search_var.trace_add("write", lambda *_: self.filter_articles())
         search_entry = Entry(search_frame, textvariable=self.search_var,
                              bg=BG_INPUT, fg=TEXT_COLOR, insertbackground="white",
                              relief="flat", font=("Segoe UI", 9))
         search_entry.grid(row=0, column=0, sticky="ew", padx=(0, 5))
         search_entry.insert(0, "🔍 搜索文章...")
+        # 焦点进入时清除 placeholder
+        def on_search_focus_in(e):
+            if self.search_var.get() == "🔍 搜索文章...":
+                search_entry.delete(0, "end")
+        def on_search_focus_out(e):
+            if not self.search_var.get().strip():
+                search_entry.insert(0, "🔍 搜索文章...")
+        search_entry.bind("<FocusIn>", on_search_focus_in)
+        search_entry.bind("<FocusOut>", on_search_focus_out)
+        # 绑定 trace 要放在 insert 之后，避免初始化时触发无意义的刷新
+        self.search_var.trace_add("write", lambda *_: self.filter_articles())
 
         # 文章列表
         list_frame = Frame(parent, bg=BG_CARD)
@@ -460,7 +471,7 @@ class BlogManagerApp:
         btn_frame = Frame(parent, bg=BG_CARD)
         btn_frame.grid(row=len(entries) + 2, column=0, columnspan=3,
                        sticky="ew", padx=12, pady=15)
-        self._make_btn_grid(btn_frame, "💾 保存设置", self.save_settings, 0)
+        self._make_btn_grid(btn_frame, "💾 保存设置", self._save_current_settings, 0)
 
     def build_statusbar(self):
         """底部状态栏"""
@@ -616,9 +627,18 @@ class BlogManagerApp:
 
             posts_dir = os.path.join(self.config["repo_path"], "source", "_posts")
             os.makedirs(posts_dir, exist_ok=True)
-            safe_name = title.replace(" ", "-").replace("/", "-").replace("\\", "-")
+            # 安全文件名：移除 Windows 非法字符 + 截断长度
+            safe_name = title.replace(" ", "-")
+            safe_name = re.sub(r'[\\/:*?"<>|]', "", safe_name)
+            safe_name = safe_name.strip("-.")[:80] or "untitled"
+            # 防重名：如果已存在则添加数字后缀
             file_name = safe_name + ".md"
             file_path = os.path.join(posts_dir, file_name)
+            counter = 1
+            while os.path.exists(file_path):
+                file_name = f"{safe_name}_{counter}.md"
+                file_path = os.path.join(posts_dir, file_name)
+                counter += 1
 
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(full)
@@ -703,7 +723,11 @@ class BlogManagerApp:
                 break
 
         if article:
-            deleted, msg = delete_article(article, self.config["repo_path"])
+            result = delete_article(article, self.config["repo_path"])
+            if len(result) == 3:
+                deleted, msg = result[0], result[2]
+            else:
+                deleted, msg = result
             self.log(f"🗑️ {msg}")
         else:
             self.log(f"❌ 未找到文章信息: {file_name}")
@@ -1143,11 +1167,41 @@ class BlogManagerApp:
             activeforeground=TEXT_COLOR, font=("Segoe UI", 9),
         ).pack(anchor="w")
 
+    def _save_current_settings(self):
+        """保存当前面板的设置（内置设置页使用）"""
+        # 敏感字段：如果显示的是脱敏值则保留原值
+        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key"}
+
+        for key, var in self._setting_vars.items():
+            val = var.get()
+            if key in _sensitive_keys and val in ("", "***"):
+                continue  # 保持原值不变
+            if isinstance(var, IntVar) and key == "preview_port":
+                self.config[key] = int(val) if val else 4000
+            else:
+                self.config[key] = val
+
+        # 写入模式
+        self.config["writing_mode"] = "classic" if self.writing_mode_var.get() else "default"
+        self.config["enable_auto_push"] = self.auto_push_var.get()
+
+        # image_host（从图床页获取）
+        self.config["image_host"] = self.host_var.get()
+
+        save_config(self.config)
+        self.path_var.set(self.config.get("repo_path", ""))
+        self.log("⚙️ 设置已保存")
+        messagebox.showinfo("完成", "设置已保存")
+
     def _save_all_settings(self):
-        """保存所有设置"""
+        """保存所有设置（弹出设置窗口使用）"""
+        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key"}
+
         # 基础设置
         for key, var in self._setting_vars.items():
             val = var.get()
+            if key in _sensitive_keys and val in ("", "***"):
+                continue  # 保持原值不变
             if isinstance(var, IntVar) and key == "preview_port":
                 self.config[key] = int(val) if val else 4000
             else:
@@ -1171,7 +1225,7 @@ class BlogManagerApp:
         self.path_var.set(self.config.get("repo_path", ""))
 
         self.log("⚙️ 设置已保存")
-        messagebox.showinfo("完成", "设置已保存", parent=self.root.focus_get())
+        messagebox.showinfo("完成", "设置已保存")
 
     def _toggle_writing_mode(self):
         """切换写作模式（从设置面板快捷切换）"""
@@ -1190,13 +1244,20 @@ class BlogManagerApp:
             self._update_widget_bg(self.root, BG_DARK)
 
     def _update_widget_bg(self, widget, bg):
-        """递归更新所有 widget 背景色"""
+        """递归更新所有 widget 背景色（跳过 ttk 组件，它们使用 Style 系统）"""
+        # 跳过 ttk 组件
+        if isinstance(widget, (ttk.Treeview, ttk.Notebook, ttk.Progressbar,
+                              ttk.Scrollbar, ttk.Entry, ttk.Combobox)):
+            return
         try:
             widget.configure(bg=bg)
         except Exception:
             pass
-        for child in widget.winfo_children():
-            self._update_widget_bg(child, bg)
+        try:
+            for child in widget.winfo_children():
+                self._update_widget_bg(child, bg)
+        except Exception:
+            pass
 
     # ==================== 启动 ====================
 

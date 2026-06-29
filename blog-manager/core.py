@@ -296,7 +296,7 @@ def upload_to_smms(image_path, config):
 
 def upload_image(image_path, config, progress_callback=None):
     """统一图片上传入口"""
-    config = load_config()  # 确保使用最新配置
+    config = config or load_config()
     host = config.get("image_host", "local")
     
     if progress_callback:
@@ -330,7 +330,7 @@ def process_markdown_images(content, file_dir, post_asset_dir, config, progress_
     处理 Markdown 中的本地图片
     返回: (处理后内容, 上传日志列表)
     """
-    config = load_config()
+    config = config or load_config()
     image_host = config.get("image_host", "local")
     upload_log = []
     
@@ -376,7 +376,7 @@ def process_markdown_images(content, file_dir, post_asset_dir, config, progress_
                 upload_log.append(f"⚠️ {file_name} (上传失败，已回退本地): {result[:50]}")
                 return f'![{alt_text}]({new_path})'
     
-    new_content = IMG_PATTERN.sub(replace_img, new_content)
+    content = IMG_PATTERN.sub(replace_img, content)
     return new_content, upload_log
 
 def publish_article(file_path, repo_path, remote_url, branch, git_name, git_email):
@@ -430,7 +430,7 @@ def publish_article(file_path, repo_path, remote_url, branch, git_name, git_emai
             existing = f.read()
         if existing == processed_content:
             upload_log.append("ℹ️ 内容未变更，跳过发布")
-            return True, dest, upload_log, dest
+            return True, "内容未变更，跳过发布", upload_log, dest
         # 内容不同，覆盖并记录
         upload_log.append(f"⚠️ 目标文件已存在，内容已覆盖")
     
@@ -446,7 +446,11 @@ def publish_article(file_path, repo_path, remote_url, branch, git_name, git_emai
     # 先 pull 再 push，避免冲突
     r_pull = run_git(["git", "pull", "origin", branch], repo_path)
     if r_pull.returncode != 0:
-        upload_log.append(f"⚠️ Git pull 警告: {r_pull.stderr[:100]}")
+        err = r_pull.stderr[:200]
+        # 网络错误可以继续，但合并冲突必须中止
+        if "merge conflict" in err.lower() or "conflict" in err.lower():
+            return False, f"Git pull 冲突: {err}", upload_log, dest
+        upload_log.append(f"⚠️ Git pull 警告: {err}")
     
     r1 = run_git(["git", "add", "-A"], repo_path)
     if r1.returncode != 0:
@@ -479,27 +483,41 @@ def delete_article(article, repo_path):
     asset_dir = os.path.join(posts_dir, os.path.splitext(article["file"])[0])
     
     deleted = False
-    if os.path.exists(md_path):
-        os.remove(md_path)
-        deleted = True
-    if os.path.isdir(asset_dir):
-        shutil.rmtree(asset_dir, ignore_errors=True)
-        if deleted:
-            upload_log_msg = f"已删除 {article['file']} 及其资源目录"
+    try:
+        if os.path.exists(md_path):
+            os.remove(md_path)
+            deleted = True
+        if os.path.isdir(asset_dir):
+            shutil.rmtree(asset_dir, ignore_errors=True)
+            if deleted:
+                upload_log_msg = f"已删除 {article['file']} 及其资源目录"
+            else:
+                upload_log_msg = f"已删除资源目录 (文章文件不存在)"
         else:
-            upload_log_msg = f"已删除资源目录 (文章文件不存在)"
-    else:
-        upload_log_msg = f"未找到资源目录" if deleted else f"文件不存在，无需删除"
-    
+            upload_log_msg = f"未找到资源目录" if deleted else f"文件不存在，无需删除"
+    except Exception as e:
+        return False, f"删除失败: {str(e)[:200]}"
+
     if deleted:
         title = article["title"]
-        run_git(["git", "add", "-A"], repo_path)
-        run_git(["git", "commit", "-m", f"Remove: {title}"], repo_path)
+        r1 = run_git(["git", "add", "-A"], repo_path)
+        if r1.returncode != 0:
+            return True, f"文件已删除但 Git add 失败: {r1.stderr[:200]}", upload_log_msg
+
+        r2 = run_git(["git", "commit", "-m", f"Remove: {title}"], repo_path)
+        if r2.returncode != 0:
+            if "nothing to commit" in (r2.stderr + r2.stdout).lower():
+                upload_log_msg += " (无变更需提交)"
+            else:
+                return True, f"文件已删除但 Git commit 失败: {r2.stderr[:200]}", upload_log_msg
+
         # push 删除
         config = load_config()
-        run_git(["git", "push", "origin", config.get("branch", "main")], repo_path)
-    
-    return deleted, upload_log_msg
+        r3 = run_git(["git", "push", "origin", config.get("branch", "main")], repo_path)
+        if r3.returncode != 0:
+            return True, f"文件已删除但 Git push 失败: {r3.stderr[:200]}", upload_log_msg
+
+        return deleted, upload_log_msg
 
 
 # ============ 拖拽处理 ============
