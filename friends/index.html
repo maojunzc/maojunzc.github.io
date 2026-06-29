@@ -68,11 +68,7 @@
           <div class="todark" id="todark"><i class="ri-moon-line"></i></div>
         </div>
 
-        <!-- ===== Reward Modal ===== -->
         
-            <div class="reward-item"><img class="reward-img" src="/images/qrcode/wechat.jpg" /><span class="reward-type">微信</span></div>
-          </div>
-        </div>
       
         
       
@@ -125,17 +121,18 @@
           </div>
         </aside>
 
-<div id="mask"></div>
+      <!-- ===== Mask & Reward ===== -->
+      <div id="mask"></div>
+      <div id="reward">
+        <span class="close"><i class="ri-close-line"></i></span>
+        <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧</p>
+        <div class="reward-box">
+          <div class="reward-item"><img class="reward-img" src="/images/qrcode/alipay.png" /><span class="reward-type">支付宝</span></div>
+          <div class="reward-item"><img class="reward-img" src="/images/qrcode/wechat.jpg" /><span class="reward-type">微信</span></div>
+        </div>
+      </div>
 
-<div id="reward">
-          <span class="close"><i class="ri-close-line"></i></span>
-          <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧</p>
-          <div class="reward-box">
-            <div class="reward-item"><img class="reward-img" src="/images/qrcode/alipay.png" /><span class="reward-type">支付宝</span></div>
-
-
-      <!-- ===== Footer ===== -->
-      
+      <!-- ===== After Footer: 运行时间 ===== -->
       <center>网站已运行 <span id="run_time" style="color:black"></span></center>
       <script>
         function runTime() {
