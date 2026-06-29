@@ -22,7 +22,7 @@
   </head>
   <body>
     <div id="app">
-      <main class="content animate__animated animate__fadeIn">
+      <main class="content on">
         <section class="outer">
           <article class="article article-type-page" data-scroll-reveal>
             <div class="article-inner">
@@ -62,8 +62,37 @@
           </article>
         </section>
 
-        <!-- ===== Sidebar ===== -->
-        <aside class="sidebar animate__animated animate__fadeInLeft">
+        <!-- ===== Float Buttons ===== -->
+        <div class="float_btns animate__animated animate__fadeInRight animate__delay-2s">
+          <div class="totop" id="totop"><i class="ri-arrow-up-line"></i></div>
+          <div class="todark" id="todark"><i class="ri-moon-line"></i></div>
+        </div>
+
+        <!-- ===== Reward Modal ===== -->
+        
+            <div class="reward-item"><img class="reward-img" src="/images/qrcode/wechat.jpg" /><span class="reward-type">微信</span></div>
+          </div>
+        </div>
+      
+        
+      
+
+      
+        <footer class="footer">
+        <div class="outer">
+          <ul><li>Copyrights &copy; 2023 <i class="ri-heart-fill heart_icon"></i> maojunzc</li></ul>
+          <ul>
+            <li>
+              <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+              <span class="division">|</span>
+              <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      </main>
+
+<aside class="sidebar on">
           <button class="navbar-toggle"></button>
           <nav class="navbar">
             <div class="logo"><a href="/"><img src="/images/ayer-side.svg" alt="maojunzc" /></a></div>
@@ -95,38 +124,18 @@
             </div>
           </div>
         </aside>
-        <div id="mask"></div>
 
-        <!-- ===== Float Buttons ===== -->
-        <div class="float_btns animate__animated animate__fadeInRight animate__delay-2s">
-          <div class="totop" id="totop"><i class="ri-arrow-up-line"></i></div>
-          <div class="todark" id="todark"><i class="ri-moon-line"></i></div>
-        </div>
+<div id="mask"></div>
 
-        <!-- ===== Reward Modal ===== -->
-        <div id="reward">
+<div id="reward">
           <span class="close"><i class="ri-close-line"></i></span>
           <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧</p>
           <div class="reward-box">
             <div class="reward-item"><img class="reward-img" src="/images/qrcode/alipay.png" /><span class="reward-type">支付宝</span></div>
-            <div class="reward-item"><img class="reward-img" src="/images/qrcode/wechat.jpg" /><span class="reward-type">微信</span></div>
-          </div>
-        </div>
-      </main>
+
 
       <!-- ===== Footer ===== -->
-      <footer class="footer">
-        <div class="outer">
-          <ul><li>Copyrights &copy; 2023 <i class="ri-heart-fill heart_icon"></i> maojunzc</li></ul>
-          <ul>
-            <li>
-              <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
-              <span class="division">|</span>
-              <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      
       <center>网站已运行 <span id="run_time" style="color:black"></span></center>
       <script>
         function runTime() {

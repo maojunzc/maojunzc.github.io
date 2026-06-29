@@ -20,10 +20,9 @@
   --sidebar-width: 8rem;
 }
 
-/* Base font size - keep theme default (1.4rem = ~22px on body) */
-/* 不覆盖body字体，保留主题原始大小 */
-
-/* ========== Sidebar ========== */
+/* ========== Sidebar ==========
+   主题原生: position:fixed, left:-8rem(隐藏), z-index:9
+   custom.css 提升 z-index 并保持切换逻辑 */
 .sidebar {
   position: fixed;
   top: 0;
@@ -38,13 +37,14 @@
   z-index: 100;
   will-change: left;
 }
-
-/* 覆盖主题原生 z-index:9，提升到 custom.css 的层级 */
 .sidebar.on { left: 0 !important; }
 .sidebar:not(.on) {
   left: calc(-1 * var(--sidebar-width)) !important;
 }
 
+/* ========== Content (main) ==========
+   主题原生: position:relative, z-index:1, margin-left:0
+   sidebar 是 fixed 覆盖层，不影响文档流 */
 .content {
   position: relative;
   z-index: 1;
@@ -52,13 +52,12 @@
   color: #e0e0e0;
   background: #0a0a1a;
   animation: fadeIn 0.8s ease;
-  /* 主题原生：content 不随 sidebar 偏移，sidebar 用 fixed 覆盖 */
   margin-left: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
-/* Dark背景应用于所有内容区 */
+/* 主题原生 .content.on 保持 margin-left:0!important，我们不做覆盖 */
 .content, #main, .outer {
   background: #0a0a1a;
 }
@@ -69,13 +68,7 @@
   padding: 2rem 0;
 }
 
-/* 主题原生 .content.on 用 margin-left:0!important 保持原位，
-   sidebar 是 fixed 覆盖层，不占文档流 */
-.content.on {
-  margin-left: 0 !important;
-}
-
-/* Footer 对齐方式 */
+/* ========== Footer (在 main 内部) ========== */
 .footer {
   background: rgba(255, 255, 255, 0.02) !important;
   backdrop-filter: blur(10px);
@@ -85,9 +78,10 @@
   margin-left: 0;
 }
 
-/* 覆盖主题原生 #app overflow:hidden 以支持 sticky 定位 */
+/* 覆盖主题原生 #app overflow:hidden 
+   主题原生需要 hidden 来限制 main 滚动区域，否则 sidebar fixed 定位异常 */
 #app {
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* ========== Navbar ========== */
@@ -433,13 +427,12 @@
 
 /* ========== Float Buttons ========== */
 .float_btns {
-  position: sticky;
+  position: fixed;
   bottom: 10rem;
   right: 50px;
-  z-index: 101;
-  float: right;
-  width: 50px;
+  z-index: 9996;
   text-align: center;
+  width: 50px;
 }
 
 .totop, .todark {
