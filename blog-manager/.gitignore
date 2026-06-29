@@ -1,0 +1,12 @@
+# PyInstaller 构建产物
+__pycache__/
+*.pyc
+dist/
+build/
+*.spec
+
+# UPX 压缩包
+upx-*.zip
+
+# 旧版 exe（保留新版）
+Blog-Manager.exe

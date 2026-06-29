@@ -5,3 +5,11 @@ db.json
 node_modules/
 public/
 .deploy*/
+blog-manager/__pycache__/
+blog-manager/*.pyc
+blog-manager/dist/
+blog-manager/build/
+blog-manager/*.spec
+blog-manager/upx-*.zip
+blog-manager/upx*/
+blog-manager/.nojekyll

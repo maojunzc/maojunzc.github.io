@@ -17,7 +17,7 @@ import urllib.request
 import urllib.error
 import collections
 from datetime import datetime
-from ctypes import windll
+from pathlib import Path
 
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
 
@@ -348,11 +348,7 @@ def process_markdown_images(content, file_dir, post_asset_dir, config, progress_
         alt_text = m.group(1)[2:-1]  # 去掉 ![ 和 ](
         img_path = m.group(2)
         
-        # 跳过网络图片
-        if img_path.startswith("http://") or img_path.startswith("https://"):
-            return m.group(0)  # 保持原样
-        
-        # 跳过已替换过的路径（防止重复处理）
+        # 跳过网络图片（已上传或外链）
         if img_path.startswith("http://") or img_path.startswith("https://"):
             return m.group(0)
         

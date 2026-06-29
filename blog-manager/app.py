@@ -34,6 +34,7 @@ BG_CARD = "#16213e"
 BG_INPUT = "#0f3460"
 ACCENT = "#e94560"
 TEXT_COLOR = "#eee"
+BTN_BG = "#e94560"
 WRITING_BG = "#f5f5f5"  # 灰色写作模式背景
 WRITING_FG = "#333333"   # 灰色写作模式文字
 
