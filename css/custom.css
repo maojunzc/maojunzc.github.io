@@ -69,7 +69,6 @@ body {
   -webkit-overflow-scrolling: touch;
   line-height: 1.8;
 }
-/* Dark背景应用于所有内容区 */
 .content, #main, .outer {
   background: #0a0a1a;
 }
@@ -78,6 +77,20 @@ body {
   position: relative;
   z-index: 2;
   padding: 2rem 0;
+  min-height: auto;
+}
+
+/* ========== 封面 Cover 优化 ==========
+   修复 cover-frame 100vh 在滚动容器内的显示 */
+.cover {
+  position: relative;
+  overflow: hidden;
+}
+.cover-frame {
+  position: relative;
+  min-width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* ========== Footer (在 main 内部) ========== */
@@ -88,6 +101,39 @@ body {
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
   margin-left: 0;
+  font-size: 115%;
+}
+.footer .outer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+  min-height: auto;
+}
+.footer .outer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .outer ul li {
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+.footer .outer ul li i {
+  margin: 0 2px;
+  font-style: normal;
+}
+.footer .outer ul span {
+  margin-right: 6px;
+}
+.footer .outer ul li .division {
+  display: inline;
+  margin: 0 5px;
 }
 
 /* 覆盖主题原生 #app overflow:hidden 
@@ -330,6 +376,7 @@ body {
   padding: 0 1.5rem;
   width: 100%;
   box-sizing: border-box;
+  min-height: auto;
 }
 
 /* ========== Notice Card ========== */
@@ -588,7 +635,21 @@ body {
   background: rgba(255, 255, 255, 0.08) !important;
 }
 .local-search-input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========== 文章图片在暗色主题下的边框 ========== */
+.article-entry img {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== 首页联系卡片居中 ========== */
+.index-contact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* ========== Scrollbar ========== */
@@ -998,6 +1059,8 @@ body {
   .about-qrcodes .qrcode-item img { height: 160px; }
   .skill-tag { font-size: 0.8rem; padding: 0.2rem 0.6rem; }
   .guestbook-message { flex-direction: column; align-items: flex-start; }
+  .guestbook-messages { width: 100%; overflow-x: hidden; }
+  .msg-content { word-break: break-word; }
 }
 
 /* Safari 100vh fix for cover */
