@@ -18,6 +18,16 @@
   --text-primary: #f0f0f0;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --sidebar-width: 8rem;
+  --font-size-base: 1.6rem;
+}
+
+/* 放大全局字体（主题原生 html font-size:62.5% => 10px，body 1.4rem => 14px）
+   调整为 1.6rem => 16px，提升阅读舒适度 */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: var(--font-size-base) !important;
 }
 
 /* ========== Sidebar ==========
@@ -953,7 +963,7 @@
 }
 
 @media (max-width: 640px) {
-  :root { --sidebar-width: 0px; }
+  :root { --sidebar-width: 0px; --font-size-base: 1.5rem; }
   .sidebar { display: none; }
   .sidebar.on { display: block; --sidebar-width: 8rem; }
   .cover { height: 70vh; min-height: 400px; }
@@ -970,6 +980,7 @@
 }
 
 @media (max-width: 480px) {
+  :root { --font-size-base: 1.4rem; }
   .cover { height: 60vh; min-height: 350px; }
   .cover-inner { padding: 1rem; }
   .cover-learn-more { bottom: 1.5rem; }
