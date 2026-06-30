@@ -13,4 +13,3 @@ blog-manager/*.spec
 blog-manager/upx-*.zip
 blog-manager/upx*/
 blog-manager/.nojekyll
-nul
