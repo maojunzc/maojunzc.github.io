@@ -21,6 +21,7 @@
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index-pin-top": "^0.2.2",
     "hexo-generator-searchdb": "^1.4.1",
+    "hexo-generator-sitemap": "^3.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^4.0.0",
@@ -31,7 +32,6 @@
     "hexo-theme-ayer": "^1.9.7-0",
     "hexo-theme-landscape": "^0.0.3",
     "moment-timezone": "^0.5.40",
-    "tocbot": "^4.20.1",
-    "valine": "^1.5.1"
+    "tocbot": "^4.20.1"
   }
 }

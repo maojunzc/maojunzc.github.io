@@ -28,8 +28,11 @@ GitResult = collections.namedtuple('GitResult', ['returncode', 'stdout', 'stderr
 
 # ============ 配置管理 ============
 
-    DEFAULT_CONFIG = {
+DEFAULT_CONFIG = {
     "repo_path": "",
+    "remote_url": "",
+    "branch": "main",
+    "git_name": "maojunzc",
     "remote_url": "",
     "branch": "main",
     "git_name": "maojunzc",
