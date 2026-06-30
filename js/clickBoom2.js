@@ -9,13 +9,7 @@
   // ---- Canvas setup ----
   var canvas = document.createElement('canvas');
   var ctx = canvas.getContext('2d');
-  canvas.style.position = 'fixed';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100%';
-  canvas.style.height = '100%';
-  canvas.style.pointerEvents = 'none';
-  canvas.style.zIndex = '99999';
+  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;';
   document.body.appendChild(canvas);
 
   var W, H;
@@ -54,7 +48,9 @@
 
   // ---- Mouse click handler ----
   document.addEventListener('click', function(e) {
-    createParticles(e.clientX, e.clientY, 28);
+    // 移动端减少粒子数
+    var count = window.innerWidth < 768 ? 14 : 28;
+    createParticles(e.clientX, e.clientY, count);
     if (!animating) {
       animating = true;
       animate();

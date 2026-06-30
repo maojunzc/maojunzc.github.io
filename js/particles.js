@@ -7,6 +7,7 @@
 
   var canvas = document.createElement('canvas');
   canvas.id = 'particles-canvas';
+  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;';
   document.body.appendChild(canvas);
 
   var ctx = canvas.getContext('2d');
@@ -25,6 +26,13 @@
     color2: { r: 253, g: 121, b: 168 },   // #fd79a8 pink
     speed: 0.2
   };
+
+  // 移动端降低粒子数以优化性能
+  if (window.innerWidth < 768) {
+    CONFIG.particleCount = 30;
+    CONFIG.maxDistance = 120;
+    CONFIG.speed = 0.15;
+  }
 
   function resize() {
     canvas.width = window.innerWidth;

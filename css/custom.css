@@ -1056,3 +1056,14 @@ body {
 .wl-preview {
   background: rgba(255, 255, 255, 0.02) !important;
 }
+
+/* ========== Search Empty State Dark Mode ========== */
+.search-result-empty p {
+  color: #aaa !important;
+}
+
+/* ========== Click Effect Canvas 确保在侧边栏上层 ========== */
+.fireworks,
+canvas[style*="position: fixed"][style*="z-index: 99999"] {
+  pointer-events: none !important;
+}
