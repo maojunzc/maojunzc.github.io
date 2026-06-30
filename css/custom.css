@@ -1000,3 +1000,42 @@
 .animate__delay-2s {
   --animate-delay: 0.6s;
 }
+
+/* ========== Waline 评论系统暗色适配 ========== */
+#waline {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.wl-card,
+.wl-panel,
+.wl-editor,
+.wl-input,
+.wl-textarea {
+  background: rgba(255, 255, 255, 0.03) !important;
+  color: #e0e0e0 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.wl-count,
+.wl-nick,
+.wl-item .wl-info .wl-nick a {
+  color: #ccc !important;
+}
+.wl-header label {
+  color: #aaa !important;
+}
+.wl-btn {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+}
+.wl-btn:hover {
+  background: var(--primary-light) !important;
+}
+.wl-emoji-popup {
+  background: #1a1a2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.wl-preview {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
