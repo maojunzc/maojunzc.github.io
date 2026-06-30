@@ -28,9 +28,9 @@ GitResult = collections.namedtuple('GitResult', ['returncode', 'stdout', 'stderr
 
 # ============ 配置管理 ============
 
-DEFAULT_CONFIG = {
+    DEFAULT_CONFIG = {
     "repo_path": "",
-    "remote_url": "https://github.com/maojunzc/maojunzc.github.io.git",
+    "remote_url": "",
     "branch": "main",
     "git_name": "maojunzc",
     "git_email": "",
@@ -38,11 +38,11 @@ DEFAULT_CONFIG = {
     "default_tags": "技术,教程,生活",
     "default_categories": "默认",
     "enable_auto_push": True,
-    # GitHub 图床相关
+    # GitHub 图床相关（敏感字段默认留空，由用户设置页面填写）
     "github_token": "",
-    "github_user": "maojunzc",
+    "github_user": "",
     "image_host": "local",  # local / github / imgbb / smms
-    "github_image_repo": "maojunzc.github.io",
+    "github_image_repo": "",
     "github_image_path": "images/posts",
     "imgbb_api_key": "",
     "smms_api_key": "",
@@ -377,7 +377,7 @@ def process_markdown_images(content, file_dir, post_asset_dir, config, progress_
                 return f'![{alt_text}]({new_path})'
     
     content = IMG_PATTERN.sub(replace_img, content)
-    return new_content, upload_log
+    return content, upload_log
 
 def publish_article(file_path, repo_path, remote_url, branch, git_name, git_email):
     """

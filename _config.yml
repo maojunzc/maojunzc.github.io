@@ -135,7 +135,7 @@ aplayer:
 
 # Blog Encrypt (hexo-blog-encrypt)
 encrypt:
-  enable: true
+  enable: false
   default_abstract: 这是一篇加密文章，你无权查看。
   default_message: 输入密码，查看文章。
 
