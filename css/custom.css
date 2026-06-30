@@ -1130,3 +1130,39 @@ body {
 canvas[style*="position: fixed"][style*="z-index: 99999"] {
   pointer-events: none !important;
 }
+
+/* ========== Reward Modal Dark Theme ========== */
+#reward {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+#reward .reward-p {
+  color: var(--text-primary) !important;
+  text-shadow: none;
+}
+#reward .reward-type {
+  color: var(--text-secondary) !important;
+}
+#reward .reward-img {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+#reward .close {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+#reward .close i {
+  color: #fff !important;
+}
+
+/* ========== Donate Button ========== */
+#reward-btn {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border: none;
+}
+#reward-btn:hover {
+  background: var(--primary-light) !important;
+  transform: translateX(-50%) scale(1.05) !important;
+}
