@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css" />
     <link rel="stylesheet" href="/css/clipboard.css" />
     <style>.swal2-styled.swal2-confirm { font-size: 1.6rem; }</style>
-    <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+    <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js" defer></script>
     <link rel="alternate" href="/atom.xml" title="maojunzc" type="application/atom+xml" />
       <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
 </head>
@@ -186,18 +186,18 @@
     </div>
 
     <!-- ===== Third-party Scripts ===== -->
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/lazyload.min.js"></script>
-    <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
-    <script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js" defer></script>
+    <script src="/js/lazyload.min.js" defer></script>
+    <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js" defer></script>
+    <script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script>
     <script src="/dist/main.js"></script>
-    <script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
-    <script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-    <script src="/js/busuanzi-2.3.pure.min.js"></script>
-    <script src="/js/particles.js"></script>
-    <script src="/js/clickBoom2.js"></script>
-    <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js" defer></script>
+    <script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js" defer></script>
+    <script src="/js/busuanzi-2.3.pure.min.js" defer></script>
+    <script src="/js/particles.js" defer></script>
+    <script src="/js/clickBoom2.js" defer></script>
+    <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js" defer></script>
+    
     <script>
       function wait(callback, seconds) { window.setTimeout(callback, seconds); }
       !function() {
@@ -250,6 +250,19 @@
         serverURL: 'https://my-blog-waline-five.vercel.app',
         locale: {
           placeholder: '欢迎留言...'
+        }
+      });
+    </script>
+
+
+    <script>
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+          var input = document.getElementById('local-search-input');
+          if (input && document.activeElement !== input) {
+            e.preventDefault();
+            input.focus();
+          }
         }
       });
     </script>
