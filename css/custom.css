@@ -1024,13 +1024,33 @@ body {
   :root { --sidebar-width: 0px; }
   .sidebar { display: none; background-color: #403e3e !important; }
   .sidebar.on { display: block; --sidebar-width: 8rem; left: 0 !important; }
-  .navbar-toggle { transform: scale(1.1); }
+  .sidebar .nav-main {
+    height: 55vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navbar-toggle {
+    transform: scale(1.1);
+    z-index: 101;
+    left: 1rem;
+    top: 0.8rem;
+  }
+  .sidebar.on .navbar-toggle {
+    left: calc(var(--sidebar-width) + 0.5rem);
+  }
   .cover { height: 70vh; min-height: 400px; }
   .cover .forkMe { display: none; }
   .cover-inner h1 a { font-size: 3.5rem !important; }
   .cover-inner { width: 100%; }
+  .cover-learn-more a:active i {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
   #subtitle { font-size: 1.2rem; letter-spacing: 1px; }
   .article { padding: 1.5rem 0; }
+  .article:active {
+    transform: scale(0.99);
+  }
   .reward-box { flex-direction: column; align-items: center; }
   #reward .reward-img { width: 10rem !important; height: 10rem !important; }
   .about-grid { grid-template-columns: 1fr; }
@@ -1045,6 +1065,8 @@ body {
   .ads { display: none; }
   .index-contact { flex-direction: column; align-items: stretch; }
   .index-intro { font-size: 1rem; }
+  .footer { font-size: 1.2rem; }
+  #waline { margin-top: 1rem; padding-top: 1rem; }
 }
 
 /* 480px 以下极小屏额外微调 */
@@ -1061,11 +1083,16 @@ body {
   .guestbook-message { flex-direction: column; align-items: flex-start; }
   .guestbook-messages { width: 100%; overflow-x: hidden; }
   .msg-content { word-break: break-word; }
+  .cover-learn-more { bottom: 1rem; }
+  .float_btns { bottom: 7rem; }
 }
 
 /* Safari 100vh fix for cover */
 @supports (-webkit-touch-callout: none) {
-  .cover { height: -webkit-fill-available; }
+  .cover,
+  .cover-frame {
+    height: -webkit-fill-available;
+  }
 }
 
 /* ========== Animate.css Overrides ========== */
@@ -1118,6 +1145,25 @@ body {
 }
 .wl-preview {
   background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* ========== Waline 移动端适配 ========== */
+@media (max-width: 768px) {
+  .wl-card {
+    flex-wrap: wrap;
+  }
+  .wl-header {
+    flex-direction: column;
+  }
+  .wl-header-item {
+    width: 100%;
+  }
+  .wl-header label {
+    min-width: 4rem;
+  }
+  #waline {
+    margin-top: 1rem;
+  }
 }
 
 /* ========== Search Empty State Dark Mode ========== */
