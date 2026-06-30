@@ -618,7 +618,15 @@ body {
 }
 
 /* ========== Search ========== */
-.search-form-wrap { right: var(--sidebar-width); }
+.search-form-wrap {
+  width: 100%;
+  position: fixed;
+  top: -100%;
+  right: 8rem;
+  left: 0;
+  opacity: 0;
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
 .local-search-input {
   border-radius: 12px !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -1113,6 +1121,12 @@ body {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.waline-loading {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
 }
 .wl-card,
 .wl-panel,
