@@ -1133,6 +1133,7 @@ body {
   }
   #subtitle { font-size: 1.2rem; letter-spacing: 1px; }
   .article { padding: 1.5rem 0; }
+  .article-title { font-size: 1.4rem; word-break: break-word; }
   .article:active {
     transform: scale(0.99);
   }
@@ -1160,7 +1161,7 @@ body {
   .cover { height: 60vh; min-height: 320px; }
   .hero-title { font-size: 2.8rem; }
   .hero-subtitle { font-size: 1rem; }
-  .cover-inner { padding: 0 1rem; }
+  .cover-inner { padding: 0 1.5rem; }
   #subtitle { font-size: 0.9rem; }
   .outer { padding: 0 1rem; }
   .friends_ul { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; }
