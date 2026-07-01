@@ -1,6 +1,6 @@
 """
-Blog Manager - 核心功能模块 v2.0
-包含: 文章管理、图片上传(图床)、GitHub API、拖拽处理
+Blog Manager - 核心功能模块 v2.1
+包含: 文章管理、图片上传(图床)、GitHub API、拖拽处理、Hexo编译
 """
 
 import os
@@ -463,6 +463,19 @@ def publish_article(file_path, repo_path, remote_url, branch, git_name, git_emai
         else:
             return False, f"Git commit 失败: {r2.stderr[:200]}", upload_log, dest
     
+    # ===== Hexo 编译 =====
+    upload_log.append("🔨 正在 Hexo 编译...")
+    hexo_success, hexo_msg = run_hexo_generate(repo_path)
+    if hexo_success:
+        upload_log.append(f"✅ Hexo 编译成功")
+        # 提交编译产物
+        run_git(["git", "add", "-A"], repo_path)
+        r_hexo_commit = run_git(["git", "commit", "-m", f"Build: {post_name}"], repo_path)
+        if r_hexo_commit.returncode != 0 and "nothing to commit" not in (r_hexo_commit.stderr + r_hexo_commit.stdout).lower():
+            upload_log.append(f"⚠️ Hexo 编译产物提交警告: {r_hexo_commit.stderr[:100]}")
+    else:
+        upload_log.append(f"⚠️ Hexo 编译失败: {hexo_msg[:100]}（跳过，仅推送源文件）")
+    
     # 推送
     if config.get("enable_auto_push", True):
         r3 = run_git(["git", "remote", "-v"], repo_path)
@@ -517,6 +530,43 @@ def delete_article(article, repo_path):
             return True, f"文件已删除但 Git push 失败: {r3.stderr[:200]}", upload_log_msg
 
         return deleted, upload_log_msg
+
+
+# ============ Hexo 编译 ============
+
+def run_hexo_generate(repo_path):
+    """
+    执行 Hexo 编译生成静态文件
+    返回: (success, message)
+    """
+    try:
+        # 检查 hexo 是否可用
+        hexo_cmd = "hexo"
+        if sys.platform == "win32":
+            # Windows 下尝试多种方式找到 hexo
+            hexo_cmd = "hexo"
+        
+        # 执行 hexo generate
+        r = subprocess.run(
+            [hexo_cmd, "generate"],
+            cwd=repo_path,
+            capture_output=True,
+            text=True,
+            timeout=120,
+            shell=(sys.platform == "win32")
+        )
+        
+        if r.returncode == 0:
+            return True, r.stdout[-200:] if r.stdout else "编译成功"
+        else:
+            return False, r.stderr[-200:] if r.stderr else "未知错误"
+            
+    except FileNotFoundError:
+        return False, "未找到 hexo 命令，请确认已安装 Hexo CLI (npm install -g hexo-cli)"
+    except subprocess.TimeoutExpired:
+        return False, "Hexo 编译超时（120秒）"
+    except Exception as e:
+        return False, f"Hexo 编译异常: {str(e)[:100]}"
 
 
 # ============ 拖拽处理 ============

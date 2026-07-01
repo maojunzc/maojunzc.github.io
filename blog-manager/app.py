@@ -29,7 +29,7 @@ from core import *
 
 
 APP_NAME = "Blog Manager"
-APP_VERSION = "2.0.0"
+APP_VERSION = "2.1.0"
 BG_DARK = "#1a1a2e"
 BG_CARD = "#16213e"
 BG_INPUT = "#0f3460"
