@@ -269,12 +269,16 @@ body {
     rgba(253, 121, 168, 0.2),
     rgba(0, 206, 201, 0.15)
   );
+  z-index: 2;
+}
+
+#wave3d-canvas {
   z-index: 1;
 }
 
 .cover-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   padding: 2rem;
   animation: fadeInUp 1s ease;
