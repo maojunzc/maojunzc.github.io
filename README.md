@@ -122,6 +122,8 @@ maojunzc.github.io/
 
 位于 `blog-manager/` 目录下的桌面端博客管理工具，使用 Python + Tkinter 构建，支持 ttkbootstrap 主题。
 
+**v3.0 零依赖设计** — 内置 Git 操作引擎 (GitPython) 和 Markdown 渲染器，无需安装 Git 命令行、Hexo CLI 或其他任何外部工具。下载 exe 即可直接使用。
+
 ### 功能特性
 
 | 功能 | 说明 |
@@ -130,9 +132,21 @@ maojunzc.github.io/
 | 🚀 **一键发布** | 自动处理 front-matter、图片上传、Git 提交推送 |
 | 🖼️ **多图床支持** | 本地复制 / GitHub / ImgBB / SM.MS 四种模式 |
 | 📥 **拖拽导入** | 支持拖拽 .md 文件和图片到窗口 |
-| ⚙️ **完整设置** | Git 配置、图床密钥、写作模式切换 |
+| ⚙️ **完整设置** | Git 远程地址、分支、图床密钥、写作模式切换 |
 | 🌐 **本地预览** | 一键启动 Hexo server 预览 |
 | 🎨 **写作模式** | 经典灰色白底黑字模式，专注写作 |
+| 🔌 **零外部依赖** | 内置 Git 和 Markdown 引擎，无需额外安装 |
+
+### 零依赖说明
+
+BlogManager v3.0 已将以下功能内置到 exe 中：
+
+- ✅ **Git 操作** — 使用 GitPython 库（打包在 exe 内），无需安装 Git 命令行
+- ✅ **Markdown 渲染** — 使用 Python Markdown 库（打包在 exe 内）
+- ✅ **配置管理** — 所有设置在界面上完成，不写死任何默认值
+- ✅ **首次引导** — 首次运行弹窗提示配置仓库路径
+
+> 原 v2.x 依赖 Git 命令行和 Hexo CLI，v3.0 已全部内置。
 
 ### 打包部署
 
@@ -142,7 +156,7 @@ pip install pyinstaller
 python build.py        # 生成单文件 exe（含 UPX 压缩）
 ```
 
-产物位于 `blog-manager/dist/BlogManager.exe`（约 10MB）。
+产物位于 `blog-manager/dist/BlogManager.exe`（约 13.5MB，v3.0 起零外部依赖）。
 
 ## 📄 许可证
 

@@ -1,6 +1,7 @@
 """
-Blog Manager GUI - 桌面博客管理工具 v2.0
+Blog Manager GUI - 桌面博客管理工具 v3.0
 支持: 文章管理、一键发布、图片上传(图床)、拖拽、灰色写作模式
+零外部依赖：内置 Git 操作和 Markdown 渲染
 """
 
 import os
@@ -29,7 +30,7 @@ from core import *
 
 
 APP_NAME = "Blog Manager"
-APP_VERSION = "2.1.0"
+APP_VERSION = "3.0.0"
 BG_DARK = "#1a1a2e"
 BG_CARD = "#16213e"
 BG_INPUT = "#0f3460"
@@ -52,6 +53,8 @@ class BlogManagerApp:
 
         self.setup_window()
         self.build_ui()
+        # 首次运行检测（延迟执行，等 UI 渲染完成）
+        self.root.after(500, self.first_run_check)
         self.root.after(200, self.refresh_all)
 
     # ==================== 窗口初始化 ====================
@@ -486,6 +489,33 @@ class BlogManagerApp:
         self.count_var = StringVar(value="文章: 0")
         Label(bar, textvariable=self.count_var, bg=BG_CARD, fg="#888",
               font=("Segoe UI", 9)).grid(row=0, column=1, sticky="e", padx=10)
+
+    # ==================== 首次运行检测 ====================
+
+    def first_run_check(self):
+        """首次运行时检测依赖并给出引导"""
+        ok, msgs = check_dependencies()
+
+        # 检查是否已配置仓库路径
+        if not self.config.get("repo_path"):
+            self.log("👋 欢迎使用 Blog Manager v3.0！")
+            self.log("📋 首次使用请先在 ⚙️ 设置 中配置仓库路径")
+            self.set_status("请先配置仓库路径")
+            messagebox.showinfo(
+                "欢迎使用 Blog Manager v3.0",
+                "感谢使用 Blog Manager！\n\n"
+                "首次使用请先配置：\n"
+                "1. 点击 ⚙️ 设置 → 填写「仓库路径」\n"
+                "2. 配置 Git 远程地址和分支\n"
+                "3. 即可开始发布文章\n\n"
+                "v3.0 已内置 Git 操作和 Markdown 渲染，\n"
+                "无需额外安装任何依赖！",
+                parent=self.root
+            )
+
+        # 检测日志
+        for icon, msg in msgs:
+            self.log(f"{icon} {msg}")
 
     # ==================== 辅助方法 ====================
 
