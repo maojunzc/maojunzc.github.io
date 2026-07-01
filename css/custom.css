@@ -233,7 +233,7 @@ body {
   box-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
 }
 
-/* ========== Cover/Hero Section ========== */
+/* ========== Cover / Hero Section (MiMo 风格) ========== */
 .cover {
   position: relative;
   height: 100vh;
@@ -256,7 +256,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.3) saturate(1.2) blur(2px);
+  filter: brightness(0.25) saturate(1.1) blur(2px);
   transform: scale(1.05);
 }
 .bg-box::after {
@@ -265,9 +265,9 @@ body {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(108, 92, 231, 0.4),
-    rgba(253, 121, 168, 0.2),
-    rgba(0, 206, 201, 0.15)
+    rgba(108, 92, 231, 0.35) 0%,
+    rgba(15, 15, 30, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
   );
   z-index: 2;
 }
@@ -276,40 +276,106 @@ body {
   z-index: 1;
 }
 
-.cover-inner {
-  position: relative;
+/* Hero overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
   z-index: 3;
-  text-align: center;
-  padding: 2rem;
-  animation: fadeInUp 1s ease;
-}
-.cover-inner h1 {
-  margin: 0;
-}
-.cover-inner h1 a {
-  font-weight: 800 !important;
-  background: linear-gradient(135deg, #fff 0%, #a29bfe 40%, #fd79a8 70%, #00cec9 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  letter-spacing: -3px;
-  text-shadow: none !important;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-.cover-inner h1 a:hover {
-  transform: scale(1.03);
-  filter: brightness(1.2);
 }
 
+/* MiMo 风格 Hero 内容 */
+.cover-inner {
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 字符逐个淡入标题 (MiMo 风格) */
+.hero-title {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+.hero-char {
+  display: inline-block;
+  background: linear-gradient(135deg, #fff 0%, #a29bfe 40%, #fd79a8 70%, #00cec9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  animation: heroCharFadeIn 0.6s ease forwards;
+}
+@keyframes heroCharFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 副标题 (MiMo 风格) */
 #subtitle-box {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 #subtitle {
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 3px;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 300;
-  line-height: 2;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: heroContentFadeIn 0.8s ease 0.8s forwards;
+}
+
+/* 操作按钮 (MiMo 风格) */
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  opacity: 0;
+  animation: heroContentFadeIn 0.8s ease 1s forwards;
+}
+.hero-btn-primary,
+.hero-btn-secondary {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.hero-btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
+}
+.hero-btn-primary:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+}
+.hero-btn-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.hero-btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@keyframes heroContentFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .cover::after {
@@ -330,8 +396,8 @@ body {
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
-  animation: bounce 2s infinite;
+  z-index: 5;
+  animation: heroContentFadeIn 0.6s ease 1.5s forwards;
 }
 .cover-learn-more a {
   color: rgba(255, 255, 255, 0.5);
@@ -1052,8 +1118,12 @@ body {
   }
   .cover { height: 70vh; min-height: 400px; }
   .cover .forkMe { display: none; }
-  .cover-inner h1 a { font-size: 3.5rem !important; }
-  .cover-inner { width: 100%; }
+  .hero-title { font-size: 3.5rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-btn-primary,
+  .hero-btn-secondary { width: 180px; text-align: center; }
+  .cover-inner { width: 100%; padding: 1.5rem; }
   .cover-learn-more a:active i {
     opacity: 0.5;
     transform: scale(0.9);
@@ -1084,9 +1154,10 @@ body {
 /* 480px 以下极小屏额外微调 */
 @media (max-width: 480px) {
   .cover { height: 60vh; min-height: 320px; }
-  .cover-inner h1 a { font-size: 2.8rem !important; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-subtitle { font-size: 1rem; }
   .cover-inner { padding: 0 1rem; }
-  #subtitle { font-size: 1rem; }
+  #subtitle { font-size: 0.9rem; }
   .outer { padding: 0 1rem; }
   .friends_ul { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; }
   .about-qr-row { flex-direction: column; align-items: center; gap: 1.5rem; }
