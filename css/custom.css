@@ -709,7 +709,8 @@ body {
 .local-search-input:focus {
   border-color: var(--primary) !important;
   box-shadow: 0 0 20px rgba(108, 92, 231, 0.15) !important;
-  outline: none !important;
+  outline: 2px solid var(--primary-light) !important;
+  outline-offset: 2px;
   background: rgba(255, 255, 255, 0.08) !important;
 }
 .local-search-input::placeholder {
@@ -1300,4 +1301,50 @@ canvas[style*="position: fixed"][style*="z-index: 99999"] {
 #reward-btn:hover {
   background: var(--primary-light) !important;
   transform: translateX(-50%) scale(1.05) !important;
+}
+
+/* ========== Accessibility ========== */
+
+/* 减少动效偏好：用户系统设置了减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-char {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  .cover-learn-more {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* 全局焦点样式（键盘导航可见） */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid var(--primary-light) !important;
+  outline-offset: 2px;
+}
+
+/* 跳过导航链接（屏幕阅读器） */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 99999;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.skip-to-content:focus {
+  top: 0;
 }
