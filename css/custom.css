@@ -1351,3 +1351,47 @@ input:focus-visible,
 .skip-to-content:focus {
   top: 0;
 }
+
+/* ========== Mobile Touch Optimizations ========== */
+
+/* 消除 300ms 点击延迟 */
+html {
+  touch-action: manipulation;
+}
+
+/* 长按不弹出系统菜单（对按钮/链接区域） */
+a, button, .nav-item-link, .totop, .todark, #reward-btn, .hero-btn-primary, .hero-btn-secondary {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 移动端按钮增大点击区域 */
+@media (max-width: 768px) {
+  .nav-item-link {
+    padding: 14px 0 !important;
+    min-height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 240px;
+  }
+  .totop, .todark {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  /* Cover 箭头可点击区域 */
+  .cover-learn-more a {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+}
