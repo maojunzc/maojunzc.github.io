@@ -404,6 +404,7 @@ class BlogManagerApp:
         entries = [
             ("仓库路径:", "repo_path", True),
             ("远程地址:", "remote_url", True),
+            ("Git Token:", "git_token", True),
             ("Git 用户名:", "git_name", False),
             ("Git 邮箱:", "git_email", False),
             ("Typora 路径:", "typora_path", True),
@@ -1200,7 +1201,7 @@ class BlogManagerApp:
     def _save_current_settings(self):
         """保存当前面板的设置（内置设置页使用）"""
         # 敏感字段：如果显示的是脱敏值则保留原值
-        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key"}
+        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key", "git_token"}
 
         for key, var in self._setting_vars.items():
             val = var.get()
@@ -1225,7 +1226,7 @@ class BlogManagerApp:
 
     def _save_all_settings(self):
         """保存所有设置（弹出设置窗口使用）"""
-        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key"}
+        _sensitive_keys = {"github_token", "imgbb_api_key", "smms_api_key", "git_token"}
 
         # 基础设置
         for key, var in self._setting_vars.items():

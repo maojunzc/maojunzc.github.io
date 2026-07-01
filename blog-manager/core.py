@@ -153,9 +153,19 @@ def git_add_commit_push(repo_path, message, branch="main", remote_url="", git_to
     """
     统一的 Git add → commit → push 操作。
     优先使用 GitPython，降级到命令行。
+
+    如果提供了 git_token，会自动注入到 remote_url 中用于认证。
     返回 (success, message_list)
     """
     log = []
+
+    # 构建带 Token 的远程 URL（用于认证）
+    auth_remote_url = remote_url
+    if git_token and remote_url and "github.com" in remote_url:
+        # 将 Token 注入 URL: https://token@github.com/user/repo.git
+        if "@github.com" not in remote_url:
+            auth_remote_url = remote_url.replace("https://", f"https://{git_token}@")
+        log.append("🔑 已注入 Git 认证凭据")
 
     if HAS_GITPYTHON:
         try:
@@ -178,16 +188,29 @@ def git_add_commit_push(repo_path, message, branch="main", remote_url="", git_to
                 log.append("ℹ️ 无变更需提交")
                 return True, log
 
-            # push
-            if remote_url:
+            # push（使用带 Token 的 URL）
+            if auth_remote_url:
                 try:
-                    origin = repo.remotes.origin
-                    if origin.url != remote_url:
-                        origin.set_url(remote_url)
-                    origin.push()
+                    # 检查或创建 origin remote
+                    if "origin" in [r.name for r in repo.remotes]:
+                        origin = repo.remotes.origin
+                        if origin.url != auth_remote_url:
+                            origin.set_url(auth_remote_url)
+                    else:
+                        repo.create_remote("origin", auth_remote_url)
+
+                    origin.push(refspec=f"{branch}:{branch}")
                     log.append("✅ 已推送到远程")
                 except Exception as e:
                     log.append(f"⚠️ 推送失败: {str(e)[:100]}")
+                    # 尝试：先 pull 再 push
+                    try:
+                        log.append("🔄 尝试 pull 后重试...")
+                        origin.pull(branch)
+                        origin.push(refspec=f"{branch}:{branch}")
+                        log.append("✅ 重新推送成功")
+                    except Exception as e2:
+                        log.append(f"⚠️ 再次推送失败: {str(e2)[:100]}")
             else:
                 log.append("ℹ️ 未配置远程地址，跳过推送")
 
@@ -573,11 +596,13 @@ def delete_article(article, repo_path):
 
     if deleted:
         title = article["title"]
+        config = load_config()
         git_ok, git_log = git_add_commit_push(
             repo_path=repo_path,
             message=f"Remove: {title}",
-            branch="main",
-            remote_url="",
+            branch=config.get("branch", "main"),
+            remote_url=config.get("remote_url", ""),
+            git_token=config.get("git_token", ""),
         )
         if not git_ok:
             return True, f"文件已删除但 Git 操作失败", upload_log_msg
