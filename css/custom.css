@@ -101,7 +101,7 @@ body {
   padding: 2rem 0;
   color: rgba(255, 255, 255, 0.4);
   margin-left: 0;
-  font-size: 115%;
+  font-size: 1.3rem;
 }
 .footer .outer {
   display: flex;
@@ -166,7 +166,7 @@ body {
 .nav-item {
   position: relative;
   margin: 2px 8px;
-  border-radius: 10px;
+  border-radius: 12px !important;
   transition: all 0.3s ease;
 }
 .nav-item-link {
@@ -174,7 +174,7 @@ body {
   padding: 12px 0 !important;
   text-align: center !important;
   color: var(--text-secondary) !important;
-  border-radius: 10px;
+  border-radius: 12px !important;
   transition: all 0.3s ease !important;
   position: relative;
 }
@@ -298,7 +298,7 @@ body {
 
 /* 字符逐个淡入标题 (MiMo 风格) */
 .hero-title {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 6rem;
   font-weight: 800;
   letter-spacing: -2px;
@@ -547,11 +547,13 @@ body {
 .article-meta {
   color: rgba(255, 255, 255, 0.4) !important;
   margin: 0.5rem 0 1rem;
+  font-size: 1.2rem;
 }
 
 .article-entry {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
+  font-size: 1.5rem;
 }
 
 /* ========== Float Buttons ========== */
@@ -1012,7 +1014,7 @@ body {
   padding: 0.6rem 1.2rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
+  border-radius: 12px !important;
   transition: all 0.3s ease;
 }
 .index-contact-item:hover {
@@ -1149,6 +1151,7 @@ body {
   .index-contact { flex-direction: column; align-items: stretch; }
   .index-intro { font-size: 1rem; }
   .footer { font-size: 1.2rem; }
+  .article-entry { font-size: 1.4rem; }
   #waline { margin-top: 1rem; padding-top: 1rem; }
 }
 
