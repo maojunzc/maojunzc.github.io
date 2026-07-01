@@ -1166,7 +1166,7 @@ body {
   .outer { padding: 0 1rem; }
   .friends_ul { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; }
   .about-qr-row { flex-direction: column; align-items: center; gap: 1.5rem; }
-  .about-qrcodes .qrcode-item img { height: 160px; }
+  .about-qrcodes .qrcode-item img { height: 160px; max-width: 100%; }
   .skill-tag { font-size: 0.8rem; padding: 0.2rem 0.6rem; }
   .guestbook-message { flex-direction: column; align-items: flex-start; }
   .guestbook-messages { width: 100%; overflow-x: hidden; }
