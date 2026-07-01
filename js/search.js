@@ -114,7 +114,7 @@ var searchFunc = function (path, search_id, content_id) {
         });
         str += "</ul>";
         if (str.indexOf('<li>') === -1) {
-          return $resultContent.innerHTML = BTN + "<div class=\"search-result-empty\"><p><i class=\"fe fe-tired\"></i> 没有找到内容，更换下搜索词试试吧~<p></div>";
+          return $resultContent.innerHTML = BTN + "<div class=\"search-result-empty\"><p>🔍 没有找到内容</p><p style=\"font-size:0.9em;color:#888;margin-top:5px\">试试其他关键词，或<a href='/archives/' style='color:#a29bfe'>浏览全部文章</a></p></div>";
         }
         $resultContent.innerHTML = BTN + str;
       });
