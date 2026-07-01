@@ -33,7 +33,6 @@
   var PERSPECTIVE = 1.2;       // 透视强度
 
   var cols, rows;
-  var grid = [];
 
   function resize() {
     W = canvas.width = coverEl.offsetWidth;

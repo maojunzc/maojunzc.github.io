@@ -16,7 +16,6 @@ import urllib.request
 import urllib.error
 import collections
 from datetime import datetime
-from pathlib import Path
 
 CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
 
